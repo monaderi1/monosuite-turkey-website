@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MonoSuite | Cyber Asset Intelligence</title>
+  <meta name="description" content="MonoSuite bilingual website for Turkish and English audiences.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="container nav">
+      <a class="brand" href="#top"><span>M</span> MonoSuite</a>
+      <button id="menu" class="menu" aria-label="Menu">☰</button>
+      <div id="links" class="links">
+        <a href="#platform" data-k="navPlatform">Platform</a>
+        <a href="#benefits" data-k="navBenefits">Benefits</a>
+        <a href="#deployment" data-k="navDeployment">Deployment</a>
+        <a href="#contact" class="pill" data-k="navDemo">Request demo</a>
+        <button id="lang" class="lang">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-k="heroEyebrow">Cyber Asset Intelligence Platform</p>
+          <h1 data-k="heroTitle">Know every asset. Measure cyber risk continuously.</h1>
+          <p class="lead" data-k="heroText">MonoSuite helps security teams discover assets, understand exposure, and calculate cyber risk with a clear asset-centric view.</p>
+          <div class="actions">
+            <a href="#contact" class="btn primary" data-k="heroCta">Request demo</a>
+            <a href="#platform" class="btn ghost" data-k="heroLearn">Explore platform</a>
+          </div>
+        </div>
+        <div class="dashboard">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="score">
+            <span data-k="riskLabel">Organisation Cyber Risk</span>
+            <strong>72%</strong>
+            <small data-k="riskNote">Based on asset posture and exposure signals</small>
+          </div>
+          <div class="metrics">
+            <div><span data-k="m1">Assets</span><b>12,480</b></div>
+            <div><span data-k="m2">Visibility</span><b>91%</b></div>
+            <div><span data-k="m3">Exposure</span><b>184</b></div>
+            <div><span data-k="m4">Coverage</span><b>78%</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform" class="section">
+      <div class="container">
+        <p class="eyebrow" data-k="platformEyebrow">Platform</p>
+        <h2 data-k="platformTitle">One layer for asset visibility and cyber risk decisions</h2>
+        <div class="cards">
+          <article><h3 data-k="c1t">Continuous discovery</h3><p data-k="c1p">Identify known and unknown assets and keep their profiles updated.</p></article>
+          <article><h3 data-k="c2t">Risk scoring</h3><p data-k="c2p">Calculate cyber risk at asset and organisation level.</p></article>
+          <article><h3 data-k="c3t">Executive reporting</h3><p data-k="c3p">Turn technical signals into clear management reports.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="section dark">
+      <div class="container split">
+        <div>
+          <p class="eyebrow" data-k="benefitsEyebrow">Benefits</p>
+          <h2 data-k="benefitsTitle">From static inventory to live risk intelligence</h2>
+        </div>
+        <ul class="checklist">
+          <li data-k="b1">Reduce manual reporting work.</li>
+          <li data-k="b2">Improve visibility for security teams.</li>
+          <li data-k="b3">Prioritise actions based on risk.</li>
+          <li data-k="b4">Support regulated enterprise environments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="deployment" class="section soft">
+      <div class="container split">
+        <div>
+          <p class="eyebrow" data-k="deployEyebrow">Deployment</p>
+          <h2 data-k="deployTitle">Ready for enterprise-controlled environments</h2>
+          <p data-k="deployText">MonoSuite can support on-premises and private deployment models for organisations that need stronger control.</p>
+        </div>
+        <div class="box"><b data-k="deployBox">On-premises, private infrastructure, integration-ready architecture.</b></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow" data-k="contactEyebrow">Next step</p>
+          <h2 data-k="contactTitle">Evaluate MonoSuite for your organisation</h2>
+          <p data-k="contactText">Request a focused demo for cyber asset visibility and risk calculation.</p>
+        </div>
+        <a class="btn primary light" href="mailto:info@example.com" data-k="contactCta">Request demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container">© <span id="year"></span> MonoSuite</div></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
