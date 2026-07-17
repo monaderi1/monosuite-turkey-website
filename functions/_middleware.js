@@ -70,23 +70,20 @@ const FORM_ENHANCEMENT_SCRIPT = `
   }, true);
 
   let successHandled = false;
-  const observer = new MutationObserver(() => {
+  new MutationObserver(() => {
     if (successHandled || !status.classList.contains('success')) return;
     successHandled = true;
-    observer.disconnect();
     status.textContent = 'Thank you — your request has been received. We’ll contact you shortly.';
     setTimeout(() => {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('modal-open');
     }, 2500);
-  });
-  observer.observe(status, { childList: true, attributes: true, subtree: true });
+  }).observe(status, { childList: true, attributes: true, subtree: true });
 
   document.querySelectorAll('[data-open-lead]').forEach(button => {
     button.addEventListener('click', () => {
       successHandled = false;
-      if (!observer.takeRecords) return;
     });
   });
 })();
