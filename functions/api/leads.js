@@ -3,6 +3,8 @@ const JSON_HEADERS = {
   "Cache-Control": "no-store",
 };
 
+const DEFAULT_LEAD_TO_EMAIL = "monaderi@hotmail.com";
+
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: JSON_HEADERS });
 }
@@ -77,7 +79,6 @@ async function sendLeadEmail(env, lead) {
     "CF_ACCOUNT_ID",
     "CF_EMAIL_API_TOKEN",
     "LEAD_FROM_EMAIL",
-    "LEAD_TO_EMAIL",
   ];
 
   const missing = required.filter(key => !env[key]);
@@ -86,6 +87,7 @@ async function sendLeadEmail(env, lead) {
     throw new Error("Lead email delivery is not configured.");
   }
 
+  const recipient = env.LEAD_TO_EMAIL || DEFAULT_LEAD_TO_EMAIL;
   const subject = `[Cyobik website lead] ${lead.company} — ${lead.fullName}`;
   const lines = [
     `Name: ${lead.fullName}`,
@@ -126,7 +128,7 @@ async function sendLeadEmail(env, lead) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        to: env.LEAD_TO_EMAIL,
+        to: recipient,
         from: env.LEAD_FROM_EMAIL,
         replyTo: lead.workEmail,
         subject,
