@@ -1,6 +1,6 @@
-# PrimWard Turkey Website
+# Cyobik Turkey Website
 
-English-first marketing website for PrimWard's Turkey market entry.
+English-first marketing website for Cyobik's Turkey market entry.
 
 ## Current implementation
 
