@@ -130,7 +130,7 @@ async function sendLeadEmail(env, lead) {
       body: JSON.stringify({
         to: recipient,
         from: env.LEAD_FROM_EMAIL,
-        replyTo: lead.workEmail,
+        reply_to: lead.workEmail,
         subject,
         text: lines.join("\n"),
         html,
