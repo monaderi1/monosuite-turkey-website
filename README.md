@@ -20,7 +20,7 @@ The production website is deployed with **Cloudflare Pages**. GitHub is the sour
 - Production branch: `main`
 - Framework preset: None
 - Build command: `exit 0`
-- Build output directory: `/`
+- Build output directory: `.`
 - Root directory: repository root
 
 Cloudflare Pages creates preview deployments for non-production branches and pull requests. Merges to `main` publish the production version automatically after the Git integration is connected.
