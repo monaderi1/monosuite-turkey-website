@@ -69,17 +69,26 @@ const FORM_ENHANCEMENT_SCRIPT = `
     email.reportValidity();
   }, true);
 
-  let closeTimer;
-  new MutationObserver(() => {
-    if (!status.classList.contains('success')) return;
-    status.textContent = 'Thank you — your request has been received. We’ll contact you shortly. This window will close automatically.';
-    clearTimeout(closeTimer);
-    closeTimer = setTimeout(() => {
+  let successHandled = false;
+  const observer = new MutationObserver(() => {
+    if (successHandled || !status.classList.contains('success')) return;
+    successHandled = true;
+    observer.disconnect();
+    status.textContent = 'Thank you — your request has been received. We’ll contact you shortly.';
+    setTimeout(() => {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('modal-open');
     }, 2500);
-  }).observe(status, { childList: true, attributes: true, subtree: true });
+  });
+  observer.observe(status, { childList: true, attributes: true, subtree: true });
+
+  document.querySelectorAll('[data-open-lead]').forEach(button => {
+    button.addEventListener('click', () => {
+      successHandled = false;
+      if (!observer.takeRecords) return;
+    });
+  });
 })();
 </script>`;
 
