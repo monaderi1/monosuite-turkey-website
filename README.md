@@ -29,6 +29,14 @@ Cloudflare Pages creates preview deployments for non-production branches and pul
 
 The form posts to `/api/leads`, implemented as a Cloudflare Pages Function. The browser never receives the email-service credential.
 
+### CRM intake address
+
+Website leads are sent to:
+
+- `monaderi@hotmail.com`
+
+The optional `LEAD_TO_EMAIL` environment variable can override this address later without changing the code.
+
 ### Required production variables and secrets
 
 Configure these under the Pages project's production environment variables:
@@ -36,7 +44,6 @@ Configure these under the Pages project's production environment variables:
 - `CF_ACCOUNT_ID` — Cloudflare account ID
 - `CF_EMAIL_API_TOKEN` — secret API token with Email Sending permission
 - `LEAD_FROM_EMAIL` — sender address on the onboarded Cyobik domain
-- `LEAD_TO_EMAIL` — internal mailbox used for CRM intake
 
 Cloudflare Email Sending requires the sender domain to be onboarded in Cloudflare Email Service.
 
