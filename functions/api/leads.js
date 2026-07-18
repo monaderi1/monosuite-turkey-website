@@ -1,9 +1,11 @@
 const JSON_HEADERS = {
   "Content-Type": "application/json; charset=utf-8",
   "Cache-Control": "no-store",
+  "X-Content-Type-Options": "nosniff",
 };
 
 const DEFAULT_LEAD_TO_EMAIL = "monaderi@hotmail.com";
+const MAX_REQUEST_BYTES = 16_384;
 
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: JSON_HEADERS });
@@ -53,7 +55,11 @@ async function enforceRateLimit(env, request) {
 }
 
 async function validateTurnstile(env, token, request) {
-  if (!env.TURNSTILE_SECRET_KEY) return { success: true };
+  const required = String(env.REQUIRE_TURNSTILE || "").toLowerCase() === "true";
+
+  if (!env.TURNSTILE_SECRET_KEY) {
+    return { success: !required, misconfigured: required };
+  }
   if (!token) return { success: false };
 
   const response = await fetch(
@@ -151,20 +157,45 @@ export async function onRequestPost({ request, env }) {
   try {
     const requestUrl = new URL(request.url);
     const origin = request.headers.get("Origin");
-    if (origin && new URL(origin).host !== requestUrl.host) {
+    const allowedOrigins = new Set([
+      requestUrl.origin,
+      "https://cyobik.com",
+      "https://www.cyobik.com",
+    ]);
+
+    if (!origin || !allowedOrigins.has(origin)) {
       return json({ error: "Invalid request origin." }, 403);
     }
 
     const contentType = request.headers.get("Content-Type") || "";
-    if (!contentType.includes("application/json")) {
+    if (!contentType.toLowerCase().startsWith("application/json")) {
       return json({ error: "Unsupported request format." }, 415);
+    }
+
+    const contentLength = Number(request.headers.get("Content-Length") || "0");
+    if (contentLength > MAX_REQUEST_BYTES) {
+      return json({ error: "Request payload is too large." }, 413);
     }
 
     if (!(await enforceRateLimit(env, request))) {
       return json({ error: "Too many requests. Please try again later." }, 429);
     }
 
-    const body = await request.json();
+    const rawBody = await request.text();
+    if (new TextEncoder().encode(rawBody).byteLength > MAX_REQUEST_BYTES) {
+      return json({ error: "Request payload is too large." }, 413);
+    }
+
+    let body;
+    try {
+      body = JSON.parse(rawBody);
+    } catch {
+      return json({ error: "Malformed JSON request." }, 400);
+    }
+
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return json({ error: "Invalid request body." }, 400);
+    }
 
     if (clean(body.website, 200)) {
       return json({ success: true }, 202);
@@ -203,6 +234,11 @@ export async function onRequestPost({ request, env }) {
       clean(body["cf-turnstile-response"], 2048),
       request,
     );
+
+    if (turnstile.misconfigured) {
+      console.error("Turnstile is required but TURNSTILE_SECRET_KEY is missing.");
+      return json({ error: "Form verification is temporarily unavailable." }, 503);
+    }
 
     if (!turnstile.success) {
       return json({ error: "Human verification failed. Please try again." }, 400);
