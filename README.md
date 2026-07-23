@@ -1,4 +1,4 @@
-# Cyobik Turkey Website
+# Cyobik Website
 
 English-first marketing website for Cyobik's Turkey market entry.
 
@@ -6,8 +6,24 @@ English-first marketing website for Cyobik's Turkey market entry.
 
 - Static HTML website with Cloudflare Pages Functions
 - Selected visual direction: Theme 3 / Intelligence Graph
-- Primary language: English
+- Shared responsive design system with light and dark themes
+- Product claims aligned to the maintained MonoSuite Product Truth Register
 - Demo requests collected through a server-side form and delivered by email for entry into the internal CRM
+
+## Information architecture
+
+- `index.html` — positioning and product overview
+- `platform.html` — connected platform and processing model
+- `asset-intelligence.html` — discovery, onboarding, inventory, changes, networks, relationships and Business Services
+- `risk-visibility.html` — scores, vulnerability assessment, internal attack surface, dashboards and reporting
+- `compliance.html` — CIS Benchmark, PCI DSS and ISO/IEC 27001 control reporting
+- `deployment.html` — OVF delivery, air-gapped operation, updates, backup, access control and audit
+- `integrations.html` — REST API, Nessus, Splunk and adapter boundaries
+- `request-demo.html` — focused evaluation request form
+- `assets/site.css` — shared visual system and responsive layouts
+- `assets/site.js` — navigation, theme and form interactions
+
+Earlier concepts and retained static assets remain under `archive/` and `assets/` for reference.
 
 ## Deployment target
 
@@ -31,15 +47,9 @@ The form posts to `/api/leads`, implemented as a Cloudflare Pages Function. The 
 
 ### CRM intake address
 
-Website leads are sent to:
-
-- `monaderi@hotmail.com`
-
-The optional `LEAD_TO_EMAIL` environment variable can override this address later without changing the code.
+Website leads are sent to `monaderi@hotmail.com`. The optional `LEAD_TO_EMAIL` environment variable can override this address without changing the code.
 
 ### Required production variables and secrets
-
-Configure these under the Pages project's production environment variables:
 
 - `CF_ACCOUNT_ID` — Cloudflare account ID
 - `CF_EMAIL_API_TOKEN` — secret API token with Email Sending permission
@@ -54,22 +64,12 @@ Recommended production variables:
 - `TURNSTILE_SITE_KEY` — public site key
 - `TURNSTILE_SECRET_KEY` — secret validation key
 
-When these are configured, the form renders Turnstile and validates each token server-side before sending the lead email.
+When configured, the form renders Turnstile and validates each token server-side before sending the lead email.
 
 ### Optional rate limiting
 
-Create a Workers KV namespace and bind it to the Pages project as `LEAD_RATE_LIMIT`. The function then limits submissions to five per source IP hash per hour. Raw IP addresses are not stored in KV.
+Create a Workers KV namespace and bind it to the Pages project as `LEAD_RATE_LIMIT`. The current implementation limits submissions to five per source IP hash per hour. Raw IP addresses are not stored in KV.
 
 ## Custom domain
 
-The domain remains registered at GoDaddy. For the apex domain, add the domain as a Cloudflare zone and replace the GoDaddy nameservers with the Cloudflare nameservers assigned to the zone. Then associate the domain from the Cloudflare Pages project's **Custom domains** section.
-
-## Files
-
-- `index.html` — current homepage and demo form
-- `functions/api/leads.js` — server-side validation and email delivery
-- `functions/api/form-config.js` — public form configuration
-- `_routes.json` — limits Pages Functions execution to `/api/*`
-- `platform.html` — earlier platform page
-- `assets/` — earlier static assets retained for reference
-- `archive/` — archived concepts and previous homepage versions
+The domain remains registered at GoDaddy. Add the domain as a Cloudflare zone, replace the GoDaddy nameservers with the assigned Cloudflare nameservers, and associate the domain from the Cloudflare Pages project's **Custom domains** section.

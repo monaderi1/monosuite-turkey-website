@@ -1,16 +1,48 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Platform | MonoSuite</title>
-  <meta name="description" content="MonoSuite platform overview.">
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta name="color-scheme" content="light dark">
+  <title>Platform | Cyobik</title>
+  <meta name="description" content="Explore Cyobik’s on-premises cyber asset intelligence platform and connected processing model.">
+  <meta name="robots" content="index,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="container nav">
-      <a class="brand" href="index.html"><span>M</span>MonoSuite</a>
-      <button id="menu" class="menu">☰</button>
-      <div id="links" class="links">
-        <a href="platform.html
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav-shell">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Cyobik home"><span class="mark">◇</span>Cyobik</a>
+    <nav class="links" id="navLinks" aria-label="Primary navigation"><a href="platform.html" aria-current="page">Platform</a><a href="asset-intelligence.html">Asset Intelligence</a><a href="risk-visibility.html">Risk & Exposure</a><a href="compliance.html">Compliance</a><a href="deployment.html">Deployment</a><a href="integrations.html">Integrations</a></nav>
+    <div class="nav-actions">
+      <button class="theme" id="themeBtn" type="button" aria-label="Toggle colour theme">◐</button>
+      <button class="menu" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <a class="btn primary" href="request-demo.html">Request a demo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="wrap"><div class="hero-copy"><div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Platform</span></div><div class="eyebrow">Platform overview</div><h1>A maintained internal model of cyber assets, evidence and risk.</h1><p class="lead">Cyobik brings discovery, inventory, relationships, vulnerabilities, internal exposure, compliance and scores into one on-premises platform.</p><div class="actions"><a class="btn primary" href="request-demo.html">Request a demo</a><a class="btn" href="asset-intelligence.html">Start with asset intelligence</a></div></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">Operating model</div><h2>Six connected processing stages.</h2><p class="lead2">The platform progresses from finding assets to producing management-ready evidence without treating each capability as a separate data island.</p></div><div class="timeline"><div class="timeline-item"><div class="timeline-label">Stage 01</div><div><h3>Discovery and onboarding</h3><p>Identify IP-based assets, collect available service and certificate context, then approve, import or manually create managed records.</p></div></div><div class="timeline-item"><div class="timeline-label">Stage 02</div><div><h3>Inventory and enrichment</h3><p>Maintain detailed hardware, operating-system, software, service, user, patch, network and routing information.</p></div></div><div class="timeline-item"><div class="timeline-label">Stage 03</div><div><h3>Change and lifecycle correlation</h3><p>Compare scan states, preserve unreachable assets and identify active-lifecycle assets that become unreachable.</p></div></div><div class="timeline-item"><div class="timeline-label">Stage 04</div><div><h3>Relationships and business services</h3><p>Visualise observed connections and confirm business-service membership with business impact.</p></div></div><div class="timeline-item"><div class="timeline-label">Stage 05</div><div><h3>Security and control assessment</h3><p>Assess vulnerabilities, internal exposure and applicable predefined compliance controls.</p></div></div><div class="timeline-item"><div class="timeline-label">Stage 06</div><div><h3>Scores, dashboards and reporting</h3><p>Summarise posture while preserving drill-down evidence to asset, control and framework level.</p></div></div></div></div></section>
+<section class="section alt"><div class="wrap"><div class="section-head"><div class="eyebrow">Platform domains</div><h2>One product, four operational domains.</h2></div><div class="grid-4"><article class="card"><div class="num">01</div><h3>Asset truth</h3><p>Discovery, approval, inventory, networks, changes and lifecycle.</p></article><article class="card"><div class="num">02</div><h3>Operational context</h3><p>Observed relationships, business services, ownership and business impact.</p></article><article class="card"><div class="num">03</div><h3>Security evidence</h3><p>Vulnerabilities, internal exposure and predefined control assessments.</p></article><article class="card"><div class="num">04</div><h3>Decision support</h3><p>Visibility, Protection and Risk Scores, dashboards and scheduled reports.</p></article></div></div></section>
+<section class="section"><div class="wrap"><div class="grid-2"><article class="panel"><div class="panel-top"><div><div class="eyebrow">Architecture</div><h3 style="margin-top:12px">Enterprise application platform</h3></div><span class="badge">Available today</span></div><div class="check-list"><div class="check"><i>✓</i><div><b>Web interface and backend services</b><span>Dashboards, reports, workflows and operational processing.</span></div></div><div class="check"><i>✓</i><div><b>Redis and RabbitMQ</b><span>Caching, asynchronous processing and background work.</span></div></div><div class="check"><i>✓</i><div><b>Modular adapters and microservices</b><span>Supported vendor and protocol logic with internal jobs and maintenance services.</span></div></div><div class="check"><i>✓</i><div><b>REST API with Swagger/OpenAPI</b><span>Documented programmatic access to exposed platform capabilities.</span></div></div></div></article><article class="panel"><div class="panel-top"><div><div class="eyebrow">Operations</div><h3 style="margin-top:12px">Controlled customer deployment</h3></div><span class="badge ok">On-premises</span></div><div class="check-list"><div class="check"><i>✓</i><div><b>OVF delivery for VMware</b><span>Deploy inside customer-controlled virtual infrastructure.</span></div></div><div class="check"><i>✓</i><div><b>Air-gapped operation</b><span>Operate without permanent internet connectivity.</span></div></div><div class="check"><i>✓</i><div><b>No-root customer administration</b><span>Normal administration, updates and backup do not require root access.</span></div></div><div class="check"><i>✓</i><div><b>Connected or offline updates</b><span>Use approved outbound retrieval or manually uploaded update packages.</span></div></div></div></article></div></div></section>
+<section class="section alt"><div class="wrap"><div class="boundary risk"><h3>What the platform does not claim</h3><p>Cyobik does not provide built-in AI recommendations, automated remediation recommendations, attack-path analysis, external attack-surface discovery, high availability, multi-tenancy or universal computed dependency mapping in the current product.</p></div></div></section>
+<section class="wrap cta"><div><h2>Explore the asset model behind the platform.</h2><p>See how discovery, inventory, change history and relationships are maintained before risk is calculated.</p></div><a class="btn primary" href="asset-intelligence.html">Asset Intelligence</a></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><a class="brand" href="index.html"><span class="mark">◇</span>Cyobik</a><p class="small" style="margin-top:12px;max-width:430px">Cyber asset intelligence and evidence-based cyber risk visibility for enterprise environments.</p></div>
+      <div><h4>Platform</h4><a href="asset-intelligence.html">Asset Intelligence</a><a href="risk-visibility.html">Risk & Exposure</a><a href="compliance.html">Compliance</a></div>
+      <div><h4>Operations</h4><a href="deployment.html">Deployment</a><a href="integrations.html">Integrations</a><a href="request-demo.html">Request a demo</a></div>
+    </div>
+    <div class="legal"><span>© <span data-year></span> Cyobik. All rights reserved.</span><span>Product capabilities are described within their documented scope.</span></div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
