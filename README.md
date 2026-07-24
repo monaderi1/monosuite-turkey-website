@@ -9,6 +9,7 @@ Bilingual English/Turkish marketing website for Cyobik's Turkey market entry.
 - Full English and Turkish page sets under `/en/` and `/tr/`
 - Shared responsive design system with light and dark themes
 - Product claims aligned to the maintained MonoSuite/Cyobik product-truth documentation
+- Website copy is sourced from the approved Cyobik Website Final Content Pack in Confluence
 - Demo form interface is intentionally disabled until the EN/TR privacy notices and Turkish data-controller details complete legal review
 
 ## Information architecture
