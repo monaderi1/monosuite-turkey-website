@@ -3,6 +3,19 @@
   const lang = body.dataset.lang || 'en';
   const page = body.dataset.page || 'home';
   const isTr = lang === 'tr';
+
+  document.documentElement.setAttribute('translate', 'no');
+  document.documentElement.classList.add('notranslate');
+  body.setAttribute('translate', 'no');
+  body.classList.add('notranslate');
+  let translationMeta = document.querySelector('meta[name="google"]');
+  if (!translationMeta) {
+    translationMeta = document.createElement('meta');
+    translationMeta.name = 'google';
+    document.head.appendChild(translationMeta);
+  }
+  translationMeta.content = 'notranslate';
+
   const pages = {
     home:['index.html','index.html'], platform:['platform.html','platform.html'], asset:['asset-intelligence.html','varlik-istihbarati.html'], security:['security-exposure.html','guvenlik-maruziyet.html'], risk:['risk-prioritisation.html','risk-onceliklendirme.html'], integrations:['integrations.html','entegrasyonlar.html'], deployment:['deployment.html','dagitim.html'], editions:['editions.html','surumler.html'], trust:['security-trust.html','guvenlik-ve-guven.html'], company:['company.html','sirket.html'], demo:['request-demo.html','demo-talep-edin.html']
   };
@@ -18,7 +31,7 @@
   const switchHref = `/${other}/${activePath[otherIdx]}`;
   const navHtml = nav.map(([key,label]) => `<a href="${pages[key][idx]}"${key===page?' aria-current="page"':''}>${label}</a>`).join('');
   const header = document.querySelector('[data-site-header]');
-  if (header) header.innerHTML = `<header class="nav-shell"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Cyobik home"><span class="mark">◇</span>Cyobik</a><nav class="links" id="navLinks" aria-label="${isTr?'Ana navigasyon':'Primary navigation'}">${navHtml}</nav><div class="nav-actions"><button class="theme" id="themeBtn" type="button" aria-label="${isTr?'Renk temasını değiştir':'Toggle colour theme'}">◐</button><a class="btn language-switch" id="languageSwitch" href="${switchHref}" hreflang="${other}" lang="${other}" aria-label="${isTr?'Switch to English':'Türkçe sürüme geç'}">${isTr?'EN':'TR'}</a><button class="menu" id="menuBtn" type="button" aria-label="${isTr?'Navigasyonu aç':'Open navigation'}" aria-expanded="false">☰</button><a class="btn primary" href="${pages.demo[idx]}">${isTr?'Demo Talep Edin':'Request a demo'}</a></div></div></header>`;
+  if (header) header.innerHTML = `<header class="nav-shell"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Cyobik home"><span class="mark">◇</span>Cyobik</a><nav class="links" id="navLinks" aria-label="${isTr?'Ana navigasyon':'Primary navigation'}">${navHtml}</nav><div class="nav-actions"><button class="theme" id="themeBtn" type="button" aria-label="${isTr?'Renk temasını değiştir':'Toggle colour theme'}">◐</button><a class="btn language-switch notranslate" id="languageSwitch" href="${switchHref}" hreflang="${other}" lang="${other}" translate="no" aria-label="${isTr?'Switch to English':'Türkçe sürüme geç'}"><span class="notranslate" translate="no">${isTr?'EN':'TR'}</span></a><button class="menu" id="menuBtn" type="button" aria-label="${isTr?'Navigasyonu aç':'Open navigation'}" aria-expanded="false">☰</button><a class="btn primary" href="${pages.demo[idx]}">${isTr?'Demo Talep Edin':'Request a demo'}</a></div></div></header>`;
   const languageSwitch = document.getElementById('languageSwitch');
   if (languageSwitch) {
     languageSwitch.addEventListener('click', () => {
