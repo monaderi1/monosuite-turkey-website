@@ -8,6 +8,15 @@
   Cross-Origin-Resource-Policy: same-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
+/assets/layout.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/en/*
+  Cache-Control: no-cache
+
+/tr/*
+  Cache-Control: no-cache
+
 /api/*
   Cache-Control: no-store
   X-Content-Type-Options: nosniff
