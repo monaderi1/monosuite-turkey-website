@@ -16,6 +16,10 @@
   }
   translationMeta.content = 'notranslate';
 
+  const layoutFixes = document.createElement('style');
+  layoutFixes.textContent = '.wrap.cta{margin-left:auto;margin-right:auto}';
+  document.head.appendChild(layoutFixes);
+
   const pages = {
     home:['index.html','index.html'], platform:['platform.html','platform.html'], asset:['asset-intelligence.html','varlik-istihbarati.html'], security:['security-exposure.html','guvenlik-maruziyet.html'], risk:['risk-prioritisation.html','risk-onceliklendirme.html'], integrations:['integrations.html','entegrasyonlar.html'], deployment:['deployment.html','dagitim.html'], editions:['editions.html','surumler.html'], trust:['security-trust.html','guvenlik-ve-guven.html'], company:['company.html','sirket.html'], demo:['request-demo.html','demo-talep-edin.html']
   };
