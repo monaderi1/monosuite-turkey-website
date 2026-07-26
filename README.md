@@ -9,10 +9,11 @@ Bilingual English/Turkish marketing website for Cyobik's Turkey market entry.
 - Shared responsive design system with light and dark themes
 - Product claims aligned to the maintained MonoSuite/Cyobik product-truth documentation
 - Website copy is sourced from the approved Cyobik Website Final Content Pack in Confluence
-- Active bilingual demo-request form delivered to `info@veksacore.com`
+- Active bilingual demo-request form delivered to the existing `monaderi@hotmail.com` mailbox
 - Demo leads are handled through email only; no CRM is currently used
 - Separate optional marketing consent, with privacy-notice version and locale recorded in each submission
-- English Website and Demo Request Privacy Notice and Turkish KVKK Aydınlatma Metni
+- Plain-text English Privacy Notice and Turkish KVKK Aydınlatma Metni
+- Plain-text English and Turkish Website Terms of Use
 
 ## Information architecture
 
@@ -30,12 +31,13 @@ English routes:
 - `/en/company.html` — company approach and Veksacore legal details
 - `/en/request-demo.html` — active demo-request form
 - `/en/privacy.html` — website and demo-request privacy notice
+- `/en/terms.html` — public website terms of use
 
-Equivalent Turkish routes are maintained under `/tr/`, including `/tr/kvkk-aydinlatma-metni.html`.
+Equivalent Turkish routes are maintained under `/tr/`, including `/tr/kvkk-aydinlatma-metni.html` and `/tr/kullanim-kosullari.html`.
 
 ## Demo lead form
 
-The browser submits form data to `/api/leads`. The Cloudflare Pages Function validates the request, optionally validates Turnstile, applies the configured rate-limit mechanism and sends the lead to `info@veksacore.com`.
+The browser submits form data to `/api/leads`. The Cloudflare Pages Function validates the request, optionally validates Turnstile, applies the configured rate-limit mechanism and sends the lead to the existing `monaderi@hotmail.com` mailbox.
 
 Required Cloudflare variables/secrets:
 
@@ -73,3 +75,4 @@ Cloudflare Pages creates preview deployments for non-production branches and pul
 - Public pricing is not displayed. Cyobik is offered through annual licensing and Contact Sales.
 - MonoAI is excluded from the edition table; MonoTI is shown without a separate subscription label.
 - Do not claim that every technical processing step for website leads is confined to Türkiye unless provider locations have been verified.
+- Do not merge legal or form changes to `main` without explicit approval after reviewing the preview deployment.
