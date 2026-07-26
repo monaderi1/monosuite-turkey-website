@@ -10,7 +10,6 @@ Bilingual English/Turkish marketing website for Cyobik's Turkey market entry.
 - Product claims aligned to the maintained MonoSuite/Cyobik product-truth documentation
 - Website copy is sourced from the approved Cyobik Website Final Content Pack in Confluence
 - Active bilingual demo-request form delivered to the existing `monaderi@hotmail.com` mailbox
-- Demo leads are handled through email only; no CRM is currently used
 - Separate optional marketing consent, with privacy-notice version and locale recorded in each submission
 - Plain-text English Privacy Notice and Turkish KVKK Aydınlatma Metni
 - Plain-text English and Turkish Website Terms of Use
@@ -76,3 +75,5 @@ Cloudflare Pages creates preview deployments for non-production branches and pul
 - MonoAI is excluded from the edition table; MonoTI is shown without a separate subscription label.
 - Do not claim that every technical processing step for website leads is confined to Türkiye unless provider locations have been verified.
 - Do not merge legal or form changes to `main` without explicit approval after reviewing the preview deployment.
+
+<!-- Cloudflare preview redeploy trigger: 2026-07-27 -->
