@@ -4,7 +4,7 @@ const JSON_HEADERS = {
   "X-Content-Type-Options": "nosniff",
 };
 
-const LEAD_TO_EMAIL = "info@veksacore.com";
+const LEAD_TO_EMAIL = "monaderi@hotmail.com";
 const MAX_REQUEST_BYTES = 16_384;
 const EVALUATION_INTERESTS = {
   "asset-discovery-visibility": "Asset Discovery & Visibility",
