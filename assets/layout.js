@@ -17,6 +17,15 @@
   }
   translationMeta.content = 'notranslate';
 
+  let contentPolishStyles = document.querySelector('link[data-content-polish]');
+  if (!contentPolishStyles) {
+    contentPolishStyles = document.createElement('link');
+    contentPolishStyles.rel = 'stylesheet';
+    contentPolishStyles.href = '../assets/content-polish.css';
+    contentPolishStyles.dataset.contentPolish = 'true';
+    document.head.appendChild(contentPolishStyles);
+  }
+
   const layoutFixes = document.createElement('style');
   layoutFixes.textContent = '.wrap.cta{margin-left:auto;margin-right:auto}';
   document.head.appendChild(layoutFixes);
