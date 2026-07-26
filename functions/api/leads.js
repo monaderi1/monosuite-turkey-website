@@ -4,8 +4,16 @@ const JSON_HEADERS = {
   "X-Content-Type-Options": "nosniff",
 };
 
-const DEFAULT_LEAD_TO_EMAIL = "monaderi@hotmail.com";
+const LEAD_TO_EMAIL = "info@veksacore.com";
 const MAX_REQUEST_BYTES = 16_384;
+const EVALUATION_INTERESTS = {
+  "asset-discovery-visibility": "Asset Discovery & Visibility",
+  "cyber-asset-intelligence": "Cyber Asset Intelligence",
+  "risk-exposure": "Risk & Exposure",
+  "compliance-assessment": "Compliance Assessment",
+  "splunk-integration": "Splunk Integration",
+  "other": "Other",
+};
 
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: JSON_HEADERS });
@@ -36,7 +44,9 @@ function escapeHtml(value) {
 async function hashIp(ip) {
   const bytes = new TextEncoder().encode(ip);
   const digest = await crypto.subtle.digest("SHA-256", bytes);
-  return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, "0")).join("");
+  return [...new Uint8Array(digest)]
+    .map(byte => byte.toString(16).padStart(2, "0"))
+    .join("");
 }
 
 async function enforceRateLimit(env, request) {
@@ -93,35 +103,42 @@ async function sendLeadEmail(env, lead) {
     throw new Error("Lead email delivery is not configured.");
   }
 
-  const recipient = env.LEAD_TO_EMAIL || DEFAULT_LEAD_TO_EMAIL;
-  const subject = `[Cyobik website lead] ${lead.company} — ${lead.fullName}`;
+  const subject = `[Cyobik demo request] ${lead.company} — ${lead.fullName}`;
   const lines = [
     `Name: ${lead.fullName}`,
     `Work email: ${lead.workEmail}`,
     `Company: ${lead.company}`,
-    `Job title: ${lead.jobTitle}`,
     `Country: ${lead.country}`,
+    `Evaluation interest: ${lead.evaluationInterestLabel}`,
+    `Job title: ${lead.jobTitle || "Not provided"}`,
     `Phone: ${lead.phone || "Not provided"}`,
+    `Marketing consent: ${lead.marketingConsent ? "Yes" : "No"}`,
+    `Privacy notice version: ${lead.privacyNoticeVersion}`,
+    `Locale: ${lead.locale}`,
     `Source: ${lead.source}`,
     `Submitted at: ${lead.submittedAt}`,
     "",
-    "Evaluation request:",
+    "Additional details:",
     lead.message || "Not provided",
   ];
 
   const html = `
-    <h2>New Cyobik website lead</h2>
+    <h2>New Cyobik demo request</h2>
     <table cellpadding="7" cellspacing="0" border="0">
       <tr><td><strong>Name</strong></td><td>${escapeHtml(lead.fullName)}</td></tr>
       <tr><td><strong>Work email</strong></td><td>${escapeHtml(lead.workEmail)}</td></tr>
       <tr><td><strong>Company</strong></td><td>${escapeHtml(lead.company)}</td></tr>
-      <tr><td><strong>Job title</strong></td><td>${escapeHtml(lead.jobTitle)}</td></tr>
       <tr><td><strong>Country</strong></td><td>${escapeHtml(lead.country)}</td></tr>
+      <tr><td><strong>Evaluation interest</strong></td><td>${escapeHtml(lead.evaluationInterestLabel)}</td></tr>
+      <tr><td><strong>Job title</strong></td><td>${escapeHtml(lead.jobTitle || "Not provided")}</td></tr>
       <tr><td><strong>Phone</strong></td><td>${escapeHtml(lead.phone || "Not provided")}</td></tr>
+      <tr><td><strong>Marketing consent</strong></td><td>${lead.marketingConsent ? "Yes" : "No"}</td></tr>
+      <tr><td><strong>Privacy notice version</strong></td><td>${escapeHtml(lead.privacyNoticeVersion)}</td></tr>
+      <tr><td><strong>Locale</strong></td><td>${escapeHtml(lead.locale)}</td></tr>
       <tr><td><strong>Source</strong></td><td>${escapeHtml(lead.source)}</td></tr>
       <tr><td><strong>Submitted at</strong></td><td>${escapeHtml(lead.submittedAt)}</td></tr>
     </table>
-    <h3>Evaluation request</h3>
+    <h3>Additional details</h3>
     <p>${escapeHtml(lead.message || "Not provided").replace(/\n/g, "<br>")}</p>
   `;
 
@@ -134,7 +151,7 @@ async function sendLeadEmail(env, lead) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        to: recipient,
+        to: LEAD_TO_EMAIL,
         from: env.LEAD_FROM_EMAIL,
         reply_to: lead.workEmail,
         subject,
@@ -201,16 +218,23 @@ export async function onRequestPost({ request, env }) {
       return json({ success: true }, 202);
     }
 
+    const evaluationInterest = clean(body.evaluationInterest, 80);
+    const locale = clean(body.locale, 10).toLowerCase();
+
     const lead = {
       fullName: clean(body.fullName, 120),
       workEmail: clean(body.workEmail, 180).toLowerCase(),
       company: clean(body.company, 160),
-      jobTitle: clean(body.jobTitle, 120),
       country: clean(body.country, 80),
+      evaluationInterest,
+      evaluationInterestLabel: EVALUATION_INTERESTS[evaluationInterest] || "",
+      jobTitle: clean(body.jobTitle, 120),
       phone: clean(body.phone, 40),
       message: cleanMultiline(body.message, 1200),
       source: clean(body.source, 80) || "website-demo-form",
-      consent: body.consent === true,
+      locale: locale === "tr" ? "tr" : "en",
+      privacyNoticeVersion: clean(body.privacyNoticeVersion, 80),
+      marketingConsent: body.marketingConsent === true,
       submittedAt: new Date().toISOString(),
     };
 
@@ -218,9 +242,9 @@ export async function onRequestPost({ request, env }) {
       !lead.fullName ||
       !lead.workEmail ||
       !lead.company ||
-      !lead.jobTitle ||
       !lead.country ||
-      !lead.consent
+      !lead.evaluationInterestLabel ||
+      !lead.privacyNoticeVersion
     ) {
       return json({ error: "Please complete all required fields." }, 400);
     }
