@@ -75,3 +75,5 @@ Cloudflare Pages creates preview deployments for non-production branches and pul
 - MonoAI is excluded from the edition table; MonoTI is shown without a separate subscription label.
 - Do not claim that every technical processing step for website leads is confined to Türkiye unless provider locations have been verified.
 - Do not merge legal or form changes to `main` without explicit approval after reviewing the preview deployment.
+
+<!-- Cloudflare preview redeploy trigger: 2026-07-27 -->
