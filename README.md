@@ -5,12 +5,14 @@ Bilingual English/Turkish marketing website for Cyobik's Turkey market entry.
 ## Current implementation
 
 - Static HTML website with Cloudflare Pages Functions
-- Selected visual direction: Theme 3 / Intelligence Graph
 - Full English and Turkish page sets under `/en/` and `/tr/`
 - Shared responsive design system with light and dark themes
 - Product claims aligned to the maintained MonoSuite/Cyobik product-truth documentation
 - Website copy is sourced from the approved Cyobik Website Final Content Pack in Confluence
-- Demo form interface is intentionally disabled until the EN/TR privacy notices and Turkish data-controller details complete legal review
+- Active bilingual demo-request form delivered to `info@veksacore.com`
+- Demo leads are handled through email only; no CRM is currently used
+- Separate optional marketing consent, with privacy-notice version and locale recorded in each submission
+- English Website and Demo Request Privacy Notice and Turkish KVKK Aydınlatma Metni
 
 ## Information architecture
 
@@ -25,10 +27,28 @@ English routes:
 - `/en/deployment.html` — VMware OVF, on-premises, air-gapped operation, updates and backup boundaries
 - `/en/editions.html` — Standard and Security editions with annual licensing
 - `/en/security-trust.html` — verified technical and operating boundaries
-- `/en/company.html` — company approach and positioning
-- `/en/request-demo.html` — privacy-gated demo-request interface
+- `/en/company.html` — company approach and Veksacore legal details
+- `/en/request-demo.html` — active demo-request form
+- `/en/privacy.html` — website and demo-request privacy notice
 
-Equivalent Turkish routes are maintained under `/tr/`.
+Equivalent Turkish routes are maintained under `/tr/`, including `/tr/kvkk-aydinlatma-metni.html`.
+
+## Demo lead form
+
+The browser submits form data to `/api/leads`. The Cloudflare Pages Function validates the request, optionally validates Turnstile, applies the configured rate-limit mechanism and sends the lead to `info@veksacore.com`.
+
+Required Cloudflare variables/secrets:
+
+- `CF_ACCOUNT_ID`
+- `CF_EMAIL_API_TOKEN`
+- `LEAD_FROM_EMAIL`
+
+Optional protection settings:
+
+- `TURNSTILE_SITE_KEY`
+- `TURNSTILE_SECRET_KEY`
+- `REQUIRE_TURNSTILE=true`
+- `LEAD_RATE_LIMIT` KV binding
 
 ## Deployment target
 
@@ -52,3 +72,4 @@ Cloudflare Pages creates preview deployments for non-production branches and pul
 - Use `more than 1,500 CIS Benchmark recommendations` publicly; do not call them CIS Controls.
 - Public pricing is not displayed. Cyobik is offered through annual licensing and Contact Sales.
 - MonoAI is excluded from the edition table; MonoTI is shown without a separate subscription label.
+- Do not claim that every technical processing step for website leads is confined to Türkiye unless provider locations have been verified.
