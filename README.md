@@ -23,10 +23,9 @@ English routes:
 - `/en/asset-intelligence.html` — discovery, onboarding, inventory, changes, networks, relationships and Business Services
 - `/en/security-exposure.html` — vulnerability, internal attack surface, protection, compliance and MITRE ATT&CK
 - `/en/risk-prioritisation.html` — score direction, risk model, business context and prioritisation
-- `/en/integrations.html` — Splunk, Nessus, Jira and comprehensive REST API
+- `/en/integrations.html` — Splunk, Nessus, ITSM/ticketing and comprehensive REST API
 - `/en/deployment.html` — VMware OVF, on-premises, air-gapped operation, updates and backup boundaries
 - `/en/editions.html` — Standard and Security editions with annual licensing
-- `/en/security-trust.html` — verified technical and operating boundaries
 - `/en/company.html` — company approach and Veksacore legal details
 - `/en/request-demo.html` — active demo-request form
 - `/en/privacy.html` — website and demo-request privacy notice
