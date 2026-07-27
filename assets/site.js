@@ -143,6 +143,47 @@ if (leadForm) {
   });
 }
 
+if (pageBody.dataset.page === 'home') {
+  const scoreSection = [...document.querySelectorAll('main > .section')].find((section) =>
+    section.querySelector('.metric') && section.querySelector('.section-head h2')
+  );
+
+  if (scoreSection) {
+    const sectionHead = scoreSection.querySelector('.section-head');
+    const metrics = [...scoreSection.querySelectorAll('.metric')];
+    const illustrativeNote = scoreSection.querySelector('.small');
+
+    const scoreIntro = isTurkish
+      ? 'Cyobik, dağınık teknik bulguları üç anlaşılır göstergeye dönüştürür. Görünürlük Skoru ne kadarını bildiğinizi, Koruma Skoru hangi güvenlik ve kontrol kanıtlarının mevcut olduğunu, Risk Skoru ise mevcut bağlamın iş etkisi ve olasılıkla birlikte ne ifade ettiğini gösterir. Her skor, sonucu oluşturan varlık, bulgu ve kanıta kadar incelenebilir.'
+      : 'Cyobik turns fragmented technical findings into three clear operating signals. Visibility shows how much of the environment is known, Protection shows which security and control evidence is present, and Risk shows what the maintained context means when business impact and likelihood are considered together. Every score can be traced back to the assets, findings and evidence that produced it.';
+
+    if (sectionHead && !sectionHead.querySelector('[data-score-intro]')) {
+      const intro = document.createElement('p');
+      intro.className = 'lead2';
+      intro.dataset.scoreIntro = 'true';
+      intro.textContent = scoreIntro;
+      sectionHead.appendChild(intro);
+    }
+
+    const scoreDescriptions = isTurkish ? [
+      'Varlık bilgisinin ne kadar eksiksiz, güncel ve karar vermeye uygun olduğunu gösterir. Eksik envanter, sahiplik, yazılım, servis, ağ veya ilişki bilgileri skorun altında doğrudan görülebilir.',
+      'Varlıklar için hangi güvenlik, zafiyet, maruziyet ve kontrol kanıtlarının mevcut olduğunu gösterir. Amaç yalnızca araç varlığını değil, koruma durumunu destekleyen doğrulanabilir kanıtı görünür kılmaktır.',
+      'Etki, olasılık, maruziyet, koruma boşlukları ve iş bağlamını birlikte değerlendirerek varlık ve kurum düzeyindeki riski gösterir. Daha düşük skor, daha düşük değerlendirilmiş risk anlamına gelir.'
+    ] : [
+      'Shows how complete, current and decision-ready the asset knowledge is. Missing inventory, ownership, software, service, network or relationship information can be reviewed directly beneath the score.',
+      'Shows which security, vulnerability, exposure and control evidence is available for the assets. The focus is not simply whether a tool exists, but whether verifiable evidence supports the current protection posture.',
+      'Combines impact, likelihood, exposure, protection gaps and business context to express risk at asset and organisational level. A lower score represents a lower assessed level of risk.'
+    ];
+
+    metrics.forEach((metric, index) => {
+      const paragraph = metric.querySelector('p');
+      if (paragraph && scoreDescriptions[index]) paragraph.textContent = scoreDescriptions[index];
+    });
+
+    illustrativeNote?.remove();
+  }
+}
+
 const flow = document.querySelector('.flow');
 if (flow && pageBody.dataset.page === 'home') {
   const flowSteps = isTurkish ? [
