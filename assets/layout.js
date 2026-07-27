@@ -58,7 +58,6 @@
     integrations: ['integrations.html', 'entegrasyonlar.html'],
     deployment: ['deployment.html', 'dagitim.html'],
     editions: ['editions.html', 'surumler.html'],
-    trust: ['security-trust.html', 'guvenlik-ve-guven.html'],
     company: ['company.html', 'sirket.html'],
     demo: ['request-demo.html', 'demo-talep-edin.html'],
     privacy: ['privacy.html', 'kvkk-aydinlatma-metni.html'],
@@ -85,14 +84,6 @@
     ['integrations', 'Integrations']
   ];
 
-  const companyItems = isTr ? [
-    ['company', 'Cyobik Hakkında'],
-    ['trust', 'Güvenlik ve Güvenilirlik']
-  ] : [
-    ['company', 'About Cyobik'],
-    ['trust', 'Security & Trust']
-  ];
-
   const renderLink = ([key, label]) => `<a href="${pages[key][idx]}"${key === page ? ' aria-current="page"' : ''}>${label}</a>`;
   const renderDropdown = (id, label, items) => {
     const active = items.some(([key]) => key === page);
@@ -103,7 +94,7 @@
     renderDropdown('platformMenu', 'Platform', platformItems),
     renderLink(['deployment', isTr ? 'Dağıtım' : 'Deployment']),
     renderLink(['editions', isTr ? 'Sürümler' : 'Editions']),
-    renderDropdown('companyMenu', isTr ? 'Hakkımızda' : 'Company', companyItems)
+    renderLink(['company', isTr ? 'Hakkımızda' : 'Company'])
   ].join('');
 
   const header = document.querySelector('[data-site-header]');
@@ -152,6 +143,6 @@
 
   const footer = document.querySelector('[data-site-footer]');
   if (footer) {
-    footer.innerHTML = `<footer><div class="wrap"><div class="footer-grid"><div><a class="brand" href="index.html"><span class="mark">◇</span>Cyobik</a><p class="small" style="margin-top:12px;max-width:430px">${isTr ? 'Kurumsal CAASM ve kanıta dayalı siber varlık istihbaratı.' : 'Enterprise CAASM and evidence-driven cyber asset intelligence.'}</p><p class="small" style="margin-top:14px;max-width:520px">${isTr ? 'Cyobik, Veksacore Bilişim ve Siber Güvenlik Teknolojileri Ltd. Şti. tarafından işletilmektedir.' : 'Cyobik is operated by Veksacore Bilişim ve Siber Güvenlik Teknolojileri Ltd. Şti.'}</p><a class="small" style="display:inline-block;margin-top:6px" href="mailto:info@veksacore.com">info@veksacore.com</a></div><div><h4>Platform</h4><a href="${pages.asset[idx]}">${isTr ? 'Varlık İstihbaratı' : 'Asset Intelligence'}</a><a href="${pages.security[idx]}">${isTr ? 'Güvenlik ve Maruziyet' : 'Security & Exposure'}</a><a href="${pages.risk[idx]}">${isTr ? 'Risk Önceliklendirme' : 'Risk Prioritisation'}</a><a href="${pages.integrations[idx]}">${isTr ? 'Entegrasyonlar' : 'Integrations'}</a></div><div><h4>${isTr ? 'Kurumsal' : 'Company'}</h4><a href="${pages.deployment[idx]}">${isTr ? 'Dağıtım' : 'Deployment'}</a><a href="${pages.editions[idx]}">${isTr ? 'Sürümler ve Lisanslama' : 'Editions & Licensing'}</a><a href="${pages.trust[idx]}">${isTr ? 'Güvenlik ve Güvenilirlik' : 'Security & Trust'}</a><a href="${pages.company[idx]}">${isTr ? 'Cyobik Hakkında' : 'About Cyobik'}</a><a href="${pages.demo[idx]}">${isTr ? 'Demo Talep Edin' : 'Request a demo'}</a><a href="${pages.privacy[idx]}">${isTr ? 'KVKK Aydınlatma Metni' : 'Privacy Notice'}</a><a href="${pages.terms[idx]}">${isTr ? 'Kullanım Koşulları' : 'Terms of Use'}</a></div></div><div class="legal"><span>© <span data-year></span> Cyobik.</span><span>${isTr ? 'Müşteri denetimindeki kurumsal ortamlar için.' : 'Built for customer-controlled enterprise environments.'}</span></div></div></footer>`;
+    footer.innerHTML = `<footer><div class="wrap"><div class="footer-grid"><div><a class="brand" href="index.html"><span class="mark">◇</span>Cyobik</a><p class="small" style="margin-top:12px;max-width:430px">${isTr ? 'Kurumsal CAASM ve kanıta dayalı siber varlık istihbaratı.' : 'Enterprise CAASM and evidence-driven cyber asset intelligence.'}</p><p class="small" style="margin-top:14px;max-width:520px">${isTr ? 'Cyobik, Veksacore Bilişim ve Siber Güvenlik Teknolojileri Ltd. Şti. tarafından işletilmektedir.' : 'Cyobik is operated by Veksacore Bilişim ve Siber Güvenlik Teknolojileri Ltd. Şti.'}</p><a class="small" style="display:inline-block;margin-top:6px" href="mailto:info@veksacore.com">info@veksacore.com</a></div><div><h4>Platform</h4><a href="${pages.asset[idx]}">${isTr ? 'Varlık İstihbaratı' : 'Asset Intelligence'}</a><a href="${pages.security[idx]}">${isTr ? 'Güvenlik ve Maruziyet' : 'Security & Exposure'}</a><a href="${pages.risk[idx]}">${isTr ? 'Risk Önceliklendirme' : 'Risk Prioritisation'}</a><a href="${pages.integrations[idx]}">${isTr ? 'Entegrasyonlar' : 'Integrations'}</a></div><div><h4>${isTr ? 'Kurumsal' : 'Company'}</h4><a href="${pages.deployment[idx]}">${isTr ? 'Dağıtım' : 'Deployment'}</a><a href="${pages.editions[idx]}">${isTr ? 'Sürümler ve Lisanslama' : 'Editions & Licensing'}</a><a href="${pages.company[idx]}">${isTr ? 'Cyobik Hakkında' : 'About Cyobik'}</a><a href="${pages.demo[idx]}">${isTr ? 'Demo Talep Edin' : 'Request a demo'}</a><a href="${pages.privacy[idx]}">${isTr ? 'KVKK Aydınlatma Metni' : 'Privacy Notice'}</a><a href="${pages.terms[idx]}">${isTr ? 'Kullanım Koşulları' : 'Terms of Use'}</a></div></div><div class="legal"><span>© <span data-year></span> Cyobik.</span><span>${isTr ? 'Müşteri denetimindeki kurumsal ortamlar için.' : 'Built for customer-controlled enterprise environments.'}</span></div></div></footer>`;
   }
 })();
