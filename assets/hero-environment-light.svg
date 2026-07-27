@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cyobik environment intelligence overview</title>
+  <desc id="desc">Asset inventory, relationships, protection evidence and risk signals are connected inside the customer environment to produce an evidence-backed priority queue.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#20304f" flood-opacity=".09"/></filter>
+    <filter id="focus" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#2f62e8" flood-opacity=".22"/></filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#5f78a5" stroke-opacity=".075" stroke-width="1"/></pattern>
+    <style>
+      .t{font-family:Inter,Arial,sans-serif;fill:#111827}.muted{fill:#68748a}.label{font-size:15px;font-weight:700}.small{font-size:12px}.tiny{font-size:11px}.headline{font-size:19px;font-weight:800}.section{font-size:17px;font-weight:800;letter-spacing:.15em}.queue-name{font-size:13.5px;font-weight:700}.queue-severity{font-size:11px;font-weight:700}.card{fill:#fff;stroke:#dbe2ec;stroke-width:1.4;filter:url(#shadow)}.blue{stroke:#2f62e8}.green{stroke:#168348}.orange{stroke:#ef6c00}.red{fill:#c92738}.amber{fill:#d99000}.blueText{fill:#1858d8}.greenText{fill:#168348}.orangeText{fill:#ef6c00}.line{fill:none;stroke-width:2}.dot{fill:#fff;stroke-width:2.4}
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="transparent"/>
+  <rect x="24" y="35" width="1152" height="700" rx="30" fill="#fff" stroke="#168348" stroke-width="2"/>
+  <rect x="24" y="35" width="1152" height="700" rx="30" fill="url(#grid)"/>
+  <rect x="450" y="52" width="300" height="50" rx="25" fill="#fff" stroke="#b9dfc8" stroke-width="1.5" filter="url(#shadow)"/>
+  <g transform="translate(475 57)" stroke="#168348" fill="none" stroke-width="2.4"><rect x="0" y="10" width="30" height="28" rx="6"/><path d="M7 10V4a8 8 0 0 1 16 0v6"/><circle cx="15" cy="24" r="2.5" fill="#168348"/></g>
+  <text x="640" y="84" class="t section greenText" text-anchor="middle">YOUR ENVIRONMENT</text>
+
+  <circle cx="595" cy="355" r="215" fill="none" stroke="#2f62e8" stroke-opacity=".23" stroke-dasharray="5 7"/>
+  <circle cx="595" cy="355" r="135" fill="none" stroke="#2f62e8" stroke-opacity=".18" stroke-dasharray="4 6"/>
+
+  <path d="M250 205H285Q315 205 315 235V355" class="line blue"/>
+  <path d="M250 305H285Q315 305 315 335V355" class="line blue"/>
+  <path d="M250 405H285Q315 405 315 375V355" class="line blue"/>
+  <path d="M250 505H285Q315 505 315 395V355" class="line blue"/>
+  <line x1="315" y1="355" x2="475" y2="355" class="line blue"/>
+  <circle cx="315" cy="355" r="7" fill="#2f62e8"/>
+
+  <g filter="url(#shadow)"><rect class="card" x="50" y="170" width="200" height="70" rx="14"/><rect class="card" x="50" y="270" width="200" height="70" rx="14"/><rect class="card" x="50" y="370" width="200" height="70" rx="14"/><rect class="card" x="50" y="470" width="200" height="70" rx="14"/></g>
+  <g fill="none" stroke-width="2.2"><ellipse cx="85" cy="190" rx="13" ry="5" stroke="#168348"/><path d="M72 190v23c0 3 6 5 13 5s13-2 13-5v-23M72 201c0 3 6 5 13 5s13-2 13-5" stroke="#168348"/><circle cx="82" cy="303" r="5" stroke="#2f62e8"/><circle cx="100" cy="291" r="5" stroke="#2f62e8"/><circle cx="101" cy="316" r="5" stroke="#2f62e8"/><path d="M86 300l10-7m-10 13l10 8m5-18v15" stroke="#2f62e8"/><path d="M75 390l12-6 12 6v12c0 9-7 15-12 18-5-3-12-9-12-18z" stroke="#168348"/><path d="M81 401l5 5 9-11" stroke="#168348"/><path d="M76 507c8-8 8-16 0-24m9 29c12-12 12-24 0-36m10 41c16-16 16-32 0-48" stroke="#ef6c00"/></g>
+  <text x="115" y="210" class="t label">Asset inventory</text>
+  <text x="115" y="306" class="t label"><tspan x="115">Relationship</tspan><tspan x="115" dy="19">mapping</tspan></text>
+  <text x="115" y="406" class="t label"><tspan x="115">Protection</tspan><tspan x="115" dy="19">status</tspan></text>
+  <text x="115" y="510" class="t label">Risk signals</text>
+
+  <line x1="595" y1="195" x2="595" y2="300" class="line blue"/><line x1="485" y1="252" x2="520" y2="315" class="line blue"/><line x1="470" y1="520" x2="520" y2="415" class="line blue"/><line x1="610" y1="420" x2="610" y2="570" class="line green"/><line x1="690" y1="410" x2="800" y2="555" class="line orange" stroke-dasharray="6 7"/><line x1="730" y1="355" x2="900" y2="355" class="line blue" stroke-dasharray="6 6"/>
+  <g class="dot"><circle cx="595" cy="195" r="6" class="blue"/><circle cx="485" cy="252" r="6" class="blue"/><circle cx="470" cy="520" r="6" class="blue"/><circle cx="610" cy="570" r="6" class="green"/><circle cx="800" cy="555" r="6" class="orange"/><circle cx="900" cy="355" r="6" class="blue"/></g>
+
+  <rect x="500" y="115" width="190" height="80" rx="14" class="card"/><g fill="none" stroke="#2f62e8" stroke-width="2"><path d="M527 168v-30h28v30M535 138v-15h16v15M522 168h38M535 147h4m6 0h4m-14 9h4m6 0h4"/></g><text x="570" y="147" class="t label">Finance Service</text><text x="570" y="171" class="t small muted">Business context</text>
+  <rect x="330" y="205" width="205" height="90" rx="14" class="card"/><g fill="none" stroke="#2f62e8" stroke-width="2"><circle cx="360" cy="240" r="16"/><path d="M344 240h32M360 224c-6 7-6 25 0 32M360 224c6 7 6 25 0 32"/></g><text x="390" y="236" class="t label">VPN Gateway</text><text x="390" y="258" class="t small muted">Observed relationship</text>
+  <rect x="335" y="500" width="180" height="78" rx="14" class="card"/><g fill="none" stroke="#2f62e8" stroke-width="2"><circle cx="365" cy="526" r="8"/><path d="M352 558v-9c0-8 6-13 13-13s13 5 13 13v9"/></g><text x="395" y="530" class="t label">Owner</text><text x="395" y="553" class="t small muted">IT Operations</text>
+  <rect x="475" y="300" width="255" height="120" rx="18" fill="#fff" stroke="#2f62e8" stroke-width="2.4" filter="url(#focus)"/><g fill="none" stroke="#2f62e8" stroke-width="2"><rect x="503" y="330" width="35" height="19" rx="3"/><rect x="503" y="352" width="35" height="19" rx="3"/><rect x="503" y="374" width="35" height="19" rx="3"/><circle cx="511" cy="339" r="1.5" fill="#2f62e8"/><circle cx="511" cy="361" r="1.5" fill="#2f62e8"/><circle cx="511" cy="383" r="1.5" fill="#2f62e8"/></g><text x="555" y="348" class="t headline">SRV-DC-04</text><text x="555" y="378" class="t label muted" font-weight="500">Identity infrastructure</text>
+  <rect x="515" y="585" width="210" height="94" rx="14" fill="#fff" stroke="#b9dfc8" stroke-width="1.4" filter="url(#shadow)"/><path d="M540 615l11-6 11 6v11c0 9-7 15-11 17-5-3-11-8-11-17z" fill="none" stroke="#168348" stroke-width="2"/><path d="M546 625l4 4 7-8" fill="none" stroke="#168348" stroke-width="2"/><text x="575" y="615" class="t label">Protection evidence</text><text x="575" y="641" class="t small muted">EDR installed</text><text x="575" y="661" class="t small muted">Disk encryption</text>
+  <rect x="745" y="535" width="205" height="106" rx="14" fill="#fff" stroke="#f3c994" stroke-width="1.4" filter="url(#shadow)"/><path d="M770 580l13-24 13 24z" fill="none" stroke="#ef6c00" stroke-width="2"/><line x1="783" y1="565" x2="783" y2="573" stroke="#ef6c00" stroke-width="2"/><circle cx="783" cy="577" r="1.4" fill="#ef6c00"/><text x="810" y="570" class="t label">Missing control</text><text x="810" y="596" class="t small muted">MFA not enforced</text><text x="810" y="616" class="t small muted">Legacy protocol</text>
+
+  <rect x="900" y="160" width="265" height="430" rx="18" class="card"/><text x="925" y="205" class="t headline">Priority queue</text><text x="925" y="231" class="t small muted">Ranked inside your environment</text><line x1="920" y1="252" x2="1145" y2="252" stroke="#dbe2ec"/>
+  <text x="925" y="305" class="t headline red">01</text><text x="975" y="292" class="t queue-name">Identity Server</text><text x="975" y="315" class="t small muted">SRV-DC-04</text><text x="1138" y="291" class="t queue-severity red" text-anchor="end">Critical</text><text x="1138" y="319" class="t headline red" text-anchor="end">9.6</text><line x1="920" y1="340" x2="1145" y2="340" stroke="#dbe2ec"/>
+  <text x="925" y="393" class="t headline orangeText">02</text><text x="975" y="380" class="t queue-name">VPN Gateway</text><text x="975" y="403" class="t small muted">VPN-GW-01</text><text x="1138" y="379" class="t queue-severity orangeText" text-anchor="end">High</text><text x="1138" y="407" class="t headline orangeText" text-anchor="end">7.2</text><line x1="920" y1="428" x2="1145" y2="428" stroke="#dbe2ec"/>
+  <text x="925" y="481" class="t headline amber">03</text><text x="975" y="468" class="t queue-name">Finance Server</text><text x="975" y="491" class="t small muted">FIN-SRV-02</text><text x="1138" y="467" class="t queue-severity amber" text-anchor="end">Medium</text><text x="1138" y="495" class="t headline amber" text-anchor="end">4.8</text><line x1="920" y1="516" x2="1145" y2="516" stroke="#dbe2ec"/><text x="1032" y="556" class="t label blueText" text-anchor="middle">View all priorities  →</text>
+
+  <rect x="450" y="710" width="330" height="50" rx="25" fill="#fff" stroke="#b9dfc8" stroke-width="1.5"/><path d="M480 724l10-5 10 5v10c0 8-6 13-10 15-4-2-10-7-10-15z" fill="#168348"/><path d="M487 734v-4a3 3 0 0 1 6 0v4m-7 0h8v7h-8z" fill="#fff"/><text x="515" y="742" class="t label greenText">Evidence and data remain inside</text>
+  <path d="M220 735v55q0 35 35 35h280q65 0 65 40M980 735v55q0 35-35 35H665q-65 0-65 40" fill="none" stroke="#99a4b6" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="5 7"/>
+  <circle cx="600" cy="804" r="9" fill="#99a4b6"/><path d="M596 800l8 8m0-8l-8 8" stroke="#fff" stroke-width="2"/>
+  <g transform="translate(555 820)" fill="none" stroke="#99a4b6" stroke-width="2"><path d="M20 45h50a20 20 0 0 0 3-40A29 29 0 0 0 20 15 16 16 0 0 0 20 45z"/><circle cx="47" cy="28" r="11"/><path d="M36 28h22M47 17c-4 5-4 17 0 22M47 17c4 5 4 17 0 22"/></g><text x="600" y="892" class="t tiny muted" text-anchor="middle" letter-spacing="2">INTERNET / EXTERNAL</text>
+</svg>
