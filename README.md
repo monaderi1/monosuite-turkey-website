@@ -33,6 +33,12 @@ English routes:
 
 Equivalent Turkish routes are maintained under `/tr/`, including `/tr/kvkk-aydinlatma-metni.html` and `/tr/kullanim-kosullari.html`.
 
+## Brand-name rule
+
+- The product and brand name must always be written exactly as `Cyobik` in every language.
+- Do not translate, transliterate or localise the spelling.
+- In Turkish copy, rewrite sentences so Turkish grammatical suffixes are not attached to the brand name.
+
 ## Demo lead form
 
 The browser submits form data to `/api/leads`. The Cloudflare Pages Function validates the request, optionally validates Turnstile, applies the configured rate-limit mechanism and sends the lead to the existing `monaderi@hotmail.com` mailbox.
