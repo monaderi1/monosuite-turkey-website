@@ -6,6 +6,10 @@ const menuButton = document.getElementById('menuBtn');
 const navigation = document.getElementById('navLinks');
 const savedTheme = localStorage.getItem('cyobik-theme');
 
+document.querySelectorAll('a[href="security-trust.html"], a[href="guvenlik-ve-guven.html"]').forEach((link) => {
+  link.remove();
+});
+
 if (savedTheme) root.dataset.theme = savedTheme;
 if (themeButton) {
   themeButton.addEventListener('click', () => {
