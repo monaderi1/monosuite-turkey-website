@@ -38,7 +38,7 @@
     .dropdown-menu a{display:block;padding:10px 12px!important;border:0!important;border-radius:9px;white-space:nowrap}
     .dropdown-menu a:hover,.dropdown-menu a[aria-current="page"]{background:var(--surface-2);color:var(--ink)}
     .nav-dropdown.open .dropdown-menu{display:grid}
-    @media(min-width:821px){.nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{display:grid}}
+    @media(min-width:821px){.nav-dropdown:hover .dropdown-menu{display:grid}}
     @media(max-width:820px){
       .nav-dropdown{width:100%}
       .nav-dropdown-trigger{width:100%;justify-content:space-between;padding:7px 0;border:0}
