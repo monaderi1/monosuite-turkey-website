@@ -77,7 +77,7 @@ Cloudflare Pages creates preview deployments for non-production branches and pul
 - Do not name certifications, assessors or external validations without approved publishable evidence.
 - Use `more than 1,500 CIS Benchmark recommendations` publicly; do not call them CIS Controls.
 - Public pricing is not displayed. Cyobik is offered through annual licensing and Contact Sales.
-- MonoAI is excluded from the edition table; MonoTI is shown without a separate subscription label.
+- MonoAI is excluded from the edition table; CyoTI is shown without a separate subscription label.
 - Do not claim that every technical processing step for website leads is confined to Türkiye unless provider locations have been verified.
 - Do not merge legal or form changes to `main` without explicit approval after reviewing the preview deployment.
 

@@ -168,7 +168,7 @@ if (pageBody.dataset.page === 'home') {
     const scoreDescriptions = isTurkish ? [
       'Varlık bilgisinin ne kadar eksiksiz, güncel ve karar vermeye uygun olduğunu gösterir. Eksik envanter, sahiplik, yazılım, servis, ağ veya ilişki bilgileri skorun altında doğrudan görülebilir.',
       'Varlıklar için hangi güvenlik, zafiyet, maruziyet ve kontrol kanıtlarının mevcut olduğunu gösterir. Amaç yalnızca araç varlığını değil, koruma durumunu destekleyen doğrulanabilir kanıtı görünür kılmaktır.',
-      'Etki, olasılık, maruziyet, koruma boşlukları ve iş bağlamını birlikte değerlendirerek varlık ve kurum düzeyindeki riski gösterir. Daha düşük skor, daha düşük değerlendirilmiş risk anlamına gelir.'
+      'Varlıkların iş süreçlerine etkisini, güvenlik açıklarını, mevcut koruma eksiklerini ve gerçekleşme olasılığını birlikte değerlendirerek hem varlık hem de kurum genelindeki risk seviyesini ortaya koyar. Skor düştükçe değerlendirilen risk seviyesi de azalır.'
     ] : [
       'Shows how complete, current and decision-ready the asset knowledge is. Missing inventory, ownership, software, service, network or relationship information can be reviewed directly beneath the score.',
       'Shows which security, vulnerability, exposure and control evidence is available for the assets. The focus is not simply whether a tool exists, but whether verifiable evidence supports the current protection posture.',
@@ -187,11 +187,11 @@ if (pageBody.dataset.page === 'home') {
 const flow = document.querySelector('.flow');
 if (flow && pageBody.dataset.page === 'home') {
   const flowSteps = isTurkish ? [
-    { title: 'Keşfet', heading: 'Ortamınızdaki varlıkları görün', summary: 'Altyapı keşfi, Cyobik Agent envanteri, doğrulamalı içe aktarma ve manuel oluşturma ile varlık görünümünü oluşturun.', outcome: 'Çıktı: Yönetilen ve doğrulanabilir bir varlık başlangıç noktası.' },
+    { title: 'Keşfet', heading: 'Ortamınızdaki varlıkları görün', summary: 'Altyapı keşfi, Cyobik Agent ile envanter oluşturma, doğrulanmış veri aktarımı ve manuel varlık ekleme yöntemleriyle ortamınızdaki varlıkları belirleyin.', outcome: 'Çıktı: Yönetilen ve doğrulanabilir bir varlık başlangıç noktası.' },
     { title: 'Bağlamlandır', heading: 'Her varlığa anlam kazandırın', summary: 'Profilleri, yazılımları, servisleri, sahipliği, yaşam döngüsünü, ağları, ilişkileri ve İş Servislerini birleştirin.', outcome: 'Çıktı: Teknik kayıtların iş ve operasyon bağlamıyla zenginleştirilmesi.' },
-    { title: 'Görünür Kıl', heading: 'Güvenlik koşullarını ortaya çıkarın', summary: 'Zafiyetleri, iç saldırı yüzeyi koşullarını, koruma kanıtlarını ve kontrol boşluklarını ilgili varlıklarla ilişkilendirin.', outcome: 'Çıktı: Bulguların hangi varlık ve servisi etkilediğinin açık görünümü.' },
-    { title: 'Önceliklendir', heading: 'En önemli risklere odaklanın', summary: 'Görünürlük, Koruma ve Risk Skorlarını iş etkisi, olasılık ve ayrıntılı kanıtla birlikte değerlendirin.', outcome: 'Çıktı: Açıklanabilir ve iş bağlamına dayalı önceliklendirme.' },
-    { title: 'Harekete Geç', heading: 'Kararları operasyonel iş akışına taşıyın', summary: 'ITSM ve talep yönetimi, Splunk, raporlar ve REST API üzerinden iyileştirme çalışmalarını ilerletin.', outcome: 'Çıktı: Önceliklendirilmiş bağlamdan izlenebilir operasyona geçiş.' }
+    { title: 'Görünür Kıl', heading: 'Güvenlik koşullarını ortaya çıkarın', summary: 'Zafiyetleri, iç saldırı yüzeyi koşullarını, koruma kanıtlarını ve kontrol boşluklarını ilgili varlıklarla ilişkilendirin.', outcome: 'Sonuç: Her güvenlik bulgusundan hangi varlık ve servislerin etkilendiğini net bir şekilde görün.' },
+    { title: 'Önceliklendir', heading: 'En önemli risklere odaklanın', summary: 'Görünürlük, Koruma ve Risk Skorlarını iş etkisi, olasılık ve ayrıntılı kanıtla birlikte değerlendirin.', outcome: 'Sonuç: İş etkisini dikkate alan, anlaşılır ve gerekçelendirilebilir bir risk önceliklendirmesi.' },
+    { title: 'Harekete Geç', heading: 'Kararları operasyonel iş akışına taşıyın', summary: 'ITSM ve talep yönetimi, Splunk, raporlar ve REST API üzerinden iyileştirme çalışmalarını ilerletin.', outcome: 'Sonuç: Önceliklendirilen risklerden alınan aksiyonlara kadar izlenebilir ve yönetilebilir bir süreç.' }
   ] : [
     { title: 'Discover', heading: 'See the assets in your environment', summary: 'Build the asset view through infrastructure discovery, Cyobik Agent inventory, validated import and manual creation.', outcome: 'Outcome: A governed and verifiable asset starting point.' },
     { title: 'Contextualise', heading: 'Give every asset meaning', summary: 'Connect profiles, software, services, ownership, lifecycle, networks, relationships and Business Services.', outcome: 'Outcome: Technical records enriched with business and operational context.' },

@@ -152,7 +152,7 @@
 
     if (heroTitle) {
       heroTitle.textContent = isTr
-        ? 'Yeni bir risk yaratmadan siber riski keşfedin.'
+        ? 'Yeni bir risk oluşturmadan siber risklerinizi keşfedin.'
         : 'Discover cyber risk without creating a new one.';
     }
     if (heroLead) {
@@ -175,13 +175,13 @@
       section.innerHTML = isTr ? `
         <div class="wrap">
           <div class="section-head">
-            <div class="eyebrow">Veri kontrolü tasarımın merkezinde</div>
+            <div class="eyebrow">Veri kontrolü tasarımın temelinde</div>
             <h2>Riskleri görünür kılarken yeni bir maruziyet alanı oluşturmayın.</h2>
             <p class="lead2">Siber varlık verisi yalnızca bir envanter değildir. Teknolojileri, yapılandırmaları, zafiyetleri, ilişkileri ve kritik iş bağımlılıklarını ortaya koyabilir. Cyobik bu istihbaratı kontrolünüzdeki ortamda tutar.</p>
           </div>
           <div class="grid-3">
-            <article class="card"><h3>Toplu istihbarat riski</h3><p>Varlık ve zafiyet verisinin kurum dışında merkezileştirilmesi, üçüncü taraf bir ihlalin etkisini büyütebilir ve ortamınızın nasıl yapılandığını açığa çıkarabilir.</p></article>
-            <article class="card"><h3>Üçüncü taraf maruziyeti</h3><p>Bulut tabanlı bir keşif platformu yeni kimlikler, API'ler, entegrasyonlar ve veri akışları ekler. Bunların tümü saldırı yüzeyinizin ve tedarik zinciri riskinizin parçası olur.</p></article>
+            <article class="card"><h3>Toplu istihbarat riski</h3><p>Varlık ve güvenlik açığı verilerinin kurum dışındaki bir platformda toplanması, üçüncü taraf sistemlerde yaşanabilecek bir güvenlik ihlalinin etkisini artırabilir ve BT altyapınızın yapısına ilişkin hassas bilgilerin açığa çıkmasına neden olabilir.</p></article>
+            <article class="card"><h3>Üçüncü taraf maruziyeti</h3><p>Bulut tabanlı bir keşif platformu; yeni kullanıcı hesapları, API bağlantıları, entegrasyonlar ve veri akışları oluşturabilir. Bu bileşenlerin her biri saldırı yüzeyinizi genişletebilir ve üçüncü taraflardan kaynaklanan güvenlik risklerini artırabilir.</p></article>
             <article class="card"><h3>Veri egemenliği</h3><p>Hassas varlık, zafiyet ve yapılandırma verisinin kontrollü ortam dışına taşınması ek yerleşim, yönetişim ve denetim yükümlülükleri doğurabilir.</p></article>
           </div>
           <div class="callout regulated-callout">
@@ -189,9 +189,9 @@
             <h2 style="margin-top:12px">Saldırı yüzeyiniz, başkasının tutacağı bir veri değildir.</h2>
             <p>Cyobik; bankaların, kamu kurumlarının ve kritik altyapı işletmecilerinin siber varlık istihbaratını özel ve tamamen air-gapped ağlar dahil kendi kontrollerindeki ortamda tutmasına yardımcı olur. Varlık verisi, güvenlik kanıtı, puanlama ve risk analizi kurumun kontrollü altyapısında kalır.</p>
             <div class="grid-3" style="margin-top:24px">
-              <article class="card"><h3>Hassas istihbaratı içeride tutun</h3><p>Varlık, zafiyet, yapılandırma ve ilişki verisini harici bir analiz platformuna aktarmadan kurumun kontrollü ortamında yönetin.</p></article>
+              <article class="card"><h3>Hassas istihbaratı içeride tutun</h3><p>Varlık, güvenlik açığı, yapılandırma ve bağlantı verilerini harici bir analiz platformuna aktarmadan, kurumunuzun kontrolündeki ortamda yönetin.</p></article>
               <article class="card"><h3>İzole ortamlarda çalışın</h3><p>Kalıcı dış bağlantının kısıtlı veya yasak olduğu ortamlarda görünürlük, güvenlik değerlendirmesi ve risk analizini sürdürün.</p></article>
-              <article class="card"><h3>İşleme kontrolünü koruyun</h3><p>Toplama, ilişkilendirme, puanlama ve analizi tanımladığı sistemlere yakın ve kurumun güvenlik gereksinimleriyle uyumlu tutun.</p></article>
+              <article class="card"><h3>İşleme kontrolünü koruyun</h3><p>Veri toplama, ilişkilendirme, skorlama ve analiz süreçlerini verinin bulunduğu ortamda gerçekleştirin. Hassas verileri kurum dışına taşımadan, tüm süreçleri kurumunuzun güvenlik politikalarına uygun şekilde kendi altyapınızda yönetin.</p></article>
             </div>
           </div>
         </div>` : `
