@@ -14,6 +14,52 @@ Bilingual English/Turkish marketing website for Cyobik's Turkey market entry.
 - Plain-text English Privacy Notice and Turkish KVKK Aydınlatma Metni
 - Plain-text English and Turkish Website Terms of Use
 
+## Website content source of truth
+
+Confluence is the editorial source of truth for public website copy:
+
+- [Cyobik Website Final Content Pack](https://monosuite.atlassian.net/wiki/spaces/MTM/pages/10911816/Cyobik+Website+Final+Content+Pack)
+- [Cyobik Website Content Governance](https://monosuite.atlassian.net/wiki/spaces/MTM/pages/15466499/Cyobik+Website+Content+Governance)
+- [Cyobik Website Shared Content](https://monosuite.atlassian.net/wiki/spaces/MTM/pages/15466520/Cyobik+Website+Shared+Content)
+
+Production never fetches Confluence at runtime. The repository contains a reviewed, versioned snapshot at `content/website-content.snapshot.json`. `content/confluence-pages.json` records the exact Confluence page IDs and expected titles used by the exporter.
+
+The initial snapshot records:
+
+- 12 bilingual route pages;
+- 539 route content items;
+- 27 publishable shared content items;
+- 7 middleware-only strings excluded because they are not approved and have no Turkish value.
+
+### Content sync
+
+The exporter uses the Confluence Cloud REST API v2 and reads Atlas Document Format tables. Set these environment variables locally without committing them:
+
+- `ATLASSIAN_BASE_URL`
+- `ATLASSIAN_EMAIL`
+- `ATLASSIAN_API_TOKEN`
+
+Then run:
+
+```sh
+npm run content:export
+npm run content:validate
+npm test --offline
+```
+
+The exporter fails if a registered page is missing, renamed, malformed, redirects to another host, contains a duplicate content ID, has a non-publishable status, or produces incomplete English or Turkish content. It also refuses to send credentials to any origin other than the registered Atlassian site. Unapproved shared strings are preserved in the snapshot's excluded list but cannot enter publishable content.
+
+### Publication workflow
+
+1. Edit English and Turkish together in the registered Confluence route page.
+2. Complete copy, translation and product-claim review.
+3. Export and validate the repository snapshot.
+4. Review the content-ID diff in a pull request.
+5. Verify the Cloudflare preview against the approved Confluence content.
+6. Merge to publish.
+
+This first migration phase does not change rendered pages. The current HTML and runtime JavaScript still render the website until the template migration is completed in a separate pull request. Direct copy changes in HTML, JavaScript or middleware are no longer an accepted workflow.
+
 ## Information architecture
 
 English routes:

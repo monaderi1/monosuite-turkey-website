@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "siteBaseUrl": "https://monosuite.atlassian.net",
+  "spaceId": "426019",
+  "hubPageId": "10911816",
+  "governancePageId": "15466499",
+  "shared": {
+    "pageId": "15466520",
+    "title": "Cyobik Website Shared Content"
+  },
+  "routes": {
+    "home": {
+      "pageId": "15499265",
+      "title": "Website Content — Home",
+      "contentPrefix": "HOME"
+    },
+    "platform": {
+      "pageId": "15532033",
+      "title": "Website Content — Platform",
+      "contentPrefix": "PLATFORM"
+    },
+    "assetIntelligence": {
+      "pageId": "15499286",
+      "title": "Website Content — Asset Intelligence",
+      "contentPrefix": "ASSET"
+    },
+    "securityExposure": {
+      "pageId": "15466542",
+      "title": "Website Content — Security and Exposure",
+      "contentPrefix": "SECURITY"
+    },
+    "riskPrioritisation": {
+      "pageId": "15466562",
+      "title": "Website Content — Risk Prioritisation",
+      "contentPrefix": "RISK"
+    },
+    "integrations": {
+      "pageId": "15466582",
+      "title": "Website Content — Integrations",
+      "contentPrefix": "INTEGRATIONS"
+    },
+    "deployment": {
+      "pageId": "15532053",
+      "title": "Website Content — Deployment",
+      "contentPrefix": "DEPLOYMENT"
+    },
+    "editions": {
+      "pageId": "15466602",
+      "title": "Website Content — Editions and Licensing",
+      "contentPrefix": "EDITIONS"
+    },
+    "company": {
+      "pageId": "15499306",
+      "title": "Website Content — Company",
+      "contentPrefix": "COMPANY"
+    },
+    "demoRequest": {
+      "pageId": "15466622",
+      "title": "Website Content — Demo Request",
+      "contentPrefix": "DEMO"
+    },
+    "privacy": {
+      "pageId": "15564801",
+      "title": "Website Content — Privacy Notice",
+      "contentPrefix": "PRIVACY"
+    },
+    "terms": {
+      "pageId": "15564825",
+      "title": "Website Content — Terms of Use",
+      "contentPrefix": "TERMS"
+    }
+  }
+}
