@@ -19,19 +19,19 @@ Bilingual English/Turkish marketing website for Cyobik's Turkey market entry.
 English routes:
 
 - `/en/` — positioning and product overview
-- `/en/platform.html` — connected platform and processing model
-- `/en/asset-intelligence.html` — discovery, onboarding, inventory, changes, networks, relationships and Business Services
-- `/en/security-exposure.html` — vulnerability, internal attack surface, protection, compliance and MITRE ATT&CK
-- `/en/risk-prioritisation.html` — score direction, risk model, business context and prioritisation
-- `/en/integrations.html` — Splunk, Nessus, ITSM/ticketing and comprehensive REST API
-- `/en/deployment.html` — VMware OVF, on-premises, air-gapped operation, updates and backup boundaries
-- `/en/editions.html` — Standard and Security editions with annual licensing
-- `/en/company.html` — company approach and Veksacore legal details
-- `/en/request-demo.html` — active demo-request form
-- `/en/privacy.html` — website and demo-request privacy notice
-- `/en/terms.html` — public website terms of use
+- `/en/platform` — connected platform and processing model
+- `/en/asset-intelligence` — discovery, onboarding, inventory, changes, networks, relationships and Business Services
+- `/en/security-exposure` — vulnerability, internal attack surface, protection, compliance and MITRE ATT&CK
+- `/en/risk-prioritisation` — score direction, risk model, business context and prioritisation
+- `/en/integrations` — Splunk, Nessus, ITSM/ticketing and comprehensive REST API
+- `/en/deployment` — VMware OVF, on-premises, air-gapped operation, updates and backup boundaries
+- `/en/editions` — Standard and Security editions with annual licensing
+- `/en/company` — company approach and Veksacore legal details
+- `/en/request-demo` — active demo-request form
+- `/en/privacy` — website and demo-request privacy notice
+- `/en/terms` — public website terms of use
 
-Equivalent Turkish routes are maintained under `/tr/`, including `/tr/kvkk-aydinlatma-metni.html` and `/tr/kullanim-kosullari.html`.
+Equivalent Turkish routes are maintained under `/tr/`, including `/tr/kvkk-aydinlatma-metni` and `/tr/kullanim-kosullari`.
 
 ## Brand-name rule
 

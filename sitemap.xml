@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://cyobik.com/en/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/"/></url>
-  <url><loc>https://cyobik.com/en/platform/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/platform/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/platform/"/></url>
-  <url><loc>https://cyobik.com/en/asset-intelligence/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/asset-intelligence/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/varlik-istihbarati/"/></url>
-  <url><loc>https://cyobik.com/en/security-exposure/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/security-exposure/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/guvenlik-maruziyet/"/></url>
-  <url><loc>https://cyobik.com/en/risk-prioritisation/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/risk-prioritisation/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/risk-onceliklendirme/"/></url>
-  <url><loc>https://cyobik.com/en/integrations/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/integrations/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/entegrasyonlar/"/></url>
-  <url><loc>https://cyobik.com/en/deployment/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/deployment/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/dagitim/"/></url>
-  <url><loc>https://cyobik.com/en/editions/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/editions/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/surumler/"/></url>
-  <url><loc>https://cyobik.com/en/company/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/company/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/sirket/"/></url>
-  <url><loc>https://cyobik.com/en/privacy/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/privacy/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/kvkk-aydinlatma-metni/"/></url>
-  <url><loc>https://cyobik.com/en/terms/</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/terms/"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/kullanim-kosullari/"/></url>
+  <url><loc>https://cyobik.com/en/platform</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/platform"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/platform"/></url>
+  <url><loc>https://cyobik.com/en/asset-intelligence</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/asset-intelligence"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/varlik-istihbarati"/></url>
+  <url><loc>https://cyobik.com/en/security-exposure</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/security-exposure"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/guvenlik-maruziyet"/></url>
+  <url><loc>https://cyobik.com/en/risk-prioritisation</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/risk-prioritisation"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/risk-onceliklendirme"/></url>
+  <url><loc>https://cyobik.com/en/integrations</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/integrations"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/entegrasyonlar"/></url>
+  <url><loc>https://cyobik.com/en/deployment</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/deployment"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/dagitim"/></url>
+  <url><loc>https://cyobik.com/en/editions</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/editions"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/surumler"/></url>
+  <url><loc>https://cyobik.com/en/company</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/company"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/sirket"/></url>
+  <url><loc>https://cyobik.com/en/privacy</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/privacy"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/kvkk-aydinlatma-metni"/></url>
+  <url><loc>https://cyobik.com/en/terms</loc><xhtml:link rel="alternate" hreflang="en" href="https://cyobik.com/en/terms"/><xhtml:link rel="alternate" hreflang="tr" href="https://cyobik.com/tr/kullanim-kosullari"/></url>
 </urlset>
