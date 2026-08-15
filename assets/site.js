@@ -154,8 +154,8 @@ if (pageBody.dataset.page === 'home') {
     const illustrativeNote = scoreSection.querySelector('.small');
 
     const scoreIntro = isTurkish
-      ? 'Cyobik, dağınık teknik bulguları üç anlaşılır göstergeye dönüştürür. Görünürlük Skoru ne kadarını bildiğinizi, Koruma Skoru hangi güvenlik ve kontrol kanıtlarının mevcut olduğunu, Risk Skoru ise mevcut bağlamın iş etkisi ve olasılıkla birlikte ne ifade ettiğini gösterir. Her skor, sonucu oluşturan varlık, bulgu ve kanıta kadar incelenebilir.'
-      : 'Cyobik turns fragmented technical findings into three clear operating signals. Visibility shows how much of the environment is known, Protection shows which security and control evidence is present, and Risk shows what the maintained context means when business impact and likelihood are considered together. Every score can be traced back to the assets, findings and evidence that produced it.';
+      ? 'Cyobik, farklı kaynaklardan gelen teknik bulguları üç anlaşılır skora dönüştürerek ortamınızın güvenlik durumunu tek bakışta görmenizi sağlar. Görünürlük Skoru ortamınızdaki varlıkları ne ölçüde bildiğinizi, Koruma Skoru mevcut güvenlik kontrollerinin durumunu, Risk Skoru ise gerçekleşme olasılığı ve iş etkisi birlikte değerlendirildiğinde ortaya çıkan risk seviyesini gösterir.'
+      : 'Cyobik turns technical findings from different sources into three clear scores, providing an at-a-glance view of your environment\'s security posture. The Visibility Score shows how well you know the assets in your environment, the Protection Score shows the state of existing security controls, and the Risk Score shows the level of risk that emerges when likelihood and business impact are considered together.';
 
     if (sectionHead && !sectionHead.querySelector('[data-score-intro]')) {
       const intro = document.createElement('p');
