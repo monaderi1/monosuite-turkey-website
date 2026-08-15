@@ -10,7 +10,7 @@
     "sourcePage": {
       "id": "15466520",
       "title": "Cyobik Website Shared Content",
-      "version": 1,
+      "version": 2,
       "status": "Implemented baseline — pending first reconciliation"
     },
     "content": {
@@ -166,75 +166,25 @@
       },
       "SHARED.FORM.UNAVAILABLE": {
         "element": "Unavailable message",
-        "en": "The form is temporarily unavailable. Please email info@veksacore.com.",
-        "tr": "Form şu anda kullanılamıyor. Lütfen info@veksacore.com adresine e-posta gönderin.",
+        "en": "The form is temporarily unavailable. Please email info@cyobik.com.",
+        "tr": "Form şu anda kullanılamıyor. Lütfen info@cyobik.com adresine e-posta gönderin.",
         "status": "Implemented baseline"
       },
       "SHARED.FORM.GENERIC": {
         "element": "Generic error",
-        "en": "The request could not be sent. Please try again or email info@veksacore.com.",
-        "tr": "Talep gönderilemedi. Lütfen tekrar deneyin veya info@veksacore.com adresine e-posta gönderin.",
+        "en": "The request could not be sent. Please try again or email info@cyobik.com.",
+        "tr": "Talep gönderilemedi. Lütfen tekrar deneyin veya info@cyobik.com adresine e-posta gönderin.",
         "status": "Implemented baseline"
       }
     },
-    "excluded": [
-      {
-        "contentId": "SHARED.MW.BUSINESS_EMAIL_LABEL",
-        "element": "",
-        "en": "Business email *",
-        "tr": "Missing",
-        "status": "Not approved / localisation required"
-      },
-      {
-        "contentId": "SHARED.MW.BUSINESS_EMAIL_HINT",
-        "element": "",
-        "en": "Please use your company email address. Personal email services are not accepted.",
-        "tr": "Missing",
-        "status": "Not approved / localisation required"
-      },
-      {
-        "contentId": "SHARED.MW.BUSINESS_EMAIL_ERROR",
-        "element": "",
-        "en": "Please enter your business email address. Personal email services are not accepted.",
-        "tr": "Missing",
-        "status": "Not approved / localisation required"
-      },
-      {
-        "contentId": "SHARED.MW.SUCCESS_EYEBROW",
-        "element": "",
-        "en": "Request received",
-        "tr": "Missing",
-        "status": "Not approved / localisation required"
-      },
-      {
-        "contentId": "SHARED.MW.SUCCESS_TITLE",
-        "element": "",
-        "en": "Thank you for contacting Cyobik.",
-        "tr": "Missing",
-        "status": "Not approved / localisation required"
-      },
-      {
-        "contentId": "SHARED.MW.SUCCESS_BODY",
-        "element": "",
-        "en": "Your request has been received successfully. Our team will review the information and contact you shortly.",
-        "tr": "Missing",
-        "status": "Not approved / localisation required"
-      },
-      {
-        "contentId": "SHARED.MW.SUCCESS_CLOSE",
-        "element": "",
-        "en": "Close",
-        "tr": "Missing",
-        "status": "Not approved / localisation required"
-      }
-    ]
+    "excluded": []
   },
   "routes": {
     "home": {
       "sourcePage": {
         "id": "15499265",
         "title": "Website Content — Home",
-        "version": 1,
+        "version": 4,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -268,57 +218,57 @@
         },
         "HOME.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
-          "en": "Cyobik gives security, IT and risk teams the cyber asset intelligence they need without sending sensitive inventory, vulnerability and configuration data to an external cloud platform. Run it inside your private cloud or fully air-gapped environment.",
-          "tr": "Cyobik, hassas envanter, zafiyet ve yapılandırma verilerini harici bir bulut platformuna göndermeden güvenlik, BT ve risk ekiplerine ihtiyaç duydukları siber varlık istihbaratını sunar. Platformu özel bulutunuzda veya tamamen air-gapped ortamınızda çalıştırın.",
+          "en": "Cyobik gives security and IT teams the cyber asset intelligence they need without sending sensitive inventory, vulnerability and configuration data to an external cloud platform. Run it inside your private cloud or fully air-gapped environment.",
+          "tr": "Cyobik; hassas envanter, güvenlik açığı ve yapılandırma verilerinizi harici bir bulut platformuna göndermeden, siber güvenlik ve BT ekiplerinin ihtiyaç duyduğu siber varlık istihbaratını sunar. Platformu özel bulut ortamınızda veya internet bağlantısı olmayan tamamen izole ağlarda çalıştırabilirsiniz.",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.CTA.01": {
           "locationRole": "Section 01 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.CTA.02": {
           "locationRole": "Section 01 · CTA",
           "en": "Explore the platform",
-          "tr": "Platformu inceleyin",
+          "tr": "Platformu İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.01": {
           "locationRole": "Section 01 · Supporting label",
           "en": "Private cloud",
-          "tr": "Özel bulut",
+          "tr": "Özel Bulut",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.02": {
           "locationRole": "Section 01 · Supporting label",
           "en": "Fully air-gapped operation",
-          "tr": "Tam air-gapped çalışma",
+          "tr": "Tamamen İzole Ortamlarda Çalışma",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.03": {
           "locationRole": "Section 01 · Supporting label",
           "en": "Offline updates",
-          "tr": "Çevrimdışı güncellemeler",
+          "tr": "Çevrimdışı Güncelleme",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.04": {
           "locationRole": "Section 01 · Supporting label",
           "en": "Customer-controlled processing",
-          "tr": "Müşteri denetiminde veri işleme",
+          "tr": "Verilerin Kurum İçinde İşlenmesi",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.05": {
           "locationRole": "Section 01 · Supporting label",
           "en": "ADDRESS SPACE",
-          "tr": "ADDRESS SPACE",
+          "tr": "ADRES ALANI",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -478,8 +428,8 @@
         },
         "HOME.EYEBROW.02": {
           "locationRole": "Section 03 · Eyebrow",
-          "en": "One evidence layer for cyber-asset decisions",
-          "tr": "Siber varlık kararları için tek kanıt katmanı",
+          "en": "ONE TRUSTED SOURCE FOR CYBER-ASSET MANAGEMENT",
+          "tr": "SİBER VARLIK YÖNETİMİ İÇİN TEK VE GÜVENİLİR BİLGİ KAYNAĞI",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -493,28 +443,28 @@
         "HOME.LEAD_PARAGRAPH.02": {
           "locationRole": "Section 03 · Lead paragraph",
           "en": "Understand what an asset is, what changed, what it is connected to, which controls are missing and how it contributes to organisational risk.",
-          "tr": "Varlığın ne olduğunu, nelerin değiştiğini, nelere bağlı olduğunu, hangi kontrollerin eksik olduğunu ve kurumsal riske nasıl katkıda bulunduğunu anlayın.",
+          "tr": "Bir varlığın ne olduğunu, zaman içinde nasıl değiştiğini, hangi sistemlerle bağlantılı olduğunu ve hangi güvenlik kontrollerinin eksik kaldığını tek bir noktadan görün. Tüm bu bilgileri bir arada değerlendirerek varlığın kurumunuz için oluşturduğu riski doğru şekilde analiz edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.EYEBROW.03": {
           "locationRole": "Section 04 · Eyebrow",
-          "en": "Clear score direction",
-          "tr": "Net skor yönü",
+          "en": "CLEAR AND MEASURABLE SCORING",
+          "tr": "ANLAŞILIR VE ÖLÇÜLEBİLİR SKORLAMA",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.H2.02": {
           "locationRole": "Section 04 · H2",
-          "en": "Three scores, with the evidence underneath.",
-          "tr": "Üç skor ve altındaki kanıt.",
+          "en": "Three core scores, one view of security posture",
+          "tr": "Üç Temel Skor, Tek Bakışta Güvenlik Durumu",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.11": {
           "locationRole": "Section 04 · Supporting label",
-          "en": "Visibility — higher is better",
-          "tr": "Görünürlük — yüksek daha iyidir",
+          "en": "VISIBILITY",
+          "tr": "GÖRÜNÜRLÜK",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -528,14 +478,14 @@
         "HOME.PARAGRAPH.01": {
           "locationRole": "Section 04 · Paragraph",
           "en": "Shows how complete, current and decision-ready the asset knowledge is. Missing inventory, ownership, software, service, network or relationship information can be reviewed directly beneath the score.",
-          "tr": "Varlık bilgisinin ne kadar eksiksiz, güncel ve karar vermeye uygun olduğunu gösterir. Eksik envanter, sahiplik, yazılım, servis, ağ veya ilişki bilgileri skorun altında doğrudan görülebilir.",
+          "tr": "Varlık bilgilerinizin ne kadar eksiksiz, güncel ve güvenilir olduğunu gösterir. Envanter, sorumlu kişi, yazılım, servis, ağ ve varlıklar arası ilişkilerdeki eksiklikleri doğrudan görüntüleyerek hangi bilgilerin tamamlanması gerektiğini kolayca belirleyebilirsiniz.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.12": {
           "locationRole": "Section 04 · Supporting label",
-          "en": "Protection — higher is better",
-          "tr": "Koruma — yüksek daha iyidir",
+          "en": "PROTECTION",
+          "tr": "KORUMA",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -548,15 +498,15 @@
         },
         "HOME.PARAGRAPH.02": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Shows which security, vulnerability, exposure and control evidence is available for the assets. The focus is not simply whether a tool exists, but whether verifiable evidence supports the current protection posture.",
-          "tr": "Varlıklar için hangi güvenlik, zafiyet, maruziyet ve kontrol kanıtlarının mevcut olduğunu gösterir. Amaç yalnızca araç varlığını değil, koruma durumunu destekleyen doğrulanabilir kanıtı görünür kılmaktır.",
+          "en": "Shows how well your assets are protected by assessing vulnerabilities, existing safeguards and missing controls. It focuses not only on whether a security product is installed, but on whether protection is active and verifiable.",
+          "tr": "Varlıklarınızın güvenlik açıklarını, mevcut güvenlik önlemlerini ve eksik kontrollerini değerlendirerek ne ölçüde korunduğunu gösterir. Yalnızca bir güvenlik ürününün kurulu olup olmadığına değil, korumanın gerçekten aktif ve doğrulanabilir olup olmadığına odaklanır.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.SUPPORTING_LABEL.13": {
           "locationRole": "Section 04 · Supporting label",
-          "en": "Risk — lower is better",
-          "tr": "Risk — düşük daha iyidir",
+          "en": "RISK",
+          "tr": "RİSK",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -576,29 +526,29 @@
         },
         "HOME.EYEBROW.04": {
           "locationRole": "Section 05 · Eyebrow",
-          "en": "Security evidence",
-          "tr": "Güvenlik kanıtı",
+          "en": "SECURITY ASSESSMENT",
+          "tr": "GÜVENLİK DEĞERLENDİRMESİ",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.H2.03": {
           "locationRole": "Section 05 · H2",
           "en": "Assess, correlate and explain.",
-          "tr": "Değerlendirin, ilişkilendirin ve açıklayın.",
+          "tr": "Değerlendirin, ilişkilendirin ve anlamlandırın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.H3.01": {
           "locationRole": "Section 05 · H3",
-          "en": "Compliance context",
-          "tr": "Uyumluluk bağlamı",
+          "en": "Compliance assessment",
+          "tr": "Uyumluluk Değerlendirmesi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.PARAGRAPH.04": {
           "locationRole": "Section 05 · Paragraph",
-          "en": "Assess applicable configurations against more than 1,500 CIS Benchmark recommendations and review predefined ISO/IEC 27001 and PCI DSS reporting.",
-          "tr": "Uygulanabilir yapılandırmaları 1.500'den fazla CIS Benchmark önerisine göre değerlendirin; ISO/IEC 27001 ve PCI DSS raporlamasını inceleyin.",
+          "en": "Assess system configurations against more than 1,500 CIS Benchmark recommendations, use ready-made reports for ISO/IEC 27001 and PCI DSS, and identify compliance gaps more easily.",
+          "tr": "Sistem yapılandırmalarınızı 1.500’den fazla CIS Benchmark önerisine göre değerlendirin; ISO/IEC 27001 ve PCI DSS için hazır raporlarla uyumluluk durumunuzu kolayca inceleyin ve eksikleri tespit edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -612,28 +562,28 @@
         "HOME.PARAGRAPH.05": {
           "locationRole": "Section 05 · Paragraph",
           "en": "Map asset findings, vulnerabilities and security conditions to ATT&CK techniques in the interface and reports.",
-          "tr": "Varlık bulgularını, zafiyetleri ve güvenlik koşullarını arayüz ve raporlarda ATT&CK teknikleriyle eşleyin.",
+          "tr": "Varlık bulgularını, güvenlik açıklarını ve tespit edilen güvenlik risklerini MITRE ATT&CK teknikleriyle eşleştirin; saldırganların kullanabileceği yöntemleri arayüz ve raporlar üzerinden daha kolay analiz edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.H3.03": {
           "locationRole": "Section 05 · H3",
-          "en": "Vulnerability context",
-          "tr": "Zafiyet bağlamı",
+          "en": "Vulnerability analysis",
+          "tr": "Güvenlik Açığı Analizi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.PARAGRAPH.06": {
           "locationRole": "Section 05 · Paragraph",
-          "en": "Combine offline CPE/CVE assessment with scheduled Nessus findings correlated to Cyobik assets.",
+          "en": "Combine offline CPE/CVE analysis with findings from scheduled Nessus scans. Automatically correlate the results with the relevant assets in Cyobik to assess vulnerabilities by asset in one place.",
           "tr": "Çevrimdışı CPE/CVE analizlerini, planlı Nessus taramalarından elde edilen bulgularla birleştirin. Sonuçları Cyobik’teki ilgili varlıklarla otomatik olarak ilişkilendirerek güvenlik açıklarını varlık bazında tek noktadan değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.EYEBROW.05": {
           "locationRole": "Section 06 · Eyebrow",
-          "en": "Named integrations",
-          "tr": "Adlandırılmış entegrasyonlar",
+          "en": "READY INTEGRATIONS",
+          "tr": "HAZIR ENTEGRASYONLAR",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -653,8 +603,8 @@
         },
         "HOME.PARAGRAPH.07": {
           "locationRole": "Section 06 · Paragraph",
-          "en": "Retrieve authorised asset and risk context through the dedicated App / Add-on.",
-          "tr": "Özel App / Add-on üzerinden yetkili varlık ve risk bağlamını alın.",
+          "en": "Use Cyobik's dedicated Splunk App / Add-on integration to bring asset and risk information into Splunk and assess it alongside your existing security data.",
+          "tr": "Cyobik’in özel Splunk App / Add-on entegrasyonu ile varlık ve risk bilgilerini Splunk ortamınıza aktarın ve mevcut güvenlik verilerinizle birlikte değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -667,7 +617,7 @@
         },
         "HOME.PARAGRAPH.08": {
           "locationRole": "Section 06 · Paragraph",
-          "en": "Connect one or more instances and retrieve scheduled scan results.",
+          "en": "Connect one or more Nessus environments, automatically retrieve scheduled scan results and correlate findings with the relevant assets in Cyobik.",
           "tr": "Bir veya birden fazla Nessus ortamına bağlanarak planlı tarama sonuçlarını otomatik olarak alın ve bulguları Cyobik’teki ilgili varlıklarla ilişkilendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -682,7 +632,7 @@
         "HOME.PARAGRAPH.09": {
           "locationRole": "Section 06 · Paragraph",
           "en": "Create, assign, track and synchronise remediation work from asset, exposure and risk context.",
-          "tr": "İyileştirme çalışmalarını varlık, maruziyet ve risk bağlamından oluşturun, atayın, izleyin ve senkronize edin.",
+          "tr": "Tespit edilen güvenlik açıkları ve riskler için doğrudan görev oluşturun, sorumlu atayın, süreci takip edin ve güncel durumu senkronize edin. Bulguları aksiyona dönüştürerek iyileştirme süreçlerini tek noktadan yönetin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -695,8 +645,8 @@
         },
         "HOME.PARAGRAPH.10": {
           "locationRole": "Section 06 · Paragraph",
-          "en": "All product functionality and data types, with complete interactive Swagger/OpenAPI documentation.",
-          "tr": "Tüm ürün işlevleri ve veri türleri; tam etkileşimli Swagger/OpenAPI dokümantasyonu.",
+          "en": "Use the comprehensive REST API to access supported Cyobik data and product functions programmatically. Streamline integration and development with interactive Swagger/OpenAPI documentation.",
+          "tr": "Kapsamlı REST API ile Cyobik’in desteklenen verilerine ve ürün işlevlerine programatik olarak erişin. Entegrasyon ve geliştirme süreçlerinizi interaktif Swagger/OpenAPI dokümantasyonu ile kolaylaştırın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -710,7 +660,7 @@
         "HOME.H2.05": {
           "locationRole": "Section 07 · H2",
           "en": "Keep cyber-asset data and processing inside your environment.",
-          "tr": "Siber varlık verisini ve işlemeyi kendi ortamınızda tutun.",
+          "tr": "Siber Varlık Verileriniz Kendi Ortamınızda Kalsın",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -723,15 +673,15 @@
         },
         "HOME.CTA.03": {
           "locationRole": "Section 07 · CTA",
-          "en": "Explore deployment",
-          "tr": "Dağıtımı inceleyin",
+          "en": "Explore installation options",
+          "tr": "Kurulum Seçeneklerini İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.H2.06": {
           "locationRole": "Section 08 · H2",
-          "en": "Build a trusted evidence layer for cyber-asset decisions.",
-          "tr": "Siber varlık kararları için güvenilir bir kanıt katmanı oluşturun.",
+          "en": "Make decisions about your cyber assets with trusted data.",
+          "tr": "Siber varlıklarınız hakkında güvenilir verilerle karar verin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -745,35 +695,35 @@
         "HOME.CTA.04": {
           "locationRole": "Section 08 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.RISK.EYEBROW": {
           "locationRole": "Inserted risk section · Eyebrow",
-          "en": "Data control by design",
-          "tr": "Veri kontrolü tasarımın temelinde",
+          "en": "DATA CONTROL AT THE CORE OF THE DESIGN",
+          "tr": "VERİ KONTROLÜ TASARIMIN TEMELİNDE",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.RISK.TITLE": {
           "locationRole": "Inserted risk section · H2",
-          "en": "Expose risk without introducing a new source of exposure.",
-          "tr": "Riskleri görünür kılarken yeni bir maruziyet alanı oluşturmayın.",
+          "en": "Make risks visible without creating new security risks.",
+          "tr": "Riskleri görünür hale getirirken yeni güvenlik riskleri oluşturmayın.",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.RISK.INTRO": {
           "locationRole": "Inserted risk section · Lead paragraph",
           "en": "Cyber asset data is more than an inventory. It can reveal technologies, configurations, vulnerabilities, relationships and critical business dependencies. Cyobik keeps this intelligence inside the environment you control.",
-          "tr": "Siber varlık verisi yalnızca bir envanter değildir. Teknolojileri, yapılandırmaları, zafiyetleri, ilişkileri ve kritik iş bağımlılıklarını ortaya koyabilir. Cyobik bu istihbaratı kontrolünüzdeki ortamda tutar.",
+          "tr": "Siber varlık verileri yalnızca bir envanterden ibaret değildir. Kullandığınız teknolojiler, sistem yapılandırmaları, güvenlik açıkları, varlıklar arasındaki ilişkiler ve kritik iş bağımlılıkları hakkında önemli bilgiler içerir. Cyobik, tüm bu bilgilerin kontrolünüzdeki ortamda kalmasını sağlar.",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.RISK.AGGREGATED.TITLE": {
           "locationRole": "Inserted risk section · H3",
-          "en": "Aggregated intelligence risk",
-          "tr": "Toplu istihbarat riski",
+          "en": "Centralised data risk",
+          "tr": "Merkezileştirilmiş Veri Riski",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -786,8 +736,8 @@
         },
         "HOME.RISK.THIRD_PARTY.TITLE": {
           "locationRole": "Inserted risk section · H3",
-          "en": "Third-party exposure",
-          "tr": "Üçüncü taraf maruziyeti",
+          "en": "Third-party risks",
+          "tr": "Üçüncü Taraf Kaynaklı Riskler",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -800,22 +750,22 @@
         },
         "HOME.RISK.SOVEREIGNTY.TITLE": {
           "locationRole": "Inserted risk section · H3",
-          "en": "Data sovereignty",
-          "tr": "Veri egemenliği",
+          "en": "Data control and compliance",
+          "tr": "Veri Kontrolü ve Uyumluluk",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.RISK.SOVEREIGNTY.BODY": {
           "locationRole": "Inserted risk section · Paragraph",
           "en": "Moving sensitive asset, vulnerability and configuration data outside the controlled environment can introduce additional residency, governance and oversight requirements.",
-          "tr": "Hassas varlık, zafiyet ve yapılandırma verisinin kontrollü ortam dışına taşınması ek yerleşim, yönetişim ve denetim yükümlülükleri doğurabilir.",
+          "tr": "Hassas varlık, güvenlik açığı ve yapılandırma verilerinin kurumun kontrolündeki ortamın dışına çıkarılması; verinin nerede tutulduğu, nasıl yönetildiği ve nasıl denetlendiği konusunda ek güvenlik ve uyumluluk gereksinimleri doğurabilir.",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.REGULATED.EYEBROW": {
           "locationRole": "Inserted regulated callout · Eyebrow",
           "en": "For regulated and sensitive environments",
-          "tr": "Düzenlemeye tabi ve hassas ortamlar için",
+          "tr": "Yasal Düzenlemelere Tabi ve Hassas Ortamlar İçin",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -829,14 +779,14 @@
         "HOME.REGULATED.INTRO": {
           "locationRole": "Inserted regulated callout · Paragraph",
           "en": "Cyobik helps banks, government organisations and critical infrastructure operators keep cyber asset intelligence inside the environment they control, including private and fully air-gapped networks. Asset data, security evidence, scoring and risk analysis remain within the organisation’s controlled infrastructure.",
-          "tr": "Cyobik; bankaların, kamu kurumlarının ve kritik altyapı işletmecilerinin siber varlık istihbaratını özel ve tamamen air-gapped ağlar dahil kendi kontrollerindeki ortamda tutmasına yardımcı olur. Varlık verisi, güvenlik kanıtı, puanlama ve risk analizi kurumun kontrollü altyapısında kalır.",
+          "tr": "Cyobik; bankaların, kamu kurumlarının ve kritik altyapı kuruluşlarının siber varlıklarına ait hassas verileri tamamen kendi kontrollerinde tutmasını sağlar. Özel bulutlardan internet bağlantısı olmayan tamamen izole ağlara kadar tüm veriler, güvenlik değerlendirmeleri, skorlamalar ve risk analizleri kurumun kendi altyapısında işlenir ve kurum dışına çıkmaz.",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.REGULATED.INSIDE.TITLE": {
           "locationRole": "Inserted regulated callout · H3",
-          "en": "Keep sensitive intelligence inside",
-          "tr": "Hassas istihbaratı içeride tutun",
+          "en": "Keep sensitive data inside your organisation",
+          "tr": "Hassas Verileri Kurum İçinde Tutun",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -849,22 +799,22 @@
         },
         "HOME.REGULATED.ISOLATED.TITLE": {
           "locationRole": "Inserted regulated callout · H3",
-          "en": "Operate in isolated environments",
-          "tr": "İzole ortamlarda çalışın",
+          "en": "Operate continuously in isolated environments",
+          "tr": "İzole Ortamlarda Kesintisiz Çalışın",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.REGULATED.ISOLATED.BODY": {
           "locationRole": "Inserted regulated callout · Paragraph",
           "en": "Continue visibility, security assessment and risk analysis where permanent external connectivity is restricted or prohibited.",
-          "tr": "Kalıcı dış bağlantının kısıtlı veya yasak olduğu ortamlarda görünürlük, güvenlik değerlendirmesi ve risk analizini sürdürün.",
+          "tr": "İnternet erişiminin kısıtlı veya tamamen kapalı olduğu ortamlarda dahi varlık görünürlüğünü, güvenlik değerlendirmelerini ve risk analizlerini kesintisiz sürdürün.",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.REGULATED.PROCESSING.TITLE": {
           "locationRole": "Inserted regulated callout · H3",
           "en": "Maintain control over processing",
-          "tr": "İşleme kontrolünü koruyun",
+          "tr": "Veri İşleme Süreçlerinin Kontrolü Sizde Kalsın",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -912,8 +862,8 @@
         },
         "HOME.FLOW.01.TITLE": {
           "locationRole": "Interactive flow · Stage 1 · Detail title",
-          "en": "See the assets in your environment",
-          "tr": "Ortamınızdaki varlıkları görün",
+          "en": "Discover the assets in your environment",
+          "tr": "Ortamınızdaki Varlıkları Keşfedin",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -926,8 +876,8 @@
         },
         "HOME.FLOW.01.OUTCOME": {
           "locationRole": "Interactive flow · Stage 1 · Outcome",
-          "en": "Outcome: A governed and verifiable asset starting point.",
-          "tr": "Çıktı: Yönetilen ve doğrulanabilir bir varlık başlangıç noktası.",
+          "en": "Outcome: A current, verifiable and manageable asset inventory.",
+          "tr": "Sonuç: Güncel, doğrulanabilir ve yönetilebilir varlık envanteri.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -941,21 +891,21 @@
         "HOME.FLOW.02.TITLE": {
           "locationRole": "Interactive flow · Stage 2 · Detail title",
           "en": "Give every asset meaning",
-          "tr": "Her varlığa anlam kazandırın",
+          "tr": "Her Varlığı Anlamlandırın",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.FLOW.02.SUMMARY": {
           "locationRole": "Interactive flow · Stage 2 · Detail paragraph",
           "en": "Connect profiles, software, services, ownership, lifecycle, networks, relationships and Business Services.",
-          "tr": "Profilleri, yazılımları, servisleri, sahipliği, yaşam döngüsünü, ağları, ilişkileri ve İş Servislerini birleştirin.",
+          "tr": "Varlık profillerini; yazılım, servis, sorumlu kişi, yaşam döngüsü, ağ bağlantıları, varlıklar arası ilişkiler ve iş servisleriyle zenginleştirerek her varlığın kurumunuzdaki rolünü ve önemini ortaya çıkarın.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.FLOW.02.OUTCOME": {
           "locationRole": "Interactive flow · Stage 2 · Outcome",
-          "en": "Outcome: Technical records enriched with business and operational context.",
-          "tr": "Çıktı: Teknik kayıtların iş ve operasyon bağlamıyla zenginleştirilmesi.",
+          "en": "Outcome: A meaningful asset inventory enriched with business and operational information.",
+          "tr": "Sonuç: İş ve operasyon bilgileriyle zenginleştirilmiş, anlamlı bir varlık envanteri.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -968,15 +918,15 @@
         },
         "HOME.FLOW.03.TITLE": {
           "locationRole": "Interactive flow · Stage 3 · Detail title",
-          "en": "Reveal security conditions",
-          "tr": "Güvenlik koşullarını ortaya çıkarın",
+          "en": "Make security risks visible",
+          "tr": "Güvenlik Risklerini Görünür Hale Getirin",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.FLOW.03.SUMMARY": {
           "locationRole": "Interactive flow · Stage 3 · Detail paragraph",
           "en": "Relate vulnerabilities, internal attack-surface conditions, protection evidence and control gaps to the assets they affect.",
-          "tr": "Zafiyetleri, iç saldırı yüzeyi koşullarını, koruma kanıtlarını ve kontrol boşluklarını ilgili varlıklarla ilişkilendirin.",
+          "tr": "Güvenlik açıklarını, iç saldırı yüzeyindeki riskleri, mevcut güvenlik önlemlerini ve eksik kontrolleri ilgili varlıklarla ilişkilendirerek gerçek güvenlik durumunu ortaya çıkarın.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -997,14 +947,14 @@
         "HOME.FLOW.04.TITLE": {
           "locationRole": "Interactive flow · Stage 4 · Detail title",
           "en": "Focus on the most meaningful risk",
-          "tr": "En önemli risklere odaklanın",
+          "tr": "Gerçekten Önemli Risklere Odaklanın",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.FLOW.04.SUMMARY": {
           "locationRole": "Interactive flow · Stage 4 · Detail paragraph",
           "en": "Review Visibility, Protection and Risk Scores with business impact, likelihood and drill-down evidence.",
-          "tr": "Görünürlük, Koruma ve Risk Skorlarını iş etkisi, olasılık ve ayrıntılı kanıtla birlikte değerlendirin.",
+          "tr": "Görünürlük, Koruma ve Risk Skorlarını; iş süreçlerine etkisi, gerçekleşme olasılığı ve detaylı bulgularla birlikte değerlendirerek hangi risklerin öncelikli olduğunu belirleyin.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1025,14 +975,14 @@
         "HOME.FLOW.05.TITLE": {
           "locationRole": "Interactive flow · Stage 5 · Detail title",
           "en": "Move decisions into operational workflows",
-          "tr": "Kararları operasyonel iş akışına taşıyın",
+          "tr": "Kararları Aksiyona Dönüştürün",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "HOME.FLOW.05.SUMMARY": {
           "locationRole": "Interactive flow · Stage 5 · Detail paragraph",
           "en": "Advance remediation through ITSM and ticketing, Splunk, reports and REST API workflows.",
-          "tr": "ITSM ve talep yönetimi, Splunk, raporlar ve REST API üzerinden iyileştirme çalışmalarını ilerletin.",
+          "tr": "Önceliklendirilen riskleri ITSM ve talep yönetimi, Splunk, raporlama ve REST API entegrasyonlarıyla mevcut operasyonel süreçlerinize aktarın ve iyileştirme çalışmalarını hızlandırın.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1049,7 +999,7 @@
       "sourcePage": {
         "id": "15532033",
         "title": "Website Content — Platform",
-        "version": 1,
+        "version": 5,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -1070,49 +1020,49 @@
         "PLATFORM.EYEBROW.01": {
           "locationRole": "Section 01 · Eyebrow",
           "en": "The Cyobik platform",
-          "tr": "Cyobik platformu",
+          "tr": "Cyobik",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H1.01": {
           "locationRole": "Section 01 · H1",
-          "en": "A maintained evidence layer for every cyber asset.",
-          "tr": "Her siber varlık için sürdürülen bir kanıt katmanı.",
+          "en": "A continuously updated, trusted source for every cyber asset.",
+          "tr": "Her siber varlık için sürekli güncellenen, güvenilir bilgi kaynağı.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
-          "en": "Connect identity, inventory, network placement, relationships, exposure, vulnerabilities, control evidence and risk in one governed asset model.",
-          "tr": "Kimlik, envanter, ağ konumu, ilişkiler, maruziyet, zafiyetler, kontrol kanıtları ve riski tek bir yönetilen varlık modelinde birleştirin.",
+          "en": "Bring identity, inventory, network placement, asset relationships, vulnerabilities, existing security controls and risk data together in one manageable asset model. Turn fragmented technical data into meaningful, current cyber asset intelligence.",
+          "tr": "Kimlik, envanter, ağ konumu, varlık ilişkileri, güvenlik açıkları, mevcut güvenlik kontrolleri ve risk verilerini tek bir yönetilebilir varlık modeli altında birleştirin. Dağınık teknik verileri anlamlı ve güncel siber varlık istihbaratına dönüştürün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.CTA.01": {
           "locationRole": "Section 01 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.CTA.02": {
           "locationRole": "Section 01 · CTA",
-          "en": "View the platform model",
-          "tr": "Platform modelini görün",
+          "en": "Discover how it works",
+          "tr": "Nasıl Çalıştığını Keşfedin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.EYEBROW.02": {
           "locationRole": "Section 02 · Eyebrow",
-          "en": "End-to-end model",
-          "tr": "Uçtan uca model",
+          "en": "END-TO-END CYBER-ASSET MANAGEMENT",
+          "tr": "UÇTAN UCA SİBER VARLIK YÖNETİMİ",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H2.01": {
           "locationRole": "Section 02 · H2",
-          "en": "From discovery to operational action.",
-          "tr": "Keşiften operasyonel aksiyona.",
+          "en": "From discovery to action: manage the entire process on one platform.",
+          "tr": "Keşiften Aksiyona: Tüm Süreci Tek Platformda Yönetin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1125,8 +1075,8 @@
         },
         "PLATFORM.H3.01": {
           "locationRole": "Section 02 · H3",
-          "en": "Discover and onboard",
-          "tr": "Keşfedin ve sisteme dahil edin",
+          "en": "Discover and inventory all your assets",
+          "tr": "Tüm Varlıklarınızı Keşfedin ve Envantere Dahil Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1147,14 +1097,14 @@
         "PLATFORM.H3.02": {
           "locationRole": "Section 02 · H3",
           "en": "Maintain asset intelligence",
-          "tr": "Varlık istihbaratını güncel tutun",
+          "tr": "Siber Varlık Bilgilerinizi Sürekli Güncel Tutun",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.02": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Keep hardware, operating system, software, firmware, users, services, processes, patches, network details and supported asset-specific fields current over time.",
-          "tr": "Donanım, işletim sistemi, yazılım, firmware, kullanıcı, servis, süreç, yama, ağ ayrıntıları ve desteklenen varlığa özgü alanları zaman içinde yönetin.",
+          "en": "Keep hardware, operating system, software, firmware, users, services, running processes, patches and network information continuously up to date. Turn your asset inventory from a point-in-time record into a living source of information that tracks changes across your environment.",
+          "tr": "Donanım, işletim sistemi, yazılım, firmware, kullanıcı, servis, çalışan süreç, yama ve ağ bilgilerini sürekli güncel tutun. Böylece varlık envanteriniz yalnızca anlık bir kayıt değil, ortamınızdaki değişiklikleri takip eden canlı bir bilgi kaynağına dönüşsün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1168,14 +1118,14 @@
         "PLATFORM.H3.03": {
           "locationRole": "Section 02 · H3",
           "en": "Connect relationships and Business Services",
-          "tr": "İlişkileri ve İş Servislerini bağlayın",
+          "tr": "Varlıklar Arasındaki İlişkileri ve İş Servislerini Ortaya Çıkarın",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.03": {
           "locationRole": "Section 02 · Paragraph",
           "en": "Record observed logical or physical relationships, confirm service membership and apply business impact to the assets that support each service.",
-          "tr": "Gözlemlenen mantıksal veya fiziksel ilişkileri kaydedin, servis üyeliğini onaylayın ve iş etkisini servisi destekleyen varlıklara uygulayın.",
+          "tr": "Varlıklar arasındaki mantıksal ve fiziksel bağlantıları görün, hangi varlıkların hangi iş servislerini desteklediğini belirleyin. İş servislerinin önem derecesini ilgili varlıklarla ilişkilendirerek teknik envanterinize gerçek iş etkisini ekleyin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1188,15 +1138,15 @@
         },
         "PLATFORM.H3.04": {
           "locationRole": "Section 02 · H3",
-          "en": "Evaluate security and exposure",
-          "tr": "Güvenlik ve maruziyeti değerlendirin",
+          "en": "Assess security posture and gaps in one place",
+          "tr": "Güvenlik Durumunu ve Açıkları Tek Noktadan Değerlendirin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.04": {
           "locationRole": "Section 02 · Paragraph",
           "en": "Bring together offline CPE/CVE assessment, Nessus findings, internal attack-surface conditions, protection evidence, compliance results and MITRE ATT&CK context.",
-          "tr": "Çevrimdışı CPE/CVE değerlendirmesini, Nessus bulgularını, iç saldırı yüzeyi koşullarını, koruma kanıtlarını, uyumluluk sonuçlarını ve MITRE ATT&CK bağlamını birleştirin.",
+          "tr": "Çevrimdışı CPE/CVE analizlerini, Nessus bulgularını, iç saldırı yüzeyindeki riskleri, mevcut güvenlik kontrollerini, uyumluluk sonuçlarını ve MITRE ATT&CK verilerini bir araya getirin. Her varlığın güvenlik durumunu farklı kaynaklardan gelen verilerle birlikte değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1210,14 +1160,14 @@
         "PLATFORM.H3.05": {
           "locationRole": "Section 02 · H3",
           "en": "Explain and prioritise risk",
-          "tr": "Riski açıklayın ve önceliklendirin",
+          "tr": "Riskleri Anlamlandırın ve Doğru Önceliklendirin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.05": {
           "locationRole": "Section 02 · Paragraph",
           "en": "Use asset-level and organisation-level Visibility, Protection and Risk Scores, then drill down to the evidence that contributes to each score.",
-          "tr": "Varlık ve kurum düzeyinde Görünürlük, Koruma ve Risk Skorlarını kullanın; her skora katkıda bulunan kanıta ayrıntılı olarak inin.",
+          "tr": "Varlık ve kurum düzeyindeki Görünürlük, Koruma ve Risk Skorlarını birlikte değerlendirin. Ardından her skorun oluşmasına katkıda bulunan kanıtları ayrıntılı olarak inceleyin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1230,106 +1180,106 @@
         },
         "PLATFORM.H3.06": {
           "locationRole": "Section 02 · H3",
-          "en": "Integrate and report",
-          "tr": "Entegre edin ve raporlayın",
+          "en": "Integrate with your existing systems and report the results",
+          "tr": "Mevcut Sistemlerinizle Entegre Edin, Sonuçları Raporlayın",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.06": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Use dashboards, scheduled reports, named Splunk, Nessus and Jira integrations, and the comprehensive REST API with complete Swagger/OpenAPI documentation.",
-          "tr": "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve Jira entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.",
+          "en": "Use dashboards, scheduled reports, Splunk and Nessus integrations, enterprise ITSM and ticketing workflows, and the comprehensive REST API with complete Swagger/OpenAPI documentation.",
+          "tr": "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk ve Nessus entegrasyonları ile kurumsal ITSM ve talep yönetimi iş akışlarını kullanın; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.EYEBROW.03": {
           "locationRole": "Section 03 · Eyebrow",
-          "en": "Governance",
-          "tr": "Yönetişim",
+          "en": "ACCESS AND DATA MANAGEMENT",
+          "tr": "ERİŞİM VE VERİ YÖNETİMİ",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H2.02": {
           "locationRole": "Section 03 · H2",
-          "en": "Keep access and data boundaries explicit.",
-          "tr": "Erişim ve veri sınırlarını açık tutun.",
+          "en": "You decide who can access which data.",
+          "tr": "Kimin Hangi Veriye Erişebileceğini Siz Belirleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H3.07": {
           "locationRole": "Section 03 · H3",
           "en": "Role-based access",
-          "tr": "Rol tabanlı erişim",
+          "tr": "Rol Tabanlı Erişim Kontrolü",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.07": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Default and custom roles with granular permissions.",
+          "en": "Create default or organisation-specific roles and use granular permissions to control precisely which data and functions users can access.",
           "tr": "Hazır veya kuruma özel roller oluşturun; ayrıntılı yetkilendirme seçenekleriyle kullanıcıların hangi verilere ve işlevlere erişebileceğini hassas şekilde yönetin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H3.08": {
           "locationRole": "Section 03 · H3",
-          "en": "Attribute-based restrictions",
-          "tr": "Öznitelik tabanlı kısıtlamalar",
+          "en": "Access restrictions based on asset attributes",
+          "tr": "Varlık Özelliklerine Göre Erişim Kısıtlamaları",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.08": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Limit visible data by maintained attributes such as VLAN, location or business unit.",
+          "en": "Limit visible assets by maintained attributes such as VLAN, location or business unit, so each team can access only the data within its responsibility and authorisation.",
           "tr": "Kullanıcıların görüntüleyebileceği varlıkları VLAN, konum veya iş birimi gibi özelliklere göre sınırlandırın. Böylece her ekip yalnızca sorumluluğundaki ve yetkili olduğu verilere erişsin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H3.09": {
           "locationRole": "Section 03 · H3",
-          "en": "Auditability",
-          "tr": "Denetlenebilirlik",
+          "en": "Traceability and audit",
+          "tr": "İzlenebilirlik ve Denetim",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.09": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Record user and administrative activity and maintain lower-level system trace information.",
+          "en": "Record user and administrative activity and retain system-level traces so changes and access can be reviewed retrospectively.",
           "tr": "Kullanıcı ve yönetici işlemlerini kayıt altına alın; sistem seviyesindeki işlem izlerini koruyarak yapılan değişikliklerin ve erişimlerin geriye dönük olarak incelenebilmesini sağlayın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H3.10": {
           "locationRole": "Section 03 · H3",
-          "en": "Relationship context",
-          "tr": "İlişki bağlamı",
+          "en": "Asset and Business Service relationships",
+          "tr": "Varlık ve İş Servisi İlişkileri",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.10": {
           "locationRole": "Section 03 · Paragraph",
           "en": "Cyobik presents observed logical and physical relationships alongside confirmed Business Service context, helping teams understand how assets support operational services.",
-          "tr": "Cyobik, gözlemlenen mantıksal ve fiziksel ilişkileri onaylanmış İş Servisi bağlamıyla birlikte sunarak ekiplerin varlıkların operasyonel servisleri nasıl desteklediğini anlamasına yardımcı olur.",
+          "tr": "Cyobik, varlıklar arasındaki mantıksal ve fiziksel ilişkileri iş servisleriyle birlikte gösterir. Böylece hangi varlığın hangi operasyonel hizmeti desteklediğini, varlıklar arasındaki bağımlılıkları ve olası bir sorunun iş süreçlerine nasıl yansıyabileceğini kolayca anlayabilirsiniz.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.H2.03": {
           "locationRole": "Section 04 · H2",
           "en": "See the complete asset context in one workflow.",
-          "tr": "Varlığın tüm bağlamını tek iş akışında görün.",
+          "tr": "Bir Varlık Hakkında İhtiyacınız Olan Tüm Bilgiyi Tek Akışta Görün",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.PARAGRAPH.11": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Explore how the platform connects evidence across security, IT, risk and management teams.",
-          "tr": "Platformun güvenlik, BT, risk ve yönetim ekipleri arasındaki kanıtı nasıl birleştirdiğini inceleyin.",
+          "en": "Explore how Cyobik brings security and IT data together, connects technical findings with business impact and risk information, and enables teams to make decisions from the same current data.",
+          "tr": "Cyobik'in siber güvenlik ve BT verilerini nasıl bir araya getirdiğini; teknik bulguları iş etkisi ve risk bilgileriyle nasıl ilişkilendirerek ekiplerin aynı güncel veri üzerinden karar almasını sağladığını keşfedin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "PLATFORM.CTA.03": {
           "locationRole": "Section 04 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         }
@@ -1359,8 +1309,8 @@
       "content": {
         "ASSET.EYEBROW.01": {
           "locationRole": "Section 01 · Eyebrow",
-          "en": "Asset intelligence",
-          "tr": "Varlık istihbaratı",
+          "en": "Cyber asset intelligence",
+          "tr": "Siber Varlık İstihbaratı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1374,34 +1324,34 @@
         "ASSET.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
           "en": "Move beyond a flat asset list with maintained identity, inventory, network, lifecycle, relationship and business context.",
-          "tr": "Düz bir varlık listesinin ötesine geçerek kimlik, envanter, ağ, yaşam döngüsü, ilişki ve iş bağlamını güncel tutun.",
+          "tr": "Sıradan bir varlık listesinin ötesine geçin. Kimlik, envanter, ağ, yaşam döngüsü, varlık ilişkileri ve iş süreçlerine ait bilgileri bir araya getirerek her varlık için sürekli güncel ve anlamlı bir görünüm oluşturun.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.CTA.01": {
           "locationRole": "Section 01 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.CTA.02": {
           "locationRole": "Section 01 · CTA",
-          "en": "Collection methods",
-          "tr": "Toplama yöntemleri",
+          "en": "Explore asset discovery methods",
+          "tr": "Varlık Keşif Yöntemlerini İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.EYEBROW.02": {
           "locationRole": "Section 02 · Eyebrow",
-          "en": "Address-space intelligence",
-          "tr": "Adres alanı istihbaratı",
+          "en": "Address-space analysis",
+          "tr": "Adres Alanı Analizi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.H2.01": {
           "locationRole": "Section 02 · H2",
-          "en": "Turn address space into actionable asset intelligence.",
+          "en": "Turn the IP addresses on your network into meaningful cyber asset intelligence.",
           "tr": "Ağınızdaki IP adreslerini anlamlı siber varlık bilgisine dönüştürün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -1415,15 +1365,15 @@
         },
         "ASSET.EYEBROW.03": {
           "locationRole": "Section 03 · Eyebrow",
-          "en": "Purpose-built collection methods",
-          "tr": "Amaca uygun toplama yöntemleri",
+          "en": "ASSET-SPECIFIC DISCOVERY METHODS",
+          "tr": "Varlığa Özel Keşif Yöntemleri",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.H2.02": {
           "locationRole": "Section 03 · H2",
           "en": "Use the right collection method for each asset type.",
-          "tr": "Her varlık türü için doğru toplama yöntemini kullanın.",
+          "tr": "Her varlık türünü en doğru yöntemle keşfedin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1437,7 +1387,7 @@
         "ASSET.PARAGRAPH.02": {
           "locationRole": "Section 03 · Paragraph",
           "en": "Routers, Layer 3 switches, firewalls and similar supported infrastructure are collected through supported adapters and gateway queries.",
-          "tr": "Yönlendiriciler, Katman 3 anahtarlar, güvenlik duvarları ve benzeri desteklenen altyapılar; desteklenen adaptörler ve ağ geçidi sorgularıyla toplanır.",
+          "tr": "Router, Layer 3 switch, güvenlik duvarı ve desteklenen diğer ağ bileşenlerini uygun adaptörler ve ağ geçidi sorguları üzerinden keşfedin ve envantere dahil edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1450,7 +1400,7 @@
         },
         "ASSET.PARAGRAPH.03": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "The installed Cyobik Agent provides detailed Windows and Linux endpoint inventory.",
+          "en": "Use the Cyobik Agent to automatically collect detailed hardware, operating system, software and other inventory information from Windows and Linux systems.",
           "tr": "Cyobik Agent ile Windows ve Linux sistemlerin donanım, işletim sistemi, yazılım ve diğer ayrıntılı envanter bilgilerini otomatik olarak toplayın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -1471,15 +1421,15 @@
         },
         "ASSET.EYEBROW.04": {
           "locationRole": "Section 04 · Eyebrow",
-          "en": "Maintained context",
-          "tr": "Sürdürülen bağlam",
+          "en": "Continuously updated asset information",
+          "tr": "Sürekli Güncel Varlık Bilgisi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.H2.03": {
           "locationRole": "Section 04 · H2",
           "en": "Keep the asset profile useful over time.",
-          "tr": "Varlık profilini zaman içinde kullanılabilir tutun.",
+          "tr": "Varlık bilgilerinizi sürekli güncel ve kullanılabilir tutun.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1492,8 +1442,8 @@
         },
         "ASSET.PARAGRAPH.05": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Maintain applicable hardware, OS, software, firmware, user, service, process, network, patch and certificate information. Compare current inventory with the previous scan and record additions, modifications and removals.",
-          "tr": "Uygulanabilir donanım, işletim sistemi, yazılım, firmware, kullanıcı, servis, süreç, ağ, yama ve sertifika bilgilerini yönetin. Güncel envanteri önceki taramayla karşılaştırın.",
+          "en": "Keep hardware, operating system, software, firmware, users, services, running processes, network, patch and certificate information continuously up to date. Compare the current inventory with previous scans to identify added, changed or removed components.",
+          "tr": "Donanım, işletim sistemi, yazılım, firmware, kullanıcı, servis, çalışan süreç, ağ, yama ve sertifika bilgilerini sürekli güncel tutun. Güncel envanteri önceki taramalarla karşılaştırarak eklenen, değiştirilen veya kaldırılan bileşenleri kolayca tespit edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1507,7 +1457,7 @@
         "ASSET.PARAGRAPH.06": {
           "locationRole": "Section 04 · Paragraph",
           "en": "Retain previously discovered assets when they become unreachable and identify lifecycle conditions that no longer match observed reachability.",
-          "tr": "Daha önce keşfedilen varlıklar erişilemez olduğunda kayıtlarını koruyun ve yaşam döngüsü durumu ile gözlemlenen erişilebilirlik arasındaki uyumsuzlukları belirleyin.",
+          "tr": "Daha önce keşfedilen bir varlık erişilemez hale geldiğinde geçmiş bilgilerini kaybetmeyin. Varlığın yaşam döngüsü durumu ile ağdaki gerçek erişilebilirlik durumunu karşılaştırarak tutarsızlıkları kolayca tespit edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1541,36 +1491,36 @@
         },
         "ASSET.EYEBROW.05": {
           "locationRole": "Section 05 · Eyebrow",
-          "en": "Governed asset model",
-          "tr": "Yönetilen varlık modeli",
+          "en": "Continuously updated asset model",
+          "tr": "Sürekli Güncellenen Varlık Modeli",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.H2.04": {
           "locationRole": "Section 05 · H2",
           "en": "Turn discovery into maintained asset intelligence.",
-          "tr": "Keşfi sürdürülen varlık istihbaratına dönüştürün.",
+          "tr": "Keşfedilen varlıkları sürekli güncellenen siber varlık istihbaratına dönüştürün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.PARAGRAPH.09": {
           "locationRole": "Section 05 · Paragraph",
-          "en": "Give security, IT and risk teams one shared context for identity, changes, relationships and business meaning.",
-          "tr": "Güvenlik, BT ve risk ekiplerine kimlik, değişiklik, ilişki ve iş anlamı için ortak bir bağlam sağlayın.",
+          "en": "Bring identity, change, asset relationship and business-process information together in one place. Enable security and IT teams to understand the environment, assess risk and make better decisions from the same current data.",
+          "tr": "Kimlik, değişiklik, varlık ilişkileri ve iş süreçlerine ait bilgileri tek noktada bir araya getirin. Siber güvenlik ve BT ekiplerinin aynı güncel veriler üzerinden ortamı anlamasını, riskleri değerlendirmesini ve daha doğru kararlar almasını sağlayın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.CTA.03": {
           "locationRole": "Section 05 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "ASSET.CTA.04": {
           "locationRole": "Section 05 · CTA",
           "en": "Explore risk prioritisation",
-          "tr": "Risk önceliklendirmeyi inceleyin",
+          "tr": "Risk Önceliklendirmeyi İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         }
@@ -1600,36 +1550,36 @@
       "content": {
         "SECURITY.EYEBROW.01": {
           "locationRole": "Section 01 · Eyebrow",
-          "en": "Security coverage and exposure",
-          "tr": "Güvenlik kapsamı ve maruziyet",
+          "en": "SECURITY POSTURE AND RISK VISIBILITY",
+          "tr": "Güvenlik Durumu ve Risk Görünürlüğü",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.H1.01": {
           "locationRole": "Section 01 · H1",
-          "en": "See where assets are exposed, weak or insufficiently evidenced.",
-          "tr": "Varlıkların nerede açıkta, zayıf veya yetersiz kanıtlanmış olduğunu görün.",
+          "en": "See the vulnerabilities, weaknesses and protection gaps across your assets.",
+          "tr": "Varlıklarınızdaki güvenlik açıklarını, zayıf noktaları ve koruma eksiklerini görün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
-          "en": "Connect security conditions to maintained asset context so teams can review what is known, what is missing and where protection gaps require attention.",
-          "tr": "Güvenlik koşullarını yönetilen varlık bağlamına bağlayarak neyin bilindiğini, neyin eksik olduğunu ve hangi koruma boşluklarının dikkat gerektirdiğini inceleyin.",
+          "en": "Connect security findings with current asset information. See in one place which assets are at risk, which security controls are missing and where action should be taken first.",
+          "tr": "Güvenlik bulgularını güncel varlık bilgileriyle ilişkilendirin. Hangi varlıkların risk altında olduğunu, hangi güvenlik kontrollerinin eksik kaldığını ve öncelikle nerede aksiyon alınması gerektiğini tek noktadan görün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.CTA.01": {
           "locationRole": "Section 01 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.CTA.02": {
           "locationRole": "Section 01 · CTA",
           "en": "Explore coverage",
-          "tr": "Kapsamı inceleyin",
+          "tr": "Güvenlik Kapsamını İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1642,8 +1592,8 @@
         },
         "SECURITY.H2.01": {
           "locationRole": "Section 02 · H2",
-          "en": "Review exposure for assets managed by Cyobik.",
-          "tr": "Cyobik tarafından yönetilen varlıkların maruziyetini inceleyin.",
+          "en": "See where your assets are exposed to attack.",
+          "tr": "Varlıklarınızın saldırıya açık noktalarını görün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1656,15 +1606,15 @@
         },
         "SECURITY.PARAGRAPH.01": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Open ports, protocols, services and available process or connection context.",
-          "tr": "Açık portlar, protokoller, servisler ve mevcut süreç veya bağlantı bağlamı.",
+          "en": "Review open ports, protocols, active services and available connection information by asset to identify unnecessary or risky services.",
+          "tr": "Açık portları, kullanılan protokolleri, aktif servisleri ve mevcut bağlantı bilgilerini varlık bazında inceleyerek gereksiz veya risk oluşturan servisleri tespit edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.H3.02": {
           "locationRole": "Section 02 · H3",
           "en": "Internet-facing connections",
-          "tr": "İnternete açık bağlantılar",
+          "tr": "İnternete Açık Bağlantılar",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1677,8 +1627,8 @@
         },
         "SECURITY.H3.03": {
           "locationRole": "Section 02 · H3",
-          "en": "Endpoint and application exposure",
-          "tr": "Uç nokta ve uygulama maruziyeti",
+          "en": "Endpoint and application risks",
+          "tr": "Uç Nokta ve Uygulama Riskleri",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1692,21 +1642,21 @@
         "SECURITY.EYEBROW.03": {
           "locationRole": "Section 03 · Eyebrow",
           "en": "Vulnerability and protection",
-          "tr": "Zafiyet ve koruma",
+          "tr": "Güvenlik Açıkları ve Koruma Durumu",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.H2.02": {
           "locationRole": "Section 03 · H2",
           "en": "Connect assessment results to the asset.",
-          "tr": "Değerlendirme sonuçlarını varlığa bağlayın.",
+          "tr": "Güvenlik bulgularını doğrudan ilgili varlıklarla ilişkilendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.H3.04": {
           "locationRole": "Section 03 · H3",
           "en": "Offline CPE/CVE assessment",
-          "tr": "Çevrimdışı CPE/CVE değerlendirmesi",
+          "tr": "Çevrimdışı CPE/CVE Analizi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1719,8 +1669,8 @@
         },
         "SECURITY.H3.05": {
           "locationRole": "Section 03 · H3",
-          "en": "Nessus correlation",
-          "tr": "Nessus ilişkilendirmesi",
+          "en": "Nessus integration",
+          "tr": "Nessus Entegrasyonu",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1740,8 +1690,8 @@
         },
         "SECURITY.PARAGRAPH.06": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Higher is better. Review available security, compliance, vulnerability, exposure, authentication, certificate and related evidence with drill-down to findings.",
-          "tr": "Yüksek olması daha iyidir. Güvenlik, uyumluluk, zafiyet, maruziyet, kimlik doğrulama, sertifika ve ilişkili kanıtları temel bulgularla birlikte inceleyin.",
+          "en": "Assess how well your assets are protected through a single score. Review security controls, compliance posture, vulnerabilities, authentication and certificate information alongside the relevant findings. A higher score indicates stronger protection.",
+          "tr": "Varlıklarınızın ne ölçüde korunduğunu tek bir skor üzerinden değerlendirin. Güvenlik kontrollerini, uyumluluk durumunu, güvenlik açıklarını, kimlik doğrulama ve sertifika bilgilerini ilgili bulgularla birlikte inceleyin. Yüksek skor, daha güçlü bir koruma seviyesini ifade eder.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1754,22 +1704,22 @@
         },
         "SECURITY.PARAGRAPH.07": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Map asset findings, vulnerabilities and security conditions to ATT&CK techniques in the product interface and reports.",
-          "tr": "Varlık bulgularını, zafiyetleri ve güvenlik koşullarını ürün arayüzünde ve raporlarda ATT&CK teknikleriyle eşleyin.",
+          "en": "Map asset findings, vulnerabilities and identified security risks to MITRE ATT&CK techniques, making it easier to analyse potential attacker methods through the product interface and reports.",
+          "tr": "Varlık bulgularını, güvenlik açıklarını ve tespit edilen güvenlik risklerini MITRE ATT&CK teknikleriyle eşleştirin; saldırganların kullanabileceği yöntemleri ürün arayüzü ve raporlar üzerinden daha kolay analiz edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.EYEBROW.04": {
           "locationRole": "Section 04 · Eyebrow",
           "en": "Compliance assessment",
-          "tr": "Uyumluluk değerlendirmesi",
+          "tr": "Uyumluluk Değerlendirmesi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.H2.03": {
           "locationRole": "Section 04 · H2",
-          "en": "Assess applicable technical evidence.",
-          "tr": "Uygulanabilir teknik kanıtı değerlendirin.",
+          "en": "Assess your technical security posture against standards.",
+          "tr": "Teknik güvenlik durumunuzu standartlara göre değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1796,8 +1746,8 @@
         },
         "SECURITY.PARAGRAPH.09": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Review predefined technical reporting for applicable control areas visible to the platform.",
-          "tr": "Platformun görebildiği uygulanabilir kontrol alanları için ön tanımlı teknik raporlamayı inceleyin.",
+          "en": "Review the technical control areas Cyobik can assess against ISO/IEC 27001 and use ready-made reports to evaluate your current security posture.",
+          "tr": "Cyobik'in değerlendirebildiği teknik kontrol alanlarını ISO/IEC 27001 kapsamında inceleyin ve hazır raporlarla mevcut güvenlik durumunuzu değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1810,8 +1760,8 @@
         },
         "SECURITY.PARAGRAPH.10": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Map collected technical and operational data to applicable predefined control areas.",
-          "tr": "Toplanan teknik ve operasyonel veriyi uygulanabilir ön tanımlı kontrol alanlarıyla eşleyin.",
+          "en": "Map collected technical and operational data to relevant PCI DSS control areas to assess your security posture and identify areas for improvement more easily.",
+          "tr": "Toplanan teknik ve operasyonel verileri ilgili PCI DSS kontrol alanlarıyla eşleştirerek güvenlik durumunuzu ve iyileştirilmesi gereken noktaları daha kolay değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1824,22 +1774,22 @@
         },
         "SECURITY.H2.04": {
           "locationRole": "Section 05 · H2",
-          "en": "Put security evidence in the context of the asset.",
-          "tr": "Güvenlik kanıtını varlığın bağlamına yerleştirin.",
+          "en": "See the real risk by connecting security findings to assets.",
+          "tr": "Güvenlik bulgularını varlıklarla ilişkilendirerek gerçek riski görün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.PARAGRAPH.12": {
           "locationRole": "Section 05 · Paragraph",
-          "en": "Review exposure, vulnerability, protection and compliance evidence through one maintained asset model.",
-          "tr": "Maruziyet, zafiyet, koruma ve uyumluluk kanıtını tek bir sürdürülen varlık modeli üzerinden inceleyin.",
+          "en": "Assess vulnerabilities, exposed points, current protection posture and compliance results alongside current asset information. Bring fragmented security findings into one view to identify which assets genuinely require priority attention.",
+          "tr": "Güvenlik açıklarını, saldırıya açık noktaları, mevcut koruma durumunu ve uyumluluk sonuçlarını güncel varlık bilgileriyle birlikte değerlendirin. Dağınık güvenlik bulgularını tek bir görünümde bir araya getirerek hangi varlıkların gerçekten öncelik gerektirdiğini belirleyin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "SECURITY.CTA.03": {
           "locationRole": "Section 05 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         }
@@ -1870,56 +1820,56 @@
         "RISK.EYEBROW.01": {
           "locationRole": "Section 01 · Eyebrow",
           "en": "Risk prioritisation",
-          "tr": "Risk önceliklendirme",
+          "tr": "Risk Önceliklendirme",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.H1.01": {
           "locationRole": "Section 01 · H1",
-          "en": "Prioritise the assets that create the most meaningful risk.",
-          "tr": "En anlamlı riski oluşturan varlıkları önceliklendirin.",
+          "en": "Prioritise the assets that pose the most critical risk to your organisation.",
+          "tr": "Kurumunuz için en kritik riski oluşturan varlıklara öncelik verin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
           "en": "Combine technical evidence with impact, asset context, observed relationships and confirmed Business Services to support explainable prioritisation.",
-          "tr": "Açıklanabilir önceliklendirme için teknik kanıtı etki, varlık bağlamı, gözlemlenen ilişkiler ve onaylanmış İş Servisleriyle birleştirin.",
+          "tr": "Teknik bulguları; iş etkisi, güncel varlık bilgileri, varlıklar arasındaki ilişkiler ve İş Servisleriyle birlikte değerlendirin. Böylece hangi risklerin neden öncelikli olduğunu net biçimde görün ve kararlarınızı güvenilir verilere dayandırın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.CTA.01": {
           "locationRole": "Section 01 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.CTA.02": {
           "locationRole": "Section 01 · CTA",
-          "en": "How risk is explained",
-          "tr": "Risk nasıl açıklanır?",
+          "en": "Explore risk assessment",
+          "tr": "Risk Değerlendirmesini İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.EYEBROW.02": {
           "locationRole": "Section 02 · Eyebrow",
           "en": "Risk model",
-          "tr": "Risk modeli",
+          "tr": "Risk Modeli",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.H2.01": {
           "locationRole": "Section 02 · H2",
           "en": "Use technical and business context together.",
-          "tr": "Teknik ve iş bağlamını birlikte kullanın.",
+          "tr": "Teknik Riskleri İş Etkisiyle Birlikte Değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.LEAD_PARAGRAPH.02": {
           "locationRole": "Section 02 · Lead paragraph",
-          "en": "Cyobik uses a proprietary risk model aligned with the principles of ISO 27005 and ISO 31000. Asset Risk is structured around Impact and Likelihood.",
-          "tr": "Cyobik, ISO 27005 ve ISO 31000 ilkeleriyle uyumlu tescilli bir risk modeli kullanır. Varlık Riski, Etki ve Olasılık etrafında yapılandırılır.",
+          "en": "Cyobik uses its own risk model, aligned with the principles of ISO 27005 and ISO 31000, to assess technical security findings alongside business impact and likelihood. This makes the risk each asset poses to your organisation more meaningful and comparable.",
+          "tr": "Cyobik, ISO 27005 ve ISO 31000 ilkeleriyle uyumlu özgün risk modeli sayesinde teknik güvenlik bulgularını iş etkisi ve gerçekleşme olasılığıyla birlikte değerlendirir. Böylece her varlığın kurumunuz için oluşturduğu risk daha anlamlı ve karşılaştırılabilir hale gelir.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1988,14 +1938,14 @@
         },
         "RISK.EYEBROW.03": {
           "locationRole": "Section 03 · Eyebrow",
-          "en": "Business meaning",
-          "tr": "İş anlamı",
+          "en": "IMPACT ON BUSINESS PROCESSES",
+          "tr": "İŞ SÜREÇLERİNE ETKİ",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.H2.02": {
           "locationRole": "Section 03 · H2",
-          "en": "Explain why similar findings can require different priorities.",
+          "en": "The same vulnerability does not create the same risk for every asset.",
           "tr": "Aynı güvenlik açığı, her varlık için aynı riski oluşturmaz.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -2010,7 +1960,7 @@
         "RISK.PARAGRAPH.04": {
           "locationRole": "Section 03 · Paragraph",
           "en": "Use asset classification, lifecycle, ownership and maintained business impact.",
-          "tr": "Varlık sınıflandırmasını, yaşam döngüsünü, sahipliği ve yönetilen iş etkisini kullanın.",
+          "tr": "Varlığın önem derecesini, yaşam döngüsünü, sorumlu ekip veya kişiyi ve desteklediği iş süreçlerini birlikte değerlendirin. Böylece teknik bir bulgunun kurum üzerindeki gerçek etkisini daha doğru belirleyin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2024,14 +1974,14 @@
         "RISK.PARAGRAPH.05": {
           "locationRole": "Section 03 · Paragraph",
           "en": "Consider observed connections and confirmed Business Service membership.",
-          "tr": "Gözlemlenen bağlantıları ve onaylanmış İş Servisi üyeliğini dikkate alın.",
+          "tr": "Varlıklar arasındaki tespit edilen bağlantıları ve hangi İş Servislerini desteklediklerini dikkate alın. Bir varlıktaki riskin bağlı sistemleri ve kritik iş servislerini nasıl etkileyebileceğini görün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.H3.03": {
           "locationRole": "Section 03 · H3",
-          "en": "Evidence",
-          "tr": "Kanıt",
+          "en": "Findings",
+          "tr": "Bulgular",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2044,22 +1994,22 @@
         },
         "RISK.EYEBROW.04": {
           "locationRole": "Section 04 · Eyebrow",
-          "en": "Move work forward",
-          "tr": "İşi ilerletin",
+          "en": "TAKE ACTION",
+          "tr": "AKSİYONA GEÇİN",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.H2.03": {
           "locationRole": "Section 04 · H2",
           "en": "Connect prioritised risk to operational workflows.",
-          "tr": "Önceliklendirilen riski operasyonel iş akışlarına bağlayın.",
+          "tr": "Önceliklendirilen Riskleri Doğrudan Aksiyona Dönüştürün.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.PARAGRAPH.07": {
           "locationRole": "Section 04 · Paragraph",
           "en": "Use ITSM and ticketing integrations to create, assign, track and synchronise remediation work from prioritised risk context, or use the REST API for authorised programmatic workflows.",
-          "tr": "ITSM ve talep yönetimi entegrasyonlarıyla iyileştirme çalışmalarını önceliklendirilmiş risk bağlamından oluşturun, atayın, izleyin ve senkronize edin; yetkili programatik iş akışları için REST API'yi kullanın.",
+          "tr": "Önceliklendirilen riskleri ITSM ve talep yönetimi entegrasyonları üzerinden doğrudan iyileştirme süreçlerine aktarın. Görev oluşturun, sorumlu atayın, ilerlemeyi takip edin ve güncel durumu senkronize edin. İhtiyaçlarınıza özel otomasyon ve entegrasyonlar için kapsamlı REST API'den yararlanın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2073,14 +2023,14 @@
         "RISK.CTA.04": {
           "locationRole": "Section 04 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.H3.04": {
           "locationRole": "Section 04 · H3",
-          "en": "Current boundary",
-          "tr": "Mevcut sınır",
+          "en": "Platform scope",
+          "tr": "Platform Kapsamı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2097,7 +2047,7 @@
       "sourcePage": {
         "id": "15466582",
         "title": "Website Content — Integrations",
-        "version": 1,
+        "version": 5,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -2124,29 +2074,29 @@
         },
         "INTEGRATIONS.H1.01": {
           "locationRole": "Section 01 · H1",
-          "en": "Bring cyber-asset context into the workflows your teams already use.",
-          "tr": "Siber varlık bağlamını ekiplerinizin mevcut iş akışlarına taşıyın.",
+          "en": "Bring cyber asset data into the systems your teams already use.",
+          "tr": "Siber varlık verilerini ekiplerinizin kullandığı sistemlerle buluşturun.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
-          "en": "Use named integrations for specific operational workflows or the comprehensive REST API covering all product functionality and data types.",
-          "tr": "Belirli operasyonel iş akışları için adlandırılmış entegrasyonları veya tüm ürün işlevlerini ve veri türlerini kapsayan kapsamlı REST API'yi kullanın.",
+          "en": "Use pre-built integrations to connect Cyobik to your existing operational processes. For broader or organisation-specific requirements, use the REST API, which covers supported product functions and data types.",
+          "tr": "Hazır entegrasyonlarla Cyobik'i mevcut operasyonel süreçlerinize dahil edin. Daha kapsamlı veya kuruma özel ihtiyaçlar için ürün işlevlerini ve desteklenen veri türlerini kapsayan REST API'den yararlanın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.CTA.01": {
           "locationRole": "Section 01 · CTA",
-          "en": "Discuss integrations",
-          "tr": "Entegrasyonları görüşün",
+          "en": "Explore integrations",
+          "tr": "Entegrasyonları İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.CTA.02": {
           "locationRole": "Section 01 · CTA",
-          "en": "View connectors",
-          "tr": "Bağlayıcıları görün",
+          "en": "View connection options",
+          "tr": "Bağlantı Seçeneklerini Görün",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2159,7 +2109,7 @@
         },
         "INTEGRATIONS.BADGE.01": {
           "locationRole": "Section 02 · Badge",
-          "en": "Available",
+          "en": "Ready to use",
           "tr": "Kullanıma Hazır",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -2173,28 +2123,28 @@
         },
         "INTEGRATIONS.SUPPORTING_LABEL.01": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Direction",
+          "en": "Data flow",
           "tr": "Veri Akışı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.EMPHASIS_LABEL.01": {
           "locationRole": "Section 02 · Emphasis label",
-          "en": "Splunk pulls from Cyobik",
+          "en": "Splunk retrieves data from Cyobik",
           "tr": "Splunk, verileri Cyobik'ten alır",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.SUPPORTING_LABEL.02": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Boundary",
+          "en": "Scope",
           "tr": "Kapsam",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.EMPHASIS_LABEL.02": {
           "locationRole": "Section 02 · Emphasis label",
-          "en": "Not generic log forwarding",
+          "en": "Not for general-purpose log forwarding",
           "tr": "Genel amaçlı log aktarımı değildir",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -2208,7 +2158,7 @@
         },
         "INTEGRATIONS.BADGE.02": {
           "locationRole": "Section 02 · Badge",
-          "en": "Available",
+          "en": "Ready to use",
           "tr": "Kullanıma Hazır",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -2222,29 +2172,29 @@
         },
         "INTEGRATIONS.SUPPORTING_LABEL.03": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Instances",
+          "en": "Connection",
           "tr": "Bağlantı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.EMPHASIS_LABEL.03": {
           "locationRole": "Section 02 · Emphasis label",
-          "en": "One or more",
+          "en": "One or more Nessus environments",
           "tr": "Bir veya daha fazla Nessus ortamı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.SUPPORTING_LABEL.04": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Workflow",
-          "tr": "İş akışı",
+          "en": "Operating model",
+          "tr": "Çalışma Şekli",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.EMPHASIS_LABEL.04": {
           "locationRole": "Section 02 · Emphasis label",
-          "en": "Scheduled retrieval",
-          "tr": "Planlı alma",
+          "en": "Automatic retrieval of scheduled scan results",
+          "tr": "Planlı tarama sonuçlarının otomatik alınması",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2265,35 +2215,35 @@
         "INTEGRATIONS.PARAGRAPH.03": {
           "locationRole": "Section 02 · Paragraph",
           "en": "Connect Cyobik with enterprise ITSM and ticketing platforms to create, assign, track and synchronise remediation work directly from asset, exposure and risk context.",
-          "tr": "Cyobik ile kurumsal ITSM ve talep yönetimi platformlarını entegre ederek iyileştirme çalışmalarını doğrudan varlık, maruziyet ve risk bağlamından oluşturun, atayın, izleyin ve senkronize edin.",
+          "tr": "Cyobik'i kurumsal ITSM ve talep yönetimi sistemlerinizle entegre edin. Tespit edilen güvenlik açıkları ve önceliklendirilen riskler için doğrudan görev oluşturun, sorumlu atayın, ilerlemeyi takip edin ve güncel durumu sistemler arasında senkronize edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.SUPPORTING_LABEL.05": {
           "locationRole": "Section 02 · Supporting label",
           "en": "Workflow",
-          "tr": "İş akışı",
+          "tr": "İş Akışı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.EMPHASIS_LABEL.05": {
           "locationRole": "Section 02 · Emphasis label",
-          "en": "Create, assign and track",
-          "tr": "Oluşturun, atayın ve izleyin",
+          "en": "Create, assign, track and synchronise",
+          "tr": "Oluşturma, atama, takip ve senkronizasyon",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.SUPPORTING_LABEL.06": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Context",
-          "tr": "Bağlam",
+          "en": "Scope",
+          "tr": "Kapsam",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.EMPHASIS_LABEL.06": {
           "locationRole": "Section 02 · Emphasis label",
-          "en": "Asset, exposure and risk",
-          "tr": "Varlık, maruziyet ve risk",
+          "en": "Asset information, security findings and risks",
+          "tr": "Varlık bilgileri, güvenlik bulguları ve riskler",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2306,36 +2256,36 @@
         },
         "INTEGRATIONS.H2.01": {
           "locationRole": "Section 03 · H2",
-          "en": "Programmatic access across the product.",
-          "tr": "Ürün genelinde programatik erişim.",
+          "en": "Integrate and automate Cyobik to meet your needs.",
+          "tr": "Cyobik'i ihtiyaçlarınıza göre entegre edin ve otomatikleştirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.LEAD_PARAGRAPH.02": {
           "locationRole": "Section 03 · Lead paragraph",
           "en": "Access all data and execute permitted operations across the maintained API surface, including read and write operations where the underlying product functionality permits them.",
-          "tr": "REST API ile Cyobik'in tüm verilerine ve ürün işlevlerine programatik olarak erişin. Yetkileriniz ve ürün işlevlerinin izin verdiği kapsamda veri okuma, yazma ve işlem gerçekleştirme yeteneklerini kullanarak kuruma özel entegrasyonlar ve otomasyonlar geliştirin.",
+          "tr": "REST API ile Cyobik'in desteklenen verilerine ve ürün işlevlerine programatik olarak erişin. Yetkileriniz ve ürün işlevlerinin izin verdiği kapsamda veri okuma, yazma ve işlem gerçekleştirme yeteneklerini kullanarak kuruma özel entegrasyonlar ve otomasyonlar geliştirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.H3.04": {
           "locationRole": "Section 03 · H3",
-          "en": "Complete coverage",
-          "tr": "Tam kapsam",
+          "en": "Comprehensive access",
+          "tr": "Kapsamlı Erişim",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.PARAGRAPH.04": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "All product functionality and data types.",
-          "tr": "Tüm ürün işlevleri ve veri türleri.",
+          "en": "Access supported product functions and data types through the REST API.",
+          "tr": "Desteklenen ürün işlevlerine ve veri türlerine REST API üzerinden erişin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.H3.05": {
           "locationRole": "Section 03 · H3",
-          "en": "Governed access",
-          "tr": "Yönetilen erişim",
+          "en": "Secure, authorised access",
+          "tr": "Güvenli ve Yetkili Erişim",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2348,36 +2298,36 @@
         },
         "INTEGRATIONS.H3.06": {
           "locationRole": "Section 03 · H3",
-          "en": "Interactive documentation",
-          "tr": "Etkileşimli dokümantasyon",
+          "en": "Interactive API documentation",
+          "tr": "İnteraktif API Dokümantasyonu",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.PARAGRAPH.06": {
           "locationRole": "Section 03 · Paragraph",
           "en": "Complete Swagger/OpenAPI documentation is available for the maintained API.",
-          "tr": "Sürdürülen API için tam Swagger/OpenAPI dokümantasyonu.",
+          "tr": "Swagger/OpenAPI dokümantasyonu ile desteklenen API uç noktalarını, veri yapılarını ve işlemleri interaktif olarak inceleyin; entegrasyon geliştirme süreçlerini hızlandırın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.H2.02": {
           "locationRole": "Section 04 · H2",
-          "en": "Connect asset intelligence without weakening governance.",
-          "tr": "Yönetişimi zayıflatmadan varlık istihbaratını bağlayın.",
+          "en": "Integrate cyber asset intelligence into your systems without compromising security.",
+          "tr": "Siber varlık istihbaratını güvenlikten ödün vermeden sistemlerinize entegre edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.PARAGRAPH.07": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Discuss the named integration or API workflow that matches your environment.",
-          "tr": "Ortamınıza uyan adlandırılmış entegrasyonu veya API iş akışını görüşün.",
+          "en": "Use ready integrations or the REST API to bring Cyobik into your existing technology stack and operational workflows.",
+          "tr": "Hazır entegrasyonlardan veya REST API'den yararlanarak Cyobik'i mevcut teknoloji altyapınıza ve operasyonel süreçlerinize dahil edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "INTEGRATIONS.CTA.03": {
           "locationRole": "Section 04 · CTA",
           "en": "Request a demo",
-          "tr": "Demo talep edin",
+          "tr": "Demo Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         }
@@ -2407,133 +2357,133 @@
       "content": {
         "DEPLOYMENT.EYEBROW.01": {
           "locationRole": "Section 01 · Eyebrow",
-          "en": "Controlled deployment",
-          "tr": "Kontrollü dağıtım",
+          "en": "CONTROLLED INSTALLATION",
+          "tr": "Kontrollü Kurulum",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H1.01": {
           "locationRole": "Section 01 · H1",
           "en": "Keep cyber-asset data and processing inside your environment.",
-          "tr": "Siber varlık verisini ve işlemeyi kendi ortamınızda tutun.",
+          "tr": "Siber varlık verileriniz ve tüm işleme süreçleri kendi ortamınızda kalsın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
-          "en": "Cyobik is delivered as an OVF virtual appliance for supported VMware environments and operates inside customer-controlled infrastructure.",
-          "tr": "Cyobik, desteklenen VMware ortamları için OVF sanal cihazı olarak teslim edilir ve müşterinin denetimindeki altyapı içinde çalışır.",
+          "en": "Cyobik runs on virtualisation infrastructure controlled by your organisation. Cyber asset data and analysis remain in your environment, so you can use the platform's full capabilities without moving sensitive security data outside the organisation.",
+          "tr": "Cyobik, kurumunuzun kontrolündeki sanallaştırma altyapısında çalışır. Siber varlık verileri ve analiz süreçleri kendi ortamınızda kalır; böylece hassas güvenlik verilerinizi kurum dışına taşımadan platformun tüm yeteneklerinden yararlanabilirsiniz.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.CTA.01": {
           "locationRole": "Section 01 · CTA",
-          "en": "Discuss deployment",
-          "tr": "Dağıtımı görüşün",
+          "en": "Discuss installation options",
+          "tr": "Kurulum Seçeneklerini Görüşün",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.CTA.02": {
           "locationRole": "Section 01 · CTA",
           "en": "View the model",
-          "tr": "Modeli görün",
+          "tr": "Platform Modelini İnceleyin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.EYEBROW.02": {
           "locationRole": "Section 02 · Eyebrow",
-          "en": "Supported model",
-          "tr": "Desteklenen model",
+          "en": "INSTALLATION MODEL",
+          "tr": "Kurulum Modeli",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H2.01": {
           "locationRole": "Section 02 · H2",
-          "en": "VMware OVF delivery for on-premises environments.",
-          "tr": "Kurum içi ortamlar için VMware OVF teslimatı.",
+          "en": "Designed to run in your own infrastructure.",
+          "tr": "Kendi altyapınızda çalışacak şekilde tasarlandı.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H3.01": {
           "locationRole": "Section 02 · H3",
-          "en": "VMware virtual appliance",
-          "tr": "VMware sanal cihazı",
+          "en": "Virtualisation infrastructure",
+          "tr": "Sanallaştırma Altyapısı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.PARAGRAPH.01": {
           "locationRole": "Section 02 · Paragraph",
           "en": "Deploy the supplied OVF package in supported VMware infrastructure.",
-          "tr": "Sağlanan OVF paketini desteklenen VMware altyapısında dağıtın.",
+          "tr": "Cyobik'i sağlanan OVF paketiyle desteklenen sanallaştırma altyapınıza kurarak platformu tamamen kendi ortamınızda çalıştırın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H3.02": {
           "locationRole": "Section 02 · H3",
           "en": "On-premises operation",
-          "tr": "Kurum içi çalışma",
+          "tr": "On-Premise Çalışma",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.PARAGRAPH.02": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Keep product data and processing inside the organisation's environment except for connections it explicitly enables.",
+          "en": "Keep the data Cyobik collects and the analysis it performs inside your infrastructure. Only external connections explicitly permitted by your organisation are used.",
           "tr": "Cyobik'in topladığı verileri ve gerçekleştirdiği analizleri kendi altyapınızda tutun. Yalnızca kurumunuzun açıkça izin verdiği dış bağlantılar kullanılabilir.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H3.03": {
           "locationRole": "Section 02 · H3",
-          "en": "Fully air-gapped",
-          "tr": "Tamamen air-gapped",
+          "en": "Fully isolated (air-gapped) operation",
+          "tr": "Tamamen İzole (Air-Gapped) Çalışma",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.PARAGRAPH.03": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Operate without a permanent internet connection and use controlled offline update workflows.",
+          "en": "Operate Cyobik in fully isolated environments without a permanent internet connection. Keep the platform current through controlled offline update workflows without requiring external connectivity.",
           "tr": "Cyobik'i kalıcı internet bağlantısı olmadan tamamen izole ortamlarda çalıştırın. Kontrollü çevrimdışı güncelleme yöntemiyle platformunuzu dış bağlantıya ihtiyaç duymadan güncel tutun.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.EYEBROW.03": {
           "locationRole": "Section 03 · Eyebrow",
-          "en": "Operations",
-          "tr": "Operasyonlar",
+          "en": "UPDATES AND BACKUP",
+          "tr": "Güncelleme ve Yedekleme",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H2.02": {
           "locationRole": "Section 03 · H2",
-          "en": "Connected and offline update paths.",
-          "tr": "Bağlı ve çevrimdışı güncelleme yolları.",
+          "en": "Use the update method that suits your environment.",
+          "tr": "Ortamınıza uygun güncelleme yöntemini kullanın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H3.04": {
           "locationRole": "Section 03 · H3",
-          "en": "Connected updates",
-          "tr": "Bağlı güncellemeler",
+          "en": "Updates in connected environments",
+          "tr": "Bağlantılı Ortamlarda Güncelleme",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.PARAGRAPH.04": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Where outbound access is permitted, retrieve approved updates through the supported connected workflow.",
-          "tr": "Dış bağlantıya izin verildiğinde, onaylı güncellemeleri desteklenen bağlı iş akışıyla alın.",
+          "en": "Where outbound connectivity is permitted, securely retrieve and apply approved Cyobik updates through the supported connection method.",
+          "tr": "Dış bağlantıya izin verilen ortamlarda, onaylı Cyobik güncellemelerini desteklenen bağlantı yöntemi üzerinden güvenli şekilde alın ve uygulayın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.H3.05": {
           "locationRole": "Section 03 · H3",
-          "en": "Manual offline updates",
-          "tr": "Manuel çevrimdışı güncellemeler",
+          "en": "Offline updates",
+          "tr": "Çevrimdışı Güncelleme",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.PARAGRAPH.05": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Download approved packages outside the isolated environment, transfer them through the organisation's approved media process and apply them through Cyobik.",
+          "en": "Download approved update packages outside the isolated environment, transfer them into the isolated network through your organisation's secure data-transfer procedures, and apply them through Cyobik.",
           "tr": "İnternete kapalı ortamlarda onaylı güncelleme paketlerini dış ortamda indirin, kurumunuzun güvenli veri aktarım prosedürleriyle izole ağa taşıyın ve Cyobik üzerinden uygulayın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -2541,14 +2491,14 @@
         "DEPLOYMENT.H3.06": {
           "locationRole": "Section 03 · H3",
           "en": "Configuration and data backup",
-          "tr": "Yapılandırma ve veri yedekleme",
+          "tr": "Yapılandırma ve Veri Yedekleme",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.PARAGRAPH.06": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Back up product configuration and operational data through the supported administration workflow.",
-          "tr": "Ürün yapılandırmasını ve operasyonel veriyi desteklenen yönetim iş akışıyla yedekleyin.",
+          "en": "Back up Cyobik configuration and operational data through supported administration tools to maintain system continuity and enable restoration when needed.",
+          "tr": "Cyobik yapılandırmalarını ve operasyonel verileri desteklenen yönetim araçları üzerinden yedekleyerek sistem sürekliliğini ve gerektiğinde geri yükleme imkanını koruyun.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2561,15 +2511,15 @@
         },
         "DEPLOYMENT.PARAGRAPH.07": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Review VMware, network, update and integration requirements with the Cyobik team.",
-          "tr": "VMware, ağ, güncelleme ve entegrasyon gereksinimlerini Cyobik ekibiyle değerlendirin.",
+          "en": "Review your virtualisation infrastructure, network architecture, update methods and integration requirements with the Cyobik team to determine the installation model best suited to your organisation.",
+          "tr": "Sanallaştırma altyapınızı, ağ yapınızı, güncelleme yöntemlerinizi ve entegrasyon gereksinimlerinizi Cyobik ekibiyle birlikte değerlendirerek kurumunuza en uygun kurulum modelini belirleyin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "DEPLOYMENT.CTA.03": {
           "locationRole": "Section 04 · CTA",
           "en": "Request a technical discussion",
-          "tr": "Teknik görüşme talep edin",
+          "tr": "Teknik Görüşme Talep Edin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         }
@@ -2600,13 +2550,13 @@
         "EDITIONS.EYEBROW.01": {
           "locationRole": "Section 01 · Eyebrow",
           "en": "Editions and licensing",
-          "tr": "Sürümler ve lisanslama",
+          "tr": "Sürümler ve Lisanslama",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "EDITIONS.H1.01": {
           "locationRole": "Section 01 · H1",
-          "en": "Choose the cyber-asset capability set that matches your objectives.",
+          "en": "Choose the Cyobik edition that meets your needs.",
           "tr": "İhtiyaçlarınıza uygun Cyobik sürümünü seçin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -2620,22 +2570,22 @@
         },
         "EDITIONS.CTA.01": {
           "locationRole": "Section 01 · CTA",
-          "en": "Contact sales",
-          "tr": "Satış ekibiyle iletişime geçin",
+          "en": "Talk to sales",
+          "tr": "Satış Ekibiyle Görüşün",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "EDITIONS.CTA.02": {
           "locationRole": "Section 01 · CTA",
           "en": "Compare editions",
-          "tr": "Sürümleri karşılaştırın",
+          "tr": "Sürümleri Karşılaştırın",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "EDITIONS.TABLE_HEADING.01": {
           "locationRole": "Section 02 · Table heading",
-          "en": "Capability",
-          "tr": "Yetenek",
+          "en": "Feature",
+          "tr": "Özellik",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2697,8 +2647,8 @@
         },
         "EDITIONS.TABLE_CELL.07": {
           "locationRole": "Section 02 · Table cell",
-          "en": "Asset Profiling",
-          "tr": "Varlık Profilleme",
+          "en": "Asset profile creation",
+          "tr": "Varlık Profili Oluşturma",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2740,7 +2690,7 @@
         "EDITIONS.TABLE_CELL.13": {
           "locationRole": "Section 02 · Table cell",
           "en": "Dashboard Management",
-          "tr": "Gösterge Paneli Yönetimi",
+          "tr": "Dashboard Yönetimi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2866,7 +2816,7 @@
         "EDITIONS.TABLE_CELL.31": {
           "locationRole": "Section 02 · Table cell",
           "en": "Asset Categorisation",
-          "tr": "Varlık Kategorilendirme",
+          "tr": "Varlık Kategorizasyonu",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -3103,15 +3053,15 @@
         },
         "EDITIONS.H3.01": {
           "locationRole": "Section 03 · H3",
-          "en": "Asset visibility and intelligence foundation",
-          "tr": "Varlık görünürlüğü ve istihbarat temeli",
+          "en": "Cyber asset visibility and intelligence",
+          "tr": "Siber Varlık Görünürlüğü ve İstihbaratı",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "EDITIONS.PARAGRAPH.01": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Build and maintain discovery, inventory, change history, network context, relationships and Visibility Score through governed workflows.",
-          "tr": "Yönetilen iş akışlarıyla keşif, envanter, değişiklik geçmişi, ağ bağlamı, ilişkiler ve Görünürlük Skorunu oluşturun ve güncel tutun.",
+          "en": "Discover your cyber assets, keep the inventory continuously current and track changes. Bring network information and asset relationships together in one place to improve visibility, and use the Visibility Score to assess how complete and current your asset information is.",
+          "tr": "Siber varlıklarınızı keşfedin, envanterinizi sürekli güncel tutun ve değişiklikleri takip edin. Ağ bilgilerini ve varlıklar arasındaki ilişkileri tek noktada bir araya getirerek ortamınızın görünürlüğünü artırın ve Görünürlük Skoru ile varlık bilgilerinizin ne kadar eksiksiz ve güncel olduğunu değerlendirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -3152,8 +3102,8 @@
         },
         "EDITIONS.CTA.03": {
           "locationRole": "Section 03 · CTA",
-          "en": "Contact sales",
-          "tr": "Satış ekibiyle iletişime geçin",
+          "en": "Talk to sales",
+          "tr": "Satış Ekibiyle Görüşün",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         }
@@ -3190,22 +3140,22 @@
         },
         "COMPANY.H1.01": {
           "locationRole": "Section 01 · H1",
-          "en": "Built to make cyber-asset decisions clearer.",
-          "tr": "Siber varlık kararlarını daha anlaşılır hale getirmek için geliştirildi.",
+          "en": "Built to help you understand cyber assets, assess risk more accurately and make stronger decisions.",
+          "tr": "Siber varlıklarınızı daha iyi anlamak, riskleri daha doğru değerlendirmek ve daha güçlü kararlar almak için geliştirildi.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "COMPANY.LEAD_PARAGRAPH.01": {
           "locationRole": "Section 01 · Lead paragraph",
-          "en": "Cyobik addresses a practical enterprise problem: many security and infrastructure tools, but no single maintained context that explains what exists, what changed, what is exposed and why it matters.",
-          "tr": "Cyobik pratik bir kurumsal probleme odaklanır: çok sayıda güvenlik ve altyapı aracı, ancak nelerin bulunduğunu, nelerin değiştiğini, nelerin açıkta olduğunu ve neden önemli olduğunu açıklayan tek bir sürdürülen bağlam yoktur.",
+          "en": "Organisations use many security and infrastructure tools, yet often cannot see in one place which assets exist, what has changed, which security risks have emerged or why they matter to business processes. Cyobik addresses this problem by turning fragmented technical data into continuously updated cyber asset intelligence.",
+          "tr": "Kurumlar çok sayıda güvenlik ve altyapı aracı kullanmasına rağmen çoğu zaman ortamlarında hangi varlıkların bulunduğunu, nelerin değiştiğini, hangi güvenlik risklerinin oluştuğunu ve bunların iş süreçleri için neden önemli olduğunu tek noktadan göremez. Cyobik, dağınık teknik verileri sürekli güncel siber varlık istihbaratına dönüştürerek bu soruna çözüm sunar.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "COMPANY.CTA.01": {
           "locationRole": "Section 01 · CTA",
-          "en": "Contact Cyobik",
-          "tr": "Cyobik ile iletişime geçin",
+          "en": "Contact us",
+          "tr": "Bizimle İletişime Geçin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -3295,8 +3245,8 @@
         },
         "COMPANY.H2.02": {
           "locationRole": "Section 03 · H2",
-          "en": "Cyobik in Türkiye.",
-          "tr": "Türkiye'de Cyobik.",
+          "en": "Cyobik",
+          "tr": "Cyobik",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -3323,15 +3273,15 @@
         },
         "COMPANY.PARAGRAPH.07": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "General contact: info@veksacore.com",
-          "tr": "Genel iletişim: info@veksacore.com",
+          "en": "info@cyobik.com",
+          "tr": "info@cyobik.com",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "COMPANY.H3.06": {
           "locationRole": "Section 03 · H3",
-          "en": "Registered address",
-          "tr": "Kayıtlı adres",
+          "en": "Address",
+          "tr": "Adres",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -3351,22 +3301,22 @@
         },
         "COMPANY.H2.03": {
           "locationRole": "Section 04 · H2",
-          "en": "Discuss your cyber-asset visibility and risk requirements.",
-          "tr": "Siber varlık görünürlüğü ve risk gereksinimlerinizi görüşün.",
+          "en": "Take the first step towards understanding your cyber assets.",
+          "tr": "Siber varlıklarınızı daha iyi anlamak için ilk adımı atın.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "COMPANY.PARAGRAPH.10": {
           "locationRole": "Section 04 · Paragraph",
-          "en": "Start with the business and technical questions your current tools cannot answer consistently.",
-          "tr": "Mevcut araçlarınızın tutarlı biçimde yanıtlayamadığı iş ve teknik sorularla başlayın.",
+          "en": "Use Cyobik to address the questions your existing security and IT tools cannot answer on their own. Together, we can explore how to assess the assets in your environment, their security posture and business impact more holistically.",
+          "tr": "Mevcut güvenlik ve BT araçlarınızın tek başına yanıtlayamadığı soruları Cyobik ile ele alın. Ortamınızdaki varlıkları, güvenlik durumunu ve iş etkisini nasıl daha bütüncül değerlendirebileceğinizi birlikte inceleyelim.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "COMPANY.CTA.03": {
           "locationRole": "Section 04 · CTA",
-          "en": "Contact Cyobik",
-          "tr": "Cyobik ile iletişime geçin",
+          "en": "Contact us",
+          "tr": "Bizimle İletişime Geçin",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         }
@@ -3376,7 +3326,7 @@
       "sourcePage": {
         "id": "15466622",
         "title": "Website Content — Demo Request",
-        "version": 1,
+        "version": 2,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -3445,7 +3395,7 @@
         },
         "DEMO.PARAGRAPH.01": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Use this form to request a product discussion. Do not include passwords, internal IP addresses, network diagrams, configuration files or sensitive security details.",
+          "en": "Use this form to request a product discussion. Do not include confidential or operational security information in the form.",
           "tr": "Ürün görüşmesi talep etmek için bu formu kullanın. Gizli veya operasyonel güvenlik bilgilerini forma eklemeyin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -3589,7 +3539,7 @@
       "sourcePage": {
         "id": "15564801",
         "title": "Website Content — Privacy Notice",
-        "version": 1,
+        "version": 2,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -3812,7 +3762,7 @@
         },
         "PRIVACY.PARAGRAPH.11": {
           "locationRole": "Section 01 · Paragraph",
-          "en": "Depending on the activity, processing is based on Article 5 of the KVKK, including taking steps at the request of a prospective customer before entering into a contract, compliance with legal obligations, Veksacore’s legitimate interests in responding to genuine business enquiries and protecting its systems, and explicit consent for optional marketing communications.",
+          "en": "Depending on the activity, processing is based on Article 5 of the KVKK, including processing that is necessary and directly related to the establishment or performance of a contract, compliance with legal obligations, Veksacore’s legitimate interests in responding to genuine business enquiries and protecting its systems, and explicit consent for optional marketing communications.",
           "tr": "Kişisel veriler, faaliyetin niteliğine göre KVKK'nın 5. maddesinde yer alan hukuki sebeplere dayanılarak işlenir. Bu sebepler; bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla veri işlemenin gerekli olması, veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması, ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla Veksacore'un meşru menfaatleri için veri işlemenin zorunlu olması ve isteğe bağlı pazarlama iletişimleri bakımından açık rızadır.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
@@ -4293,4 +4243,3 @@
     }
   }
 }
-

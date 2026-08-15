@@ -7839,11 +7839,11 @@
       "routeKey": "company",
       "lang": "en",
       "contentId": "COMPANY.PARAGRAPH.07",
-      "baseline": "General contact: info@veksacore.com",
-      "elementBaseline": "General contact: info@veksacore.com",
+      "baseline": "info@cyobik.com",
+      "elementBaseline": "info@cyobik.com",
       "prefix": "",
       "suffix": "",
-      "renderer": "link",
+      "renderer": "simple",
       "tagName": "p"
     },
     {
@@ -8136,11 +8136,11 @@
       "routeKey": "company",
       "lang": "tr",
       "contentId": "COMPANY.PARAGRAPH.07",
-      "baseline": "Genel iletişim: info@veksacore.com",
-      "elementBaseline": "Genel iletişim: info@veksacore.com",
+      "baseline": "info@cyobik.com",
+      "elementBaseline": "info@cyobik.com",
       "prefix": "",
       "suffix": "",
-      "renderer": "link",
+      "renderer": "simple",
       "tagName": "p"
     },
     {

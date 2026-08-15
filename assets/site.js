@@ -45,15 +45,15 @@ if (leadForm) {
     invalid: 'Lütfen zorunlu alanları kontrol edin.',
     rateLimit: 'Çok fazla talep gönderildi. Lütfen daha sonra tekrar deneyin.',
     verification: 'İnsan doğrulaması başarısız oldu. Lütfen tekrar deneyin.',
-    unavailable: 'Form şu anda kullanılamıyor. Lütfen info@veksacore.com adresine e-posta gönderin.',
-    generic: 'Talep gönderilemedi. Lütfen tekrar deneyin veya info@veksacore.com adresine e-posta gönderin.'
+    unavailable: 'Form şu anda kullanılamıyor. Lütfen info@cyobik.com adresine e-posta gönderin.',
+    generic: 'Talep gönderilemedi. Lütfen tekrar deneyin veya info@cyobik.com adresine e-posta gönderin.'
   } : {
     success: 'Thank you. Your demo request has been received.',
     invalid: 'Please review the required fields.',
     rateLimit: 'Too many requests were submitted. Please try again later.',
     verification: 'Human verification failed. Please try again.',
-    unavailable: 'The form is temporarily unavailable. Please email info@veksacore.com.',
-    generic: 'The request could not be sent. Please try again or email info@veksacore.com.'
+    unavailable: 'The form is temporarily unavailable. Please email info@cyobik.com.',
+    generic: 'The request could not be sent. Please try again or email info@cyobik.com.'
   };
 
   async function loadTurnstile() {
@@ -166,12 +166,12 @@ if (pageBody.dataset.page === 'home') {
     }
 
     const scoreDescriptions = isTurkish ? [
-      'Varlık bilgisinin ne kadar eksiksiz, güncel ve karar vermeye uygun olduğunu gösterir. Eksik envanter, sahiplik, yazılım, servis, ağ veya ilişki bilgileri skorun altında doğrudan görülebilir.',
-      'Varlıklar için hangi güvenlik, zafiyet, maruziyet ve kontrol kanıtlarının mevcut olduğunu gösterir. Amaç yalnızca araç varlığını değil, koruma durumunu destekleyen doğrulanabilir kanıtı görünür kılmaktır.',
+      'Varlık bilgilerinizin ne kadar eksiksiz, güncel ve güvenilir olduğunu gösterir. Envanter, sorumlu kişi, yazılım, servis, ağ ve varlıklar arası ilişkilerdeki eksiklikleri doğrudan görüntüleyerek hangi bilgilerin tamamlanması gerektiğini kolayca belirleyebilirsiniz.',
+      'Varlıklarınızın güvenlik açıklarını, mevcut güvenlik önlemlerini ve eksik kontrollerini değerlendirerek ne ölçüde korunduğunu gösterir. Yalnızca bir güvenlik ürününün kurulu olup olmadığına değil, korumanın gerçekten aktif ve doğrulanabilir olup olmadığına odaklanır.',
       'Varlıkların iş süreçlerine etkisini, güvenlik açıklarını, mevcut koruma eksiklerini ve gerçekleşme olasılığını birlikte değerlendirerek hem varlık hem de kurum genelindeki risk seviyesini ortaya koyar. Skor düştükçe değerlendirilen risk seviyesi de azalır.'
     ] : [
       'Shows how complete, current and decision-ready the asset knowledge is. Missing inventory, ownership, software, service, network or relationship information can be reviewed directly beneath the score.',
-      'Shows which security, vulnerability, exposure and control evidence is available for the assets. The focus is not simply whether a tool exists, but whether verifiable evidence supports the current protection posture.',
+      'Shows how well your assets are protected by assessing vulnerabilities, existing safeguards and missing controls. It focuses not only on whether a security product is installed, but on whether protection is active and verifiable.',
       'Combines impact, likelihood, exposure, protection gaps and business context to express risk at asset and organisational level. A lower score represents a lower assessed level of risk.'
     ];
 
@@ -187,15 +187,15 @@ if (pageBody.dataset.page === 'home') {
 const flow = document.querySelector('.flow');
 if (flow && pageBody.dataset.page === 'home') {
   const flowSteps = isTurkish ? [
-    { title: 'Keşfet', heading: 'Ortamınızdaki varlıkları görün', summary: 'Altyapı keşfi, Cyobik Agent ile envanter oluşturma, doğrulanmış veri aktarımı ve manuel varlık ekleme yöntemleriyle ortamınızdaki varlıkları belirleyin.', outcome: 'Çıktı: Yönetilen ve doğrulanabilir bir varlık başlangıç noktası.' },
-    { title: 'Bağlamlandır', heading: 'Her varlığa anlam kazandırın', summary: 'Profilleri, yazılımları, servisleri, sahipliği, yaşam döngüsünü, ağları, ilişkileri ve İş Servislerini birleştirin.', outcome: 'Çıktı: Teknik kayıtların iş ve operasyon bağlamıyla zenginleştirilmesi.' },
-    { title: 'Görünür Kıl', heading: 'Güvenlik koşullarını ortaya çıkarın', summary: 'Zafiyetleri, iç saldırı yüzeyi koşullarını, koruma kanıtlarını ve kontrol boşluklarını ilgili varlıklarla ilişkilendirin.', outcome: 'Sonuç: Her güvenlik bulgusundan hangi varlık ve servislerin etkilendiğini net bir şekilde görün.' },
-    { title: 'Önceliklendir', heading: 'En önemli risklere odaklanın', summary: 'Görünürlük, Koruma ve Risk Skorlarını iş etkisi, olasılık ve ayrıntılı kanıtla birlikte değerlendirin.', outcome: 'Sonuç: İş etkisini dikkate alan, anlaşılır ve gerekçelendirilebilir bir risk önceliklendirmesi.' },
-    { title: 'Harekete Geç', heading: 'Kararları operasyonel iş akışına taşıyın', summary: 'ITSM ve talep yönetimi, Splunk, raporlar ve REST API üzerinden iyileştirme çalışmalarını ilerletin.', outcome: 'Sonuç: Önceliklendirilen risklerden alınan aksiyonlara kadar izlenebilir ve yönetilebilir bir süreç.' }
+    { title: 'Keşfet', heading: 'Ortamınızdaki Varlıkları Keşfedin', summary: 'Altyapı keşfi, Cyobik Agent ile envanter oluşturma, doğrulanmış veri aktarımı ve manuel varlık ekleme yöntemleriyle ortamınızdaki varlıkları belirleyin.', outcome: 'Sonuç: Güncel, doğrulanabilir ve yönetilebilir varlık envanteri.' },
+    { title: 'Bağlamlandır', heading: 'Her Varlığı Anlamlandırın', summary: 'Varlık profillerini; yazılım, servis, sorumlu kişi, yaşam döngüsü, ağ bağlantıları, varlıklar arası ilişkiler ve iş servisleriyle zenginleştirerek her varlığın kurumunuzdaki rolünü ve önemini ortaya çıkarın.', outcome: 'Sonuç: İş ve operasyon bilgileriyle zenginleştirilmiş, anlamlı bir varlık envanteri.' },
+    { title: 'Görünür Kıl', heading: 'Güvenlik Risklerini Görünür Hale Getirin', summary: 'Güvenlik açıklarını, iç saldırı yüzeyindeki riskleri, mevcut güvenlik önlemlerini ve eksik kontrolleri ilgili varlıklarla ilişkilendirerek gerçek güvenlik durumunu ortaya çıkarın.', outcome: 'Sonuç: Her güvenlik bulgusundan hangi varlık ve servislerin etkilendiğini net bir şekilde görün.' },
+    { title: 'Önceliklendir', heading: 'Gerçekten Önemli Risklere Odaklanın', summary: 'Görünürlük, Koruma ve Risk Skorlarını; iş süreçlerine etkisi, gerçekleşme olasılığı ve detaylı bulgularla birlikte değerlendirerek hangi risklerin öncelikli olduğunu belirleyin.', outcome: 'Sonuç: İş etkisini dikkate alan, anlaşılır ve gerekçelendirilebilir bir risk önceliklendirmesi.' },
+    { title: 'Harekete Geç', heading: 'Kararları Aksiyona Dönüştürün', summary: 'Önceliklendirilen riskleri ITSM ve talep yönetimi, Splunk, raporlama ve REST API entegrasyonlarıyla mevcut operasyonel süreçlerinize aktarın ve iyileştirme çalışmalarını hızlandırın.', outcome: 'Sonuç: Önceliklendirilen risklerden alınan aksiyonlara kadar izlenebilir ve yönetilebilir bir süreç.' }
   ] : [
-    { title: 'Discover', heading: 'See the assets in your environment', summary: 'Build the asset view through infrastructure discovery, Cyobik Agent inventory, validated import and manual creation.', outcome: 'Outcome: A governed and verifiable asset starting point.' },
-    { title: 'Contextualise', heading: 'Give every asset meaning', summary: 'Connect profiles, software, services, ownership, lifecycle, networks, relationships and Business Services.', outcome: 'Outcome: Technical records enriched with business and operational context.' },
-    { title: 'Expose', heading: 'Reveal security conditions', summary: 'Relate vulnerabilities, internal attack-surface conditions, protection evidence and control gaps to the assets they affect.', outcome: 'Outcome: A clear view of which assets and services are affected by each finding.' },
+    { title: 'Discover', heading: 'Discover the assets in your environment', summary: 'Build the asset view through infrastructure discovery, Cyobik Agent inventory, validated import and manual creation.', outcome: 'Outcome: A current, verifiable and manageable asset inventory.' },
+    { title: 'Contextualise', heading: 'Give every asset meaning', summary: 'Connect profiles, software, services, ownership, lifecycle, networks, relationships and Business Services.', outcome: 'Outcome: A meaningful asset inventory enriched with business and operational information.' },
+    { title: 'Expose', heading: 'Make security risks visible', summary: 'Relate vulnerabilities, internal attack-surface conditions, protection evidence and control gaps to the assets they affect.', outcome: 'Outcome: A clear view of which assets and services are affected by each finding.' },
     { title: 'Prioritise', heading: 'Focus on the most meaningful risk', summary: 'Review Visibility, Protection and Risk Scores with business impact, likelihood and drill-down evidence.', outcome: 'Outcome: Explainable prioritisation grounded in business context.' },
     { title: 'Act', heading: 'Move decisions into operational workflows', summary: 'Advance remediation through ITSM and ticketing, Splunk, reports and REST API workflows.', outcome: 'Outcome: A traceable path from prioritised context to operational action.' }
   ];
