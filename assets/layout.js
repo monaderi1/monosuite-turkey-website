@@ -157,12 +157,12 @@
     }
     if (heroLead) {
       heroLead.textContent = isTr
-        ? 'Cyobik, hassas envanter, zafiyet ve yapılandırma verilerini harici bir bulut platformuna göndermeden güvenlik, BT ve risk ekiplerine ihtiyaç duydukları siber varlık istihbaratını sunar. Platformu özel bulutunuzda veya tamamen air-gapped ortamınızda çalıştırın.'
-        : 'Cyobik gives security, IT and risk teams the cyber asset intelligence they need without sending sensitive inventory, vulnerability and configuration data to an external cloud platform. Run it inside your private cloud or fully air-gapped environment.';
+        ? 'Cyobik; hassas envanter, güvenlik açığı ve yapılandırma verilerinizi harici bir bulut platformuna göndermeden, siber güvenlik ve BT ekiplerinin ihtiyaç duyduğu siber varlık istihbaratını sunar. Platformu özel bulut ortamınızda veya internet bağlantısı olmayan tamamen izole ağlarda çalıştırabilirsiniz.'
+        : 'Cyobik gives security and IT teams the cyber asset intelligence they need without sending sensitive inventory, vulnerability and configuration data to an external cloud platform. Run it inside your private cloud or fully air-gapped environment.';
     }
     if (proofline) {
       proofline.innerHTML = isTr
-        ? '<span>Özel bulut</span><span>Tam air-gapped çalışma</span><span>Çevrimdışı güncellemeler</span><span>Müşteri denetiminde veri işleme</span>'
+        ? '<span>Özel Bulut</span><span>Tamamen İzole Ortamlarda Çalışma</span><span>Çevrimdışı Güncelleme</span><span>Verilerin Kurum İçinde İşlenmesi</span>'
         : '<span>Private cloud</span><span>Fully air-gapped operation</span><span>Offline updates</span><span>Customer-controlled processing</span>';
     }
 
@@ -175,44 +175,44 @@
       section.innerHTML = isTr ? `
         <div class="wrap">
           <div class="section-head">
-            <div class="eyebrow">Veri kontrolü tasarımın temelinde</div>
-            <h2>Riskleri görünür kılarken yeni bir maruziyet alanı oluşturmayın.</h2>
-            <p class="lead2">Siber varlık verisi yalnızca bir envanter değildir. Teknolojileri, yapılandırmaları, zafiyetleri, ilişkileri ve kritik iş bağımlılıklarını ortaya koyabilir. Cyobik bu istihbaratı kontrolünüzdeki ortamda tutar.</p>
+            <div class="eyebrow">VERİ KONTROLÜ TASARIMIN TEMELİNDE</div>
+            <h2>Riskleri görünür hale getirirken yeni güvenlik riskleri oluşturmayın.</h2>
+            <p class="lead2">Siber varlık verileri yalnızca bir envanterden ibaret değildir. Kullandığınız teknolojiler, sistem yapılandırmaları, güvenlik açıkları, varlıklar arasındaki ilişkiler ve kritik iş bağımlılıkları hakkında önemli bilgiler içerir. Cyobik, tüm bu bilgilerin kontrolünüzdeki ortamda kalmasını sağlar.</p>
           </div>
           <div class="grid-3">
-            <article class="card"><h3>Toplu istihbarat riski</h3><p>Varlık ve güvenlik açığı verilerinin kurum dışındaki bir platformda toplanması, üçüncü taraf sistemlerde yaşanabilecek bir güvenlik ihlalinin etkisini artırabilir ve BT altyapınızın yapısına ilişkin hassas bilgilerin açığa çıkmasına neden olabilir.</p></article>
-            <article class="card"><h3>Üçüncü taraf maruziyeti</h3><p>Bulut tabanlı bir keşif platformu; yeni kullanıcı hesapları, API bağlantıları, entegrasyonlar ve veri akışları oluşturabilir. Bu bileşenlerin her biri saldırı yüzeyinizi genişletebilir ve üçüncü taraflardan kaynaklanan güvenlik risklerini artırabilir.</p></article>
-            <article class="card"><h3>Veri egemenliği</h3><p>Hassas varlık, zafiyet ve yapılandırma verisinin kontrollü ortam dışına taşınması ek yerleşim, yönetişim ve denetim yükümlülükleri doğurabilir.</p></article>
+            <article class="card"><h3>Merkezileştirilmiş Veri Riski</h3><p>Varlık ve güvenlik açığı verilerinin kurum dışındaki bir platformda toplanması, üçüncü taraf sistemlerde yaşanabilecek bir güvenlik ihlalinin etkisini artırabilir ve BT altyapınızın yapısına ilişkin hassas bilgilerin açığa çıkmasına neden olabilir.</p></article>
+            <article class="card"><h3>Üçüncü Taraf Kaynaklı Riskler</h3><p>Bulut tabanlı bir keşif platformu; yeni kullanıcı hesapları, API bağlantıları, entegrasyonlar ve veri akışları oluşturabilir. Bu bileşenlerin her biri saldırı yüzeyinizi genişletebilir ve üçüncü taraflardan kaynaklanan güvenlik risklerini artırabilir.</p></article>
+            <article class="card"><h3>Veri Kontrolü ve Uyumluluk</h3><p>Hassas varlık, güvenlik açığı ve yapılandırma verilerinin kurumun kontrolündeki ortamın dışına çıkarılması; verinin nerede tutulduğu, nasıl yönetildiği ve nasıl denetlendiği konusunda ek güvenlik ve uyumluluk gereksinimleri doğurabilir.</p></article>
           </div>
           <div class="callout regulated-callout">
-            <div class="eyebrow">Düzenlemeye tabi ve hassas ortamlar için</div>
+            <div class="eyebrow">Yasal Düzenlemelere Tabi ve Hassas Ortamlar İçin</div>
             <h2 style="margin-top:12px">Saldırı yüzeyiniz, başkasının tutacağı bir veri değildir.</h2>
-            <p>Cyobik; bankaların, kamu kurumlarının ve kritik altyapı işletmecilerinin siber varlık istihbaratını özel ve tamamen air-gapped ağlar dahil kendi kontrollerindeki ortamda tutmasına yardımcı olur. Varlık verisi, güvenlik kanıtı, puanlama ve risk analizi kurumun kontrollü altyapısında kalır.</p>
+            <p>Cyobik; bankaların, kamu kurumlarının ve kritik altyapı kuruluşlarının siber varlıklarına ait hassas verileri tamamen kendi kontrollerinde tutmasını sağlar. Özel bulutlardan internet bağlantısı olmayan tamamen izole ağlara kadar tüm veriler, güvenlik değerlendirmeleri, skorlamalar ve risk analizleri kurumun kendi altyapısında işlenir ve kurum dışına çıkmaz.</p>
             <div class="grid-3" style="margin-top:24px">
-              <article class="card"><h3>Hassas istihbaratı içeride tutun</h3><p>Varlık, güvenlik açığı, yapılandırma ve bağlantı verilerini harici bir analiz platformuna aktarmadan, kurumunuzun kontrolündeki ortamda yönetin.</p></article>
-              <article class="card"><h3>İzole ortamlarda çalışın</h3><p>Kalıcı dış bağlantının kısıtlı veya yasak olduğu ortamlarda görünürlük, güvenlik değerlendirmesi ve risk analizini sürdürün.</p></article>
-              <article class="card"><h3>İşleme kontrolünü koruyun</h3><p>Veri toplama, ilişkilendirme, skorlama ve analiz süreçlerini verinin bulunduğu ortamda gerçekleştirin. Hassas verileri kurum dışına taşımadan, tüm süreçleri kurumunuzun güvenlik politikalarına uygun şekilde kendi altyapınızda yönetin.</p></article>
+              <article class="card"><h3>Hassas Verileri Kurum İçinde Tutun</h3><p>Varlık, güvenlik açığı, yapılandırma ve bağlantı verilerini harici bir analiz platformuna aktarmadan, kurumunuzun kontrolündeki ortamda yönetin.</p></article>
+              <article class="card"><h3>İzole Ortamlarda Kesintisiz Çalışın</h3><p>İnternet erişiminin kısıtlı veya tamamen kapalı olduğu ortamlarda dahi varlık görünürlüğünü, güvenlik değerlendirmelerini ve risk analizlerini kesintisiz sürdürün.</p></article>
+              <article class="card"><h3>Veri İşleme Süreçlerinin Kontrolü Sizde Kalsın</h3><p>Veri toplama, ilişkilendirme, skorlama ve analiz süreçlerini verinin bulunduğu ortamda gerçekleştirin. Hassas verileri kurum dışına taşımadan, tüm süreçleri kurumunuzun güvenlik politikalarına uygun şekilde kendi altyapınızda yönetin.</p></article>
             </div>
           </div>
         </div>` : `
         <div class="wrap">
           <div class="section-head">
-            <div class="eyebrow">Data control by design</div>
-            <h2>Expose risk without introducing a new source of exposure.</h2>
+            <div class="eyebrow">DATA CONTROL AT THE CORE OF THE DESIGN</div>
+            <h2>Make risks visible without creating new security risks.</h2>
             <p class="lead2">Cyber asset data is more than an inventory. It can reveal technologies, configurations, vulnerabilities, relationships and critical business dependencies. Cyobik keeps this intelligence inside the environment you control.</p>
           </div>
           <div class="grid-3">
-            <article class="card"><h3>Aggregated intelligence risk</h3><p>Centralising asset and vulnerability intelligence outside the organisation can increase the impact of a third-party compromise and reveal how your environment is structured.</p></article>
-            <article class="card"><h3>Third-party exposure</h3><p>A cloud-based discovery platform adds identities, APIs, integrations and data flows. Each becomes part of your external attack surface and supply-chain risk.</p></article>
-            <article class="card"><h3>Data sovereignty</h3><p>Moving sensitive asset, vulnerability and configuration data outside the controlled environment can introduce additional residency, governance and oversight requirements.</p></article>
+            <article class="card"><h3>Centralised data risk</h3><p>Centralising asset and vulnerability intelligence outside the organisation can increase the impact of a third-party compromise and reveal how your environment is structured.</p></article>
+            <article class="card"><h3>Third-party risks</h3><p>A cloud-based discovery platform adds identities, APIs, integrations and data flows. Each becomes part of your external attack surface and supply-chain risk.</p></article>
+            <article class="card"><h3>Data control and compliance</h3><p>Moving sensitive asset, vulnerability and configuration data outside the controlled environment can introduce additional residency, governance and oversight requirements.</p></article>
           </div>
           <div class="callout regulated-callout">
             <div class="eyebrow">For regulated and sensitive environments</div>
             <h2 style="margin-top:12px">Your attack surface is not someone else’s data to hold.</h2>
             <p>Cyobik helps banks, government organisations and critical infrastructure operators keep cyber asset intelligence inside the environment they control, including private and fully air-gapped networks. Asset data, security evidence, scoring and risk analysis remain within the organisation’s controlled infrastructure.</p>
             <div class="grid-3" style="margin-top:24px">
-              <article class="card"><h3>Keep sensitive intelligence inside</h3><p>Maintain asset, vulnerability, configuration and relationship data inside the organisation’s controlled environment rather than transferring it to an external analytics platform.</p></article>
-              <article class="card"><h3>Operate in isolated environments</h3><p>Continue visibility, security assessment and risk analysis where permanent external connectivity is restricted or prohibited.</p></article>
+              <article class="card"><h3>Keep sensitive data inside your organisation</h3><p>Maintain asset, vulnerability, configuration and relationship data inside the organisation’s controlled environment rather than transferring it to an external analytics platform.</p></article>
+              <article class="card"><h3>Operate continuously in isolated environments</h3><p>Continue visibility, security assessment and risk analysis where permanent external connectivity is restricted or prohibited.</p></article>
               <article class="card"><h3>Maintain control over processing</h3><p>Keep collection, correlation, scoring and analysis close to the systems and data they describe, aligned with organisational security requirements.</p></article>
             </div>
           </div>
@@ -224,8 +224,8 @@
     const flowEyebrow = flow?.closest('.section')?.querySelector('.section-head .eyebrow');
     if (flowEyebrow) {
       flowEyebrow.textContent = isTr
-        ? 'Siber varlık kararları için tek kanıt katmanı'
-        : 'One evidence layer for cyber-asset decisions';
+        ? 'SİBER VARLIK YÖNETİMİ İÇİN TEK VE GÜVENİLİR BİLGİ KAYNAĞI'
+        : 'ONE TRUSTED SOURCE FOR CYBER-ASSET MANAGEMENT';
     }
   }
 
