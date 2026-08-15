@@ -184,7 +184,7 @@
       "sourcePage": {
         "id": "15499265",
         "title": "Website Content — Home",
-        "version": 4,
+        "version": 5,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -666,8 +666,8 @@
         },
         "HOME.PARAGRAPH.11": {
           "locationRole": "Section 07 · Paragraph",
-          "en": "Deploy the supplied OVF appliance in supported VMware environments, including fully isolated air-gapped networks with offline update workflows.",
-          "tr": "Sağlanan OVF cihazını, çevrimdışı güncelleme iş akışlarına sahip tamamen izole air-gapped ağlar dahil desteklenen VMware ortamlarında dağıtın.",
+          "en": "Deploy Cyobik easily in your own virtualisation infrastructure and keep all data under your organisation's control. Run the platform even in fully isolated air-gapped environments without internet connectivity; with offline update support, perform all analysis and data processing in your own infrastructure without moving data outside the organisation.",
+          "tr": "Cyobik’i kendi sanallaştırma altyapınıza kolayca kurun ve tüm verileri kurumunuzun kontrolünde tutun. Platformu internet bağlantısı olmayan tamamen izole air-gapped ortamlarda dahi çalıştırın; çevrimdışı güncelleme desteğiyle verilerinizi kurum dışına çıkarmadan tüm analiz ve veri işleme süreçlerini kendi altyapınızda gerçekleştirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -771,8 +771,8 @@
         },
         "HOME.REGULATED.TITLE": {
           "locationRole": "Inserted regulated callout · H2",
-          "en": "Your attack surface is not someone else’s data to hold.",
-          "tr": "Saldırı yüzeyiniz, başkasının tutacağı bir veri değildir.",
+          "en": "Data about your attack surface should not be held by others outside your organisation.",
+          "tr": "Saldırı yüzeyinize ilişkin veriler, kurum dışında birilerinin tutacağı veriler değildir.",
           "implementation": "assets/layout.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -827,8 +827,8 @@
         },
         "HOME.SCORES.INTRO": {
           "locationRole": "Score section · Lead paragraph",
-          "en": "Cyobik turns fragmented technical findings into three clear operating signals. Visibility shows how much of the environment is known, Protection shows which security and control evidence is present, and Risk shows what the maintained context means when business impact and likelihood are considered together. Every score can be traced back to the assets, findings and evidence that produced it.",
-          "tr": "Cyobik, dağınık teknik bulguları üç anlaşılır göstergeye dönüştürür. Görünürlük Skoru ne kadarını bildiğinizi, Koruma Skoru hangi güvenlik ve kontrol kanıtlarının mevcut olduğunu, Risk Skoru ise mevcut bağlamın iş etkisi ve olasılıkla birlikte ne ifade ettiğini gösterir. Her skor, sonucu oluşturan varlık, bulgu ve kanıta kadar incelenebilir.",
+          "en": "Cyobik turns technical findings from different sources into three clear scores, providing an at-a-glance view of your environment's security posture. The Visibility Score shows how well you know the assets in your environment, the Protection Score shows the state of existing security controls, and the Risk Score shows the level of risk that emerges when likelihood and business impact are considered together.",
+          "tr": "Cyobik, farklı kaynaklardan gelen teknik bulguları üç anlaşılır skora dönüştürerek ortamınızın güvenlik durumunu tek bakışta görmenizi sağlar. Görünürlük Skoru ortamınızdaki varlıkları ne ölçüde bildiğinizi, Koruma Skoru mevcut güvenlik kontrollerinin durumunu, Risk Skoru ise gerçekleşme olasılığı ve iş etkisi birlikte değerlendirildiğinde ortaya çıkan risk seviyesini gösterir.",
           "implementation": "assets/site.js",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -999,7 +999,7 @@
       "sourcePage": {
         "id": "15532033",
         "title": "Website Content — Platform",
-        "version": 5,
+        "version": 6,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -1166,8 +1166,8 @@
         },
         "PLATFORM.PARAGRAPH.05": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Use asset-level and organisation-level Visibility, Protection and Risk Scores, then drill down to the evidence that contributes to each score.",
-          "tr": "Varlık ve kurum düzeyindeki Görünürlük, Koruma ve Risk Skorlarını birlikte değerlendirin. Ardından her skorun oluşmasına katkıda bulunan kanıtları ayrıntılı olarak inceleyin.",
+          "en": "Use Visibility, Protection and Risk Scores to assess risk levels at both asset and organisational level. Examine in detail which assets, security findings and assessment data contribute to each score, so you can set priorities based on reliable data.",
+          "tr": "Görünürlük, Koruma ve Risk Skorlarıyla hem varlık hem de kurum genelindeki risk seviyesini değerlendirin. Her skorun hangi varlıklardan, güvenlik bulgularından ve değerlendirme verilerinden oluştuğunu ayrıntılı olarak inceleyerek önceliklerinizi güvenilir verilere göre belirleyin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1187,8 +1187,8 @@
         },
         "PLATFORM.PARAGRAPH.06": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Use dashboards, scheduled reports, Splunk and Nessus integrations, enterprise ITSM and ticketing workflows, and the comprehensive REST API with complete Swagger/OpenAPI documentation.",
-          "tr": "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk ve Nessus entegrasyonları ile kurumsal ITSM ve talep yönetimi iş akışlarını kullanın; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.",
+          "en": "Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and Jira integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.",
+          "tr": "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve Jira entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1530,7 +1530,7 @@
       "sourcePage": {
         "id": "15466542",
         "title": "Website Content — Security and Exposure",
-        "version": 1,
+        "version": 4,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -1585,8 +1585,8 @@
         },
         "SECURITY.EYEBROW.02": {
           "locationRole": "Section 02 · Eyebrow",
-          "en": "Internal attack surface",
-          "tr": "İç saldırı yüzeyi",
+          "en": "Internal network attack surface",
+          "tr": "İç Ağ Saldırı Yüzeyi",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1599,8 +1599,8 @@
         },
         "SECURITY.H3.01": {
           "locationRole": "Section 02 · H3",
-          "en": "Network and service exposure",
-          "tr": "Ağ ve servis maruziyeti",
+          "en": "Network and service security",
+          "tr": "Ağ ve Servis Güvenliği",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1799,7 +1799,7 @@
       "sourcePage": {
         "id": "15466562",
         "title": "Website Content — Risk Prioritisation",
-        "version": 1,
+        "version": 5,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -1875,8 +1875,8 @@
         },
         "RISK.SUPPORTING_LABEL.01": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Visibility — higher is better",
-          "tr": "Görünürlük — yüksek daha iyidir",
+          "en": "Visibility",
+          "tr": "Görünürlük",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1889,15 +1889,15 @@
         },
         "RISK.PARAGRAPH.01": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Completeness and usability of asset knowledge.",
-          "tr": "Varlık bilgisinin eksiksizliği ve kullanılabilirliği.",
+          "en": "Shows how complete, current and decision-ready your asset information is.",
+          "tr": "Varlık bilgilerinizin ne kadar eksiksiz, güncel ve karar vermeye uygun olduğunu gösterir.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.SUPPORTING_LABEL.02": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Protection — higher is better",
-          "tr": "Koruma — yüksek daha iyidir",
+          "en": "Protection",
+          "tr": "Koruma",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1910,15 +1910,15 @@
         },
         "RISK.PARAGRAPH.02": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Available protection and security evidence.",
-          "tr": "Mevcut koruma ve güvenlik kanıtı.",
+          "en": "Shows the level of existing security controls and overall protection across your assets.",
+          "tr": "Varlıklarınızdaki mevcut güvenlik kontrollerinin ve genel koruma durumunun seviyesini gösterir.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
         "RISK.SUPPORTING_LABEL.03": {
           "locationRole": "Section 02 · Supporting label",
-          "en": "Risk — lower is better",
-          "tr": "Risk — düşük daha iyidir",
+          "en": "Risk",
+          "tr": "Risk",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -1931,8 +1931,8 @@
         },
         "RISK.PARAGRAPH.03": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Asset and organisation risk with drill-down context.",
-          "tr": "Varlık ve kurum riski; ayrıntılı bağlamla.",
+          "en": "Shows risk at asset and organisational level by considering business impact, likelihood and current security posture together.",
+          "tr": "İş etkisi, gerçekleşme olasılığı ve mevcut güvenlik durumunu birlikte değerlendirerek varlık ve kurum düzeyindeki risk seviyesini gösterir.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
@@ -2529,7 +2529,7 @@
       "sourcePage": {
         "id": "15466602",
         "title": "Website Content — Editions and Licensing",
-        "version": 1,
+        "version": 4,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -3081,8 +3081,8 @@
         },
         "EDITIONS.PARAGRAPH.02": {
           "locationRole": "Section 03 · Paragraph",
-          "en": "Extend Standard with internal Attack Surface Management, Protection Score, vulnerability assessment and CyoTI vulnerability-data updates.",
-          "tr": "Standard sürümünü iç Saldırı Yüzeyi Yönetimi, Koruma Skoru, zafiyet değerlendirmesi ve CyoTI zafiyet verisi güncellemeleriyle genişletin.",
+          "en": "In addition to all cyber asset intelligence capabilities in Standard, analyse your environment's security posture more comprehensively with internal Attack Surface Management, Protection Score, vulnerability assessment and CyoTI vulnerability data.",
+          "tr": "Standard sürümündeki tüm siber varlık istihbaratı yeteneklerine ek olarak Kurum İçi Saldırı Yüzeyi Yönetimi, Koruma Skoru, güvenlik açığı değerlendirmesi ve CyoTI güvenlik açığı verileriyle ortamınızın güvenlik durumunu daha kapsamlı analiz edin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },

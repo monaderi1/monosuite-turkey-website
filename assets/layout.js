@@ -186,7 +186,7 @@
           </div>
           <div class="callout regulated-callout">
             <div class="eyebrow">Yasal Düzenlemelere Tabi ve Hassas Ortamlar İçin</div>
-            <h2 style="margin-top:12px">Saldırı yüzeyiniz, başkasının tutacağı bir veri değildir.</h2>
+            <h2 style="margin-top:12px">Saldırı yüzeyinize ilişkin veriler, kurum dışında birilerinin tutacağı veriler değildir.</h2>
             <p>Cyobik; bankaların, kamu kurumlarının ve kritik altyapı kuruluşlarının siber varlıklarına ait hassas verileri tamamen kendi kontrollerinde tutmasını sağlar. Özel bulutlardan internet bağlantısı olmayan tamamen izole ağlara kadar tüm veriler, güvenlik değerlendirmeleri, skorlamalar ve risk analizleri kurumun kendi altyapısında işlenir ve kurum dışına çıkmaz.</p>
             <div class="grid-3" style="margin-top:24px">
               <article class="card"><h3>Hassas Verileri Kurum İçinde Tutun</h3><p>Varlık, güvenlik açığı, yapılandırma ve bağlantı verilerini harici bir analiz platformuna aktarmadan, kurumunuzun kontrolündeki ortamda yönetin.</p></article>
@@ -208,7 +208,7 @@
           </div>
           <div class="callout regulated-callout">
             <div class="eyebrow">For regulated and sensitive environments</div>
-            <h2 style="margin-top:12px">Your attack surface is not someone else’s data to hold.</h2>
+            <h2 style="margin-top:12px">Data about your attack surface should not be held by others outside your organisation.</h2>
             <p>Cyobik helps banks, government organisations and critical infrastructure operators keep cyber asset intelligence inside the environment they control, including private and fully air-gapped networks. Asset data, security evidence, scoring and risk analysis remain within the organisation’s controlled infrastructure.</p>
             <div class="grid-3" style="margin-top:24px">
               <article class="card"><h3>Keep sensitive data inside your organisation</h3><p>Maintain asset, vulnerability, configuration and relationship data inside the organisation’s controlled environment rather than transferring it to an external analytics platform.</p></article>
