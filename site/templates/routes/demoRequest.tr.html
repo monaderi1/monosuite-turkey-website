@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{CYOBIK:META_TITLE}}</title>
+  <meta name="description" content="{{CYOBIK:META_DESCRIPTION}}">
+  <link rel="canonical" href="{{CYOBIK:CANONICAL}}">
+  <link rel="alternate" hreflang="en" href="{{CYOBIK:ALTERNATE_EN}}">
+  <link rel="alternate" hreflang="tr" href="{{CYOBIK:ALTERNATE_TR}}">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-lang="tr" data-page="demo">
+<a class="skip-link" href="#main">İçeriğe geç</a>
+<div data-site-header></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow" data-cyobik-content="DEMO.EYEBROW.01">Demo talep edin</div>
+        <h1 data-cyobik-content="DEMO.H1.01">Cyobik platformunu öncelikleriniz bağlamında görün.</h1>
+        <p class="lead" data-cyobik-content="DEMO.LEAD_PARAGRAPH.01">Ürün görüşmesinin kurumunuz için önemli iş akışlarına ve kanıtlara odaklanabilmesi için neyi değerlendirdiğinizi bize bildirin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap form-layout">
+      <div>
+        <div class="section-head">
+          <div class="eyebrow" data-cyobik-content="DEMO.EYEBROW.02">Değerlendirme ilgi alanları</div>
+          <h2 data-cyobik-content="DEMO.H2.01">Odaklı bir kurumsal görüşme.</h2>
+          <p class="lead2" data-cyobik-content="DEMO.LEAD_PARAGRAPH.02">Varlık Keşfi ve Görünürlük, Siber Varlık İstihbaratı, Risk ve Maruziyet, Uyumluluk Değerlendirmesi, Splunk Entegrasyonu veya tanımlı başka bir gereksinim.</p>
+        </div>
+        <div class="boundary">
+          <h3 data-cyobik-content="DEMO.H3.01">İlk görüşme için uygun bilgileri paylaşın</h3>
+          <p data-cyobik-content="DEMO.PARAGRAPH.01">Ürün görüşmesi talep etmek için bu formu kullanın. Gizli veya operasyonel güvenlik bilgilerini forma eklemeyin.</p>
+        </div>
+      </div>
+
+      <form class="form-card" id="leadForm" novalidate>
+        <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="source" value="website-demo-form-tr">
+        <input type="hidden" name="locale" value="tr">
+        <input type="hidden" name="privacyNoticeVersion" value="2026-07-27-v1.2">
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName" data-cyobik-content="DEMO.FORM_LABEL.01">Ad Soyad *</label>
+            <input id="fullName" name="fullName" autocomplete="name" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="workEmail" data-cyobik-content="DEMO.FORM_LABEL.02">İş E-postası *</label>
+            <input id="workEmail" name="workEmail" type="email" autocomplete="email" maxlength="180" placeholder="ad@sirket.com" required>
+          </div>
+          <div class="field">
+            <label for="company" data-cyobik-content="DEMO.FORM_LABEL.03">Şirket *</label>
+            <input id="company" name="company" autocomplete="organization" maxlength="160" required>
+          </div>
+          <div class="field">
+            <label for="country" data-cyobik-content="DEMO.FORM_LABEL.04">Ülke *</label>
+            <input id="country" name="country" autocomplete="country-name" maxlength="80" required>
+          </div>
+          <div class="field full">
+            <label for="evaluationInterest" data-cyobik-content="DEMO.FORM_LABEL.05">Değerlendirme İlgi Alanı *</label>
+            <select id="evaluationInterest" name="evaluationInterest" required>
+              <option value="" data-cyobik-content="DEMO.SELECT_OPTION.01">Bir alan seçin</option>
+              <option value="asset-discovery-visibility" data-cyobik-content="DEMO.SELECT_OPTION.02">Varlık Keşfi ve Görünürlük</option>
+              <option value="cyber-asset-intelligence" data-cyobik-content="DEMO.SELECT_OPTION.03">Siber Varlık İstihbaratı</option>
+              <option value="risk-exposure" data-cyobik-content="DEMO.SELECT_OPTION.04">Risk ve Maruziyet</option>
+              <option value="compliance-assessment" data-cyobik-content="DEMO.SELECT_OPTION.05">Uyumluluk Değerlendirmesi</option>
+              <option value="splunk-integration" data-cyobik-content="DEMO.SELECT_OPTION.06">Splunk Entegrasyonu</option>
+              <option value="other" data-cyobik-content="DEMO.SELECT_OPTION.07">Diğer</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="jobTitle" data-cyobik-content="DEMO.FORM_LABEL.06">Görev Unvanı</label>
+            <input id="jobTitle" name="jobTitle" autocomplete="organization-title" maxlength="120">
+          </div>
+          <div class="field">
+            <label for="phone" data-cyobik-content="DEMO.FORM_LABEL.07">Telefon Numarası</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+          </div>
+          <div class="field full">
+            <label for="message" data-cyobik-content="DEMO.FORM_LABEL.08">Ek Bilgiler</label>
+            <textarea id="message" name="message" maxlength="1200" placeholder="Değerlendirmek istediğiniz konuyu kısaca açıklayın. Hassas güvenlik bilgisi eklemeyin."></textarea>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:18px" data-cyobik-content="DEMO.PARAGRAPH.02">Bu formu göndererek <a href="kvkk-aydinlatma-metni"><strong>Web Sitesi ve Demo Talebi KVKK Aydınlatma Metni</strong></a>'ni okuduğunuzu teyit edersiniz. Bu teyit pazarlama izni değildir.</p>
+
+        <label class="consent" data-cyobik-content="DEMO.FORM_LABEL.09">
+          <input type="checkbox" name="marketingConsent" value="true">
+          <span>Zaman zaman Cyobik ürün ve etkinlik güncellemelerini almak istiyorum. Bu açık rıza isteğe bağlıdır ve her zaman geri çekilebilir.</span>
+        </label>
+
+        <div class="turnstile-slot" id="turnstileSlot"></div>
+        <div class="form-actions">
+          <button class="btn primary" id="leadSubmit" type="submit" data-cyobik-content="DEMO.BUTTON.01">Demo talep edin</button>
+          <span class="small" data-cyobik-content="DEMO.SUPPORTING_LABEL.01">Zorunlu alanlar * ile işaretlenmiştir.</span>
+        </div>
+        <div class="form-status" id="leadStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+<div data-site-footer></div>
+<script src="../assets/layout.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
