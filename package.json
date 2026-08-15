@@ -6,9 +6,15 @@
   "scripts": {
     "content:export": "node scripts/export-confluence-content.mjs",
     "content:validate": "node scripts/validate-content-snapshot.mjs",
-    "test": "node --test tests/*.test.mjs && npm run content:validate"
+    "site:build": "node scripts/build-site-content.mjs",
+    "site:check": "node scripts/build-site-content.mjs --check",
+    "site:templates:init": "node scripts/create-site-templates.mjs",
+    "test": "node --test tests/*.test.mjs && npm run content:validate && npm run site:check"
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "parse5": "8.0.1"
   }
 }

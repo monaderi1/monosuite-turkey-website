@@ -44,21 +44,36 @@ Then run:
 ```sh
 npm run content:export
 npm run content:validate
+npm run site:build
 npm test --offline
 ```
 
 The exporter fails if a registered page is missing, renamed, malformed, redirects to another host, contains a duplicate content ID, has a non-publishable status, or produces incomplete English or Turkish content. It also refuses to send credentials to any origin other than the registered Atlassian site. Unapproved shared strings are preserved in the snapshot's excluded list but cannot enter publishable content.
+
+### Generated website workflow
+
+The route files under `en/` and `tr/`, plus `assets/layout.js` and `assets/site.js`, are generated artifacts. Their public copy comes from `content/website-content.snapshot.json`; their structure comes from the files under `site/templates/`.
+
+- Change copy in Confluence, then export the snapshot and run `npm run site:build`.
+- Change markup or layout in `site/templates/`, then run `npm run site:build`.
+- Do not edit generated route HTML or generated JavaScript copy directly.
+- `npm run site:check` fails when a generated file is stale or was edited by hand.
+- `npm run site:templates:init` is a migration utility, not part of the normal publishing workflow; it rebuilds templates from the currently generated site and should only be used intentionally.
+
+Production does not contact Confluence. Cloudflare serves the committed generated files, so an unavailable Confluence instance cannot break the live website.
 
 ### Publication workflow
 
 1. Edit English and Turkish together in the registered Confluence route page.
 2. Complete copy, translation and product-claim review.
 3. Export and validate the repository snapshot.
-4. Review the content-ID diff in a pull request.
-5. Verify the Cloudflare preview against the approved Confluence content.
-6. Merge to publish.
+4. Run `npm run site:build` to update only the generated files affected by the snapshot diff.
+5. Run `npm test --offline`; CI repeats the snapshot and generated-output checks.
+6. Review both the content-ID diff and generated-file diff in a pull request.
+7. Verify the Cloudflare preview against the approved Confluence content.
+8. Merge to publish.
 
-This first migration phase does not change rendered pages. The current HTML and runtime JavaScript still render the website until the template migration is completed in a separate pull request. Direct copy changes in HTML, JavaScript or middleware are no longer an accepted workflow.
+The generator replaces values by stable content ID and writes only output files whose content actually changed. A one-page copy change therefore does not rewrite unrelated pages.
 
 ## Information architecture
 

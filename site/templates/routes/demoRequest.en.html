@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{CYOBIK:META_TITLE}}</title>
+  <meta name="description" content="{{CYOBIK:META_DESCRIPTION}}">
+  <link rel="canonical" href="{{CYOBIK:CANONICAL}}">
+  <link rel="alternate" hreflang="en" href="{{CYOBIK:ALTERNATE_EN}}">
+  <link rel="alternate" hreflang="tr" href="{{CYOBIK:ALTERNATE_TR}}">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-lang="en" data-page="demo">
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow" data-cyobik-content="DEMO.EYEBROW.01">Request a demo</div>
+        <h1 data-cyobik-content="DEMO.H1.01">See Cyobik in the context of your priorities.</h1>
+        <p class="lead" data-cyobik-content="DEMO.LEAD_PARAGRAPH.01">Tell us what you are evaluating so the product discussion can focus on the workflows and evidence that matter to your organisation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap form-layout">
+      <div>
+        <div class="section-head">
+          <div class="eyebrow" data-cyobik-content="DEMO.EYEBROW.02">Evaluation interests</div>
+          <h2 data-cyobik-content="DEMO.H2.01">A focused enterprise discussion.</h2>
+          <p class="lead2" data-cyobik-content="DEMO.LEAD_PARAGRAPH.02">Asset Discovery & Visibility, Cyber Asset Intelligence, Risk & Exposure, Compliance Assessment, Splunk Integration or another defined requirement.</p>
+        </div>
+        <div class="boundary">
+          <h3 data-cyobik-content="DEMO.H3.01">Share only what is appropriate for an initial discussion</h3>
+          <p data-cyobik-content="DEMO.PARAGRAPH.01">Use this form to request a product discussion. Do not include passwords, internal IP addresses, network diagrams, configuration files or sensitive security details.</p>
+        </div>
+      </div>
+
+      <form class="form-card" id="leadForm" novalidate>
+        <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="source" value="website-demo-form-en">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="privacyNoticeVersion" value="2026-07-27-v1.2">
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName" data-cyobik-content="DEMO.FORM_LABEL.01">Full Name *</label>
+            <input id="fullName" name="fullName" autocomplete="name" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="workEmail" data-cyobik-content="DEMO.FORM_LABEL.02">Work Email *</label>
+            <input id="workEmail" name="workEmail" type="email" autocomplete="email" maxlength="180" placeholder="name@company.com" required>
+          </div>
+          <div class="field">
+            <label for="company" data-cyobik-content="DEMO.FORM_LABEL.03">Company *</label>
+            <input id="company" name="company" autocomplete="organization" maxlength="160" required>
+          </div>
+          <div class="field">
+            <label for="country" data-cyobik-content="DEMO.FORM_LABEL.04">Country *</label>
+            <input id="country" name="country" autocomplete="country-name" maxlength="80" required>
+          </div>
+          <div class="field full">
+            <label for="evaluationInterest" data-cyobik-content="DEMO.FORM_LABEL.05">Evaluation Interest *</label>
+            <select id="evaluationInterest" name="evaluationInterest" required>
+              <option value="" data-cyobik-content="DEMO.SELECT_OPTION.01">Select an area</option>
+              <option value="asset-discovery-visibility" data-cyobik-content="DEMO.SELECT_OPTION.02">Asset Discovery & Visibility</option>
+              <option value="cyber-asset-intelligence" data-cyobik-content="DEMO.SELECT_OPTION.03">Cyber Asset Intelligence</option>
+              <option value="risk-exposure" data-cyobik-content="DEMO.SELECT_OPTION.04">Risk & Exposure</option>
+              <option value="compliance-assessment" data-cyobik-content="DEMO.SELECT_OPTION.05">Compliance Assessment</option>
+              <option value="splunk-integration" data-cyobik-content="DEMO.SELECT_OPTION.06">Splunk Integration</option>
+              <option value="other" data-cyobik-content="DEMO.SELECT_OPTION.07">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="jobTitle" data-cyobik-content="DEMO.FORM_LABEL.06">Job Title</label>
+            <input id="jobTitle" name="jobTitle" autocomplete="organization-title" maxlength="120">
+          </div>
+          <div class="field">
+            <label for="phone" data-cyobik-content="DEMO.FORM_LABEL.07">Phone Number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+          </div>
+          <div class="field full">
+            <label for="message" data-cyobik-content="DEMO.FORM_LABEL.08">Additional Details</label>
+            <textarea id="message" name="message" maxlength="1200" placeholder="Briefly describe what you would like to evaluate. Do not include sensitive security information."></textarea>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:18px" data-cyobik-content="DEMO.PARAGRAPH.02">By submitting this form, you confirm that you have read the <a href="privacy"><strong>Website and Demo Request Privacy Notice</strong></a>. This acknowledgement is not marketing consent.</p>
+
+        <label class="consent" data-cyobik-content="DEMO.FORM_LABEL.09">
+          <input type="checkbox" name="marketingConsent" value="true">
+          <span>I would like to receive occasional Cyobik product and event updates. This consent is optional and may be withdrawn at any time.</span>
+        </label>
+
+        <div class="turnstile-slot" id="turnstileSlot"></div>
+        <div class="form-actions">
+          <button class="btn primary" id="leadSubmit" type="submit" data-cyobik-content="DEMO.BUTTON.01">Request a demo</button>
+          <span class="small" data-cyobik-content="DEMO.SUPPORTING_LABEL.01">Required fields are marked with *.</span>
+        </div>
+        <div class="form-status" id="leadStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+<div data-site-footer></div>
+<script src="../assets/layout.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
