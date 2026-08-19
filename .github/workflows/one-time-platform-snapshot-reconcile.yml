@@ -1,3 +1,4 @@
+# One-time helper: synchronize the single stale Platform content ID, validate, then remove this file.
 name: One-time Platform snapshot reconciliation
 
 on:
