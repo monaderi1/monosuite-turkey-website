@@ -1,4 +1,4 @@
-# One-time helper: synchronize the single stale Platform content ID, validate, then remove this file.
+# One-time helper: migrate the stale Platform integration content ID to the current canonical wording, validate, then remove this file.
 name: One-time Platform snapshot reconciliation
 
 on:
@@ -26,32 +26,65 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Reconcile the single stale Platform content ID
+      - name: Reconcile Platform content ID and template baseline
         shell: bash
         run: |
           node <<'NODE'
           const fs = require('node:fs');
-          const path = 'content/website-content.snapshot.json';
-          const data = JSON.parse(fs.readFileSync(path, 'utf8'));
-          const platform = data.routes?.platform;
-          const item = platform?.content?.['PLATFORM.PARAGRAPH.06'];
-          if (!item) throw new Error('PLATFORM.PARAGRAPH.06 not found');
+          const snapshotPath = 'content/website-content.snapshot.json';
+          const manifestPath = 'site/templates/manifest.json';
+          const contentId = 'PLATFORM.PARAGRAPH.06';
 
-          const oldEn = 'Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and Jira integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.';
+          const oldSnapshotEn = 'Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and Jira integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.';
           const oldTr = "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve Jira entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.";
+          const oldTemplateEn = 'Use dashboards, scheduled reports, named Splunk, Nessus and Jira integrations, and the comprehensive REST API with complete Swagger/OpenAPI documentation.';
           const newEn = 'Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and ITSM/ticketing integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.';
           const newTr = "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve ITSM / talep yönetimi entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.";
 
-          if (item.en === newEn && item.tr === newTr) process.exit(0);
-          if (item.en !== oldEn || item.tr !== oldTr) {
+          const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
+          const platform = snapshot.routes?.platform;
+          const item = platform?.content?.[contentId];
+          if (!item) throw new Error(`${contentId} not found`);
+          if (platform.sourcePage?.id !== '15532033') throw new Error('Unexpected Platform source page ID');
+          if (item.en === oldSnapshotEn && item.tr === oldTr) {
+            item.en = newEn;
+            item.tr = newTr;
+          } else if (item.en !== newEn || item.tr !== newTr) {
             throw new Error('Unexpected Platform snapshot content; refusing a blind replacement.');
           }
-          if (platform.sourcePage?.id !== '15532033') throw new Error('Unexpected Platform source page ID');
-
-          item.en = newEn;
-          item.tr = newTr;
           platform.sourcePage.version = 7;
-          fs.writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+          fs.writeFileSync(snapshotPath, JSON.stringify(snapshot, null, 2) + '\n');
+
+          const templateMigrations = [
+            ['site/templates/routes/platform.en.html', oldTemplateEn, newEn],
+            ['site/templates/routes/platform.tr.html', oldTr, newTr],
+          ];
+          for (const [path, oldValue, newValue] of templateMigrations) {
+            let source = fs.readFileSync(path, 'utf8');
+            if (source.includes(oldValue)) {
+              source = source.replace(oldValue, newValue);
+            } else if (!source.includes(newValue)) {
+              throw new Error(`${path}: expected Platform baseline not found`);
+            }
+            fs.writeFileSync(path, source);
+          }
+
+          const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+          for (const [lang, value] of [['en', newEn], ['tr', newTr]]) {
+            const matches = manifest.htmlBindings.filter(binding =>
+              binding.routeKey === 'platform' && binding.lang === lang && binding.contentId === contentId
+            );
+            if (matches.length !== 1) throw new Error(`Expected exactly one ${contentId}.${lang} manifest binding; found ${matches.length}`);
+            const binding = matches[0];
+            if (binding.renderer !== 'simple' || binding.tagName !== 'p') {
+              throw new Error(`Unexpected renderer/tag for ${contentId}.${lang}`);
+            }
+            binding.baseline = value;
+            binding.elementBaseline = value;
+            binding.prefix = '';
+            binding.suffix = '';
+          }
+          fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
           NODE
 
       - name: Install pinned dependencies
@@ -71,5 +104,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Reconcile Platform snapshot to ITSM canonical'
+          git commit -m 'Reconcile Platform integration copy to ITSM canonical'
           git push origin HEAD:${{ github.head_ref }}
