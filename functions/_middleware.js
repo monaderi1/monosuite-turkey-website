@@ -65,7 +65,7 @@ function normalisePath(pathname) {
   return value.replace(/\/{2,}/g, "/").toLowerCase();
 }
 
-function isNonPublicPath(pathname) {
+export function isNonPublicPath(pathname) {
   const path = normalisePath(pathname);
   if (NON_PUBLIC_FILES.has(path)) return true;
   return NON_PUBLIC_PREFIXES.some(
