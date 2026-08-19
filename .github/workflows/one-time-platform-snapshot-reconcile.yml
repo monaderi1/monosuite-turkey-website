@@ -1,0 +1,74 @@
+name: One-time Platform snapshot reconciliation
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'agent/publication-boundary-platform-itsm-fix' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Reconcile the single stale Platform content ID
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = 'content/website-content.snapshot.json';
+          const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+          const platform = data.routes?.platform;
+          const item = platform?.content?.['PLATFORM.PARAGRAPH.06'];
+          if (!item) throw new Error('PLATFORM.PARAGRAPH.06 not found');
+
+          const oldEn = 'Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and Jira integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.';
+          const oldTr = "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve Jira entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.";
+          const newEn = 'Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and ITSM/ticketing integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.';
+          const newTr = "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve ITSM / talep yönetimi entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.";
+
+          if (item.en === newEn && item.tr === newTr) process.exit(0);
+          if (item.en !== oldEn || item.tr !== oldTr) {
+            throw new Error('Unexpected Platform snapshot content; refusing a blind replacement.');
+          }
+          if (platform.sourcePage?.id !== '15532033') throw new Error('Unexpected Platform source page ID');
+
+          item.en = newEn;
+          item.tr = newTr;
+          platform.sourcePage.version = 7;
+          fs.writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+          NODE
+
+      - name: Install pinned dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Regenerate from the reconciled snapshot
+        run: npm run site:build
+
+      - name: Validate all website content
+        run: npm test --offline
+
+      - name: Remove helper and commit the canonical reconciliation
+        shell: bash
+        run: |
+          rm .github/workflows/one-time-platform-snapshot-reconcile.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Reconcile Platform snapshot to ITSM canonical'
+          git push origin HEAD:${{ github.head_ref }}
