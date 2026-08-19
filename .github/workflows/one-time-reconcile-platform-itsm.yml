@@ -1,0 +1,74 @@
+name: One-time reconcile Platform ITSM copy
+
+on:
+  push:
+    branches:
+      - agent/publication-boundary-platform-itsm-fix
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/publication-boundary-platform-itsm-fix
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Reconcile canonical Platform content in snapshot
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = 'content/website-content.snapshot.json';
+          const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+          const platform = data.routes?.platform;
+          const item = platform?.content?.['PLATFORM.PARAGRAPH.06'];
+          if (!item) throw new Error('PLATFORM.PARAGRAPH.06 not found');
+          const expectedOldEn = 'Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and Jira integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.';
+          const expectedOldTr = "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve Jira entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.";
+          if (item.en !== expectedOldEn || item.tr !== expectedOldTr) {
+            throw new Error('Snapshot no longer matches the expected stale Jira wording; refusing blind replacement.');
+          }
+          item.en = 'Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and ITSM/ticketing integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.';
+          item.tr = "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve ITSM / talep yönetimi entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.";
+          if (platform.sourcePage?.id !== '15532033') throw new Error('Unexpected Platform source page id');
+          platform.sourcePage.version = 7;
+          fs.writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+          NODE
+
+      - name: Install pinned dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Regenerate website from snapshot
+        run: npm run site:build
+
+      - name: Validate snapshot and generated website
+        run: npm test --offline
+
+      - name: Verify prohibited public copy is absent
+        shell: bash
+        run: |
+          ! grep -RIn --include='*.html' --include='*.js' 'Jira integrations\|Jira entegrasyonları' en tr assets site/templates
+          ! grep -RIn --include='*.html' --include='*.js' 'ITSM için belirli bir vendor adı kullanılmaz\|Splunk genel inbound kaynak olarak gösterilmez' en tr assets site/templates
+
+      - name: Remove this one-time workflow and commit reconciliation
+        shell: bash
+        run: |
+          rm .github/workflows/one-time-reconcile-platform-itsm.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/website-content.snapshot.json en/platform.html tr/platform.html site/templates/routes/platform.en.html site/templates/routes/platform.tr.html .github/workflows/one-time-reconcile-platform-itsm.yml
+          git diff --cached --exit-code && exit 0
+          git commit -m 'Reconcile Platform integration copy to ITSM canonical'
+          git push origin HEAD:agent/publication-boundary-platform-itsm-fix
