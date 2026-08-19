@@ -999,7 +999,7 @@
       "sourcePage": {
         "id": "15532033",
         "title": "Website Content — Platform",
-        "version": 6,
+        "version": 7,
         "status": "Implemented baseline — pending first reconciliation"
       },
       "route": {
@@ -1187,8 +1187,8 @@
         },
         "PLATFORM.PARAGRAPH.06": {
           "locationRole": "Section 02 · Paragraph",
-          "en": "Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and Jira integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.",
-          "tr": "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve Jira entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.",
+          "en": "Track your security posture with dashboards and scheduled reports. Integrate Cyobik into your existing operational processes through Splunk, Nessus and ITSM/ticketing integrations; use the comprehensive REST API and Swagger/OpenAPI documentation to develop integrations tailored to your needs.",
+          "tr": "Gösterge panelleri ve planlı raporlarla güvenlik durumunuzu takip edin. Splunk, Nessus ve ITSM / talep yönetimi entegrasyonlarıyla Cyobik'i mevcut operasyonel süreçlerinize dahil edin; kapsamlı REST API ve Swagger/OpenAPI dokümantasyonu ile ihtiyaçlarınıza özel entegrasyonlar geliştirin.",
           "implementation": "Route HTML",
           "status": "Implemented baseline — pending first reconciliation"
         },
